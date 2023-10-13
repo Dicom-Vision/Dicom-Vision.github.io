@@ -1,0 +1,270 @@
+---
+layout: page
+title: Who We Are
+custom_css: cobalt
+custom_font: font4
+header_style: "one"
+white_menu: true
+header_image: "/assets/images/art/bg5.jpg"
+
+our_vision:
+  enable: true
+  image: "/assets/images/augmented_vision.jpg"
+  title: "Our vision is to facilitate understanding of phenomena and processes"
+  text: |
+    We believe that a deep understanding of what happens around us is
+    important to develop a critic, equal and livable society. In every
+    human activity and natural events we can find phenomena to analyze
+    and understand profoundly to improve our lives and develop a better
+    future society. For this reason, we believe that exposing that
+    phenomena and understanding them at large scale is of primary
+    importance for us as a species. D/Vision Lab wants to pursue this
+    vision and contribute in the understanding of phenomena and
+    processes around us.
+
+our_mission:
+  enable: true
+  image: "/assets/images/who_we_are/mission.jpg"
+  title: "Our mission is to provide understanding through vision and interaction"
+  text: |
+    We put the sense of vision in the center of our mission: we want (you) to see what is
+    going on and have an intuition in the most natural way possible.
+    And, by extension, an even deeper understanding of the phenomena and
+    processes can be acquired by direct interaction: performing actions
+    and seeing the results of those actions, is probably the most
+    natural and effective way used by humans to understand and learn.
+---
+
+<!--about us wrapper-->
+<div class="wrapper gray-wrapper">
+  <div class="container">
+    <div class="container inner">
+      <div class="row align-items-center">
+        {% if page.our_vision.image %}
+        <div
+          class="col-lg-6 order-lg-2"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <figure>
+            <img
+              src="{{page.our_vision.image}}"
+              alt="{{page.our_vision.title}}"
+            />
+          </figure>
+        </div>
+        {% endif %}
+        <!--/column -->
+        <div class="space40 d-lg-none"></div>
+        <div
+          class="col-lg-6 pr-60 pr-md-15"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3 class="display-3">{{page.our_vision.title}}</h3>
+          <div class="space20"></div>
+          <p style="text-align: justify">{{page.our_vision.text}}</p>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      <div class="space140"></div>
+      <div class="row align-items-center">
+        {% if page.our_mission.image %}
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <figure>
+            <img
+              src="{{page.our_mission.image}}"
+              alt="{{page.our_mission.title}}"
+            />
+          </figure>
+        </div>
+        {% endif %}
+        <!--/column -->
+        <div class="space40 d-lg-none"></div>
+        <div class="col-lg-6 pl-60 pl-md-15">
+          <h3 class="display-3">{{page.our_mission.title}}</h3>
+          <div class="space20"></div>
+          <p style="text-align: justify">{{page.our_mission.text}}</p>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+  </div>
+  <!--wrapper About Us-->
+
+  <!-- wrapper team members-->
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <h2 class="section-title mb-40 text-center">Our Team</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/simone.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Simone Manini</h4>
+          <div class="meta mb-5">President & COO - Co-Founder</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/simone-manini-b0227265/"
+                target="_blank"
+                ><i class="jam jam-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/daron1337" target="_blank"
+                ><i class="jam jam-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+        <div class="col-md-4">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/mattia.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Mattia Ronzoni</h4>
+          <div class="meta mb-5">CEO - Co-Founder</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mattiaronzoni90/"
+                target="_blank"
+                ><i class="jam jam-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/ronzim" target="_blank"
+                ><i class="jam jam-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+        <div class="col-md-4">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/ale-re.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Alessandro Re</h4>
+          <div class="meta mb-5">CTO - Co-Founder</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a href="https://www.linkedin.com/in/akiross/" target="_blank"
+                ><i class="jam jam-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/akiross" target="_blank"
+                ><i class="jam jam-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      <div class="space100"></div>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/ale-x.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Alessandro Incognito</h4>
+          <div class="meta mb-5">Business Manager</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/alessandro-incognito-14892a11/"
+                target="_blank"
+                ><i class="jam jam-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+        <div class="col-md-3">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/daniele.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Daniele Ciriello</h4>
+          <div class="meta mb-5">AI Engineer</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a href="https://www.linkedin.com/in/dnlcrl/" target="_blank"
+                ><i class="jam jam-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/dnlcrl" target="_blank"
+                ><i class="jam jam-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+        <div class="col-md-3">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/sara.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Sara Zanchi</h4>
+          <div class="meta mb-5">UX Engineer</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a href="https://www.linkedin.com/in/sara-zanchi-113a4b61/"
+                ><i class="jam jam-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+        <div class="col-md-3">
+          <figure class="img-blob blob1 mb-25">
+            <img
+              src="{{relative_url}}/assets/images/who_we_are/alessia.png"
+              style="width: 12rem"
+              alt=""
+            />
+          </figure>
+          <h4 class="mb-15">Alessia Zanni</h4>
+          <div class="meta mb-5">Software Engineer</div>
+          <ul class="social social-s ml-auto">
+            <li>
+              <a href="#"><i class="jam jam-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+  <!--/.wrapper team members-->
+</div>

@@ -1,0 +1,54 @@
+---
+layout: page
+title: Contact Us
+custom_css: cobalt
+custom_font: font4
+header_style: "one"
+white_menu: true
+header_image: "/assets/images/art/bg5.jpg"
+
+contact_info:
+  enable: true
+  title: "Get Information"
+  contact_data:
+    - icon: "/assets/images/icons/ui-gps.png"
+      info: "Via Pasubio, 5<br> c/o POINT<br>v24044 Dalmine, BG Italia"
+
+    - icon: "/assets/images/icons/co-email-5.png"
+      info:
+        - "info@dvisionlab.com"
+contact_form:
+  enable: true
+
+  lists:
+    - title: Address
+      info_01: Via Pasubio, 5 c/o POINT<br>24044 Dalmine, BG Italia
+      icon: "icofont-location-pin"
+
+    - title: E-mail
+      info_01: "info@dvisionlab.com"
+      icon: "icofont-mail-box"
+
+google_maps:
+  enable: true
+---
+
+<div
+  class="wrapper light-wrapper page-title-wrapper"
+  data-image-src="{{page_d.background_image}}"
+>
+  <div class="container inner text-center">
+    {% if page_d.title %}
+    <h1 class="page-title">{{page_d.title}}</h1>
+    {% endif %} {% if page_d.sub_title %}
+    <p class="lead mb-30">{{page_d.sub_title}}</p>
+    {% endif %} {% if page_d.button_text != null %}
+    <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover"
+      >{{page_d.button_text}}</a
+    >
+    {% endif %}
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% include contact_4.html %}

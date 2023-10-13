@@ -1,0 +1,165 @@
+---
+layout: page
+title: "3D Synthetic Data"
+custom_css: cobalt
+custom_font: font4
+header_image: "/assets/images/art/bg5.jpg"
+white_menu: true
+header_style: "one"
+
+video_area:
+  enable: true
+  vimeo_video_id: 124071444
+
+synthetic_data:
+  enable: true
+  image: "/assets/images/what_we_do/synthetic_data.jpg"
+  title: "3D Synthetic Data"
+  description_1: |
+    Building computer vision systems that use synthetic data is a transformative shift from ones that use real data. 
+    While real-world data requires painstaking collection and annotation, a synthetic dataset can be constructed in a 
+    matter of minutes by a single machine learning (ML) engineer, enabling a rapid, data-centric development cycle.
+  description_2: |
+    It is fast, so you can experiment with many dataset variations at once to find ones that improve your model.
+
+domain_randomization:
+  enable: true
+  image: "/assets/images/what_we_do/domain_randomization.gif"
+  title: "Domain Randomization"
+  description_1: |
+    In Domain Randomization, real world is just one of the many possible world. If the model have seen a plethora of 
+    simulated environments, real world would appear to be just another one.
+  description_2: |
+    We can render the training data from synthetic objects only. To cover all cases in real world, we randomize 
+    the properties of our simulation to create a distribution over data randomizing lights, camera, shapes, textures and so on.
+
+synthetic_medical:
+  enable: true
+  image: "/assets/images/what_we_do/synthetic_medical.png"
+  title: "Medical Imaging"
+  description_1: |
+    Obtaining medical imaging data for AI can be difficult due to privacy and data protection laws. 
+    Generating 2D/3D images can provide photo-realistic solutions and it's currently used by many medical organisations and establishments.
+  description_2: |
+    Sharing healthcare data among researchers, institutions and companies building AI solutions can have numerous benefits. 
+    Synthetic data can help healthcare researchers create shareable data and overcome these challenges.
+    Some benefits: Improves machine learning model accuracy, enables prediction of rare diseases, enables collaboration and provides reproducibility for medical research
+---
+
+<div class="wrapper overflow-top">
+  <div class="container inner">
+    {% if page.video_area.enable %}
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-center">
+        {% assign id = page.video_area.vimeo_video_id %}
+        <div
+          class="player"
+          data-plyr-provider="vimeo"
+          data-plyr-embed-id="{{id}}"
+        ></div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+
+    <!-- 3D Synthetic Data -->
+    {% if page.synthetic_data.enable %}
+    <div class="space160"></div>
+    <div class="row align-items-center">
+      {% if page.synthetic_data.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.synthetic_data.image}}"
+            alt="{{page.synthetic_data.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.synthetic_data.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.synthetic_data.description_1}}</p>
+        <p style="text-align: justify">{{page.synthetic_data.description_2}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- Domain Randomization -->
+    {% if page.domain_randomization.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.domain_randomization.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.domain_randomization.image}}"
+            alt="{{page.domain_randomization.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.domain_randomization.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.domain_randomization.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.domain_randomization.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- Synthetic Data for Medical Imaging -->
+    {% if page.synthetic_medical.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.synthetic_medical.image}}"
+            alt="{{page.synthetic_medical.title}}"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.synthetic_medical.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.synthetic_medical.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.synthetic_medical.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>

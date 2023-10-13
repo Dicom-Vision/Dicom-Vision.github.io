@@ -1,0 +1,216 @@
+---
+layout: page
+title: "Data Analytics"
+custom_css: cobalt
+custom_font: font4
+header_image: "/assets/images/art/bg5.jpg"
+white_menu: true
+header_style: "one"
+
+video_area:
+  enable: false
+  vimeo_video_id: 124071444
+
+iot_data_visualization:
+  enable: true
+  image: "/assets/images/what_we_do/iot_data_visualization.png"
+  title: "IoT Data Visualization"
+  description_1: |
+    Visualize your IoT data on a dynamic dashboard with charts, gauges, maps, and other visual elements that show the status and performance of vital assets and events in real time.
+  description_2: |
+    Make data insights accessible to the whole organization by combining and sharing data from multiple business systems onto a single dashboard. Start encouraging a data-driven culture today by visualizing your data on dashboards.
+    Visualize patterns, relationships, anomalies, and incidents to make more informed decisions.
+  btn_text: Live Demo
+  btn_url: "http://dev.dvisionlab.com/dashboard/"
+
+geolocation_data:
+  enable: true
+  image: "/assets/images/what_we_do/geolocation_data.gif"
+  title: "Visualization of Geolocation data"
+  description_1: |
+    The real value of tracking isn't just knowing live-location, it's also the insights you collect and analyze over time — the ability to pair historical data with a real-time view of your operations.
+  description_2: |
+    Visualize geospatial data to help make decisions and improve operations: view and analyze data from multiple sources on a map to facilitate better decisions.
+
+data_management:
+  enable: true
+  image: "/assets/images/what_we_do/data_management.png"
+  title: "Data Management UI"
+  description_1: |
+    We develop custom user interfaces for data management and data entry, supporting tabular data, surveys, graphical widgets and charts.
+  description_2: |
+    Forms remain one of the most important types of interactions for users on the web and in apps. In fact, forms are often considered the 
+    final step in the journey of completing their goals. Forms are just a means to an end.
+
+smart_reports:
+  enable: true
+  image: "/assets/images/what_we_do/alarms_reports.png"
+  title: "Automated alarms and reports"
+  description_1: |
+    Fully automated (on-demand or scheduled) and customized reports to share high-level metrics with those who do not have access to dashboards, or don't have the time to take a deep dive into the data.
+  description_2: |
+    Alerts, on the other hand, can be used to provide time-sensitive notifications so quick action can be taken to remedy any potential problems.
+    These alerts allow you to constantly monitor the data of a chart without needing to have the dashboard in front of you at all times.
+---
+
+<div class="wrapper overflow-top">
+  <div class="container inner">
+    {% if page.video_area.enable %}
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-center">
+        {% assign id = page.video_area.vimeo_video_id %}
+        <div
+          class="player"
+          data-plyr-provider="vimeo"
+          data-plyr-embed-id="{{id}}"
+        ></div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+
+    <!-- IoT Data Visualization -->
+    {% if page.iot_data_visualization.enable %}
+    <div class="space160"></div>
+    <div class="row align-items-center">
+      {% if page.iot_data_visualization.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.iot_data_visualization.image}}"
+            alt="{{page.iot_data_visualization.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.iot_data_visualization.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.iot_data_visualization.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.iot_data_visualization.description_2}}
+        </p>
+        {% if page.iot_data_visualization.btn_text %}
+        <div class="space10"></div>
+        <a
+          href="{{page.iot_data_visualization.btn_url}}"
+          target="_blank"
+          class="btn"
+          >{{page.iot_data_visualization.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- GeoLocation Data -->
+    {% if page.geolocation_data.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.geolocation_data.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.geolocation_data.image}}"
+            alt="{{page.geolocation_data.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.geolocation_data.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.geolocation_data.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.geolocation_data.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- Data Management UI-->
+    {% if page.data_management.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.data_management.image}}"
+            alt="{{page.data_management.title}}"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.data_management.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.data_management.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.data_management.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- Smart Alarms & Reports -->
+    {% if page.smart_reports.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.smart_reports.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.smart_reports.image}}"
+            alt="{{page.smart_reports.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.smart_reports.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.smart_reports.description_1}}</p>
+        <p style="text-align: justify">{{page.smart_reports.description_2}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>

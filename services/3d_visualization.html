@@ -1,0 +1,217 @@
+---
+layout: page
+title: "3D Visualization"
+custom_css: cobalt
+custom_font: font4
+header_image: "/assets/images/art/bg5.jpg"
+white_menu: true
+header_style: "one"
+
+video_area:
+  enable: false
+  vimeo_video_id: 124071444
+
+_3d_visualization:
+  enable: true
+  image: "/assets/images/what_we_do/real_time_3d.png"
+  video: "/assets/media/iot_point.mp4"
+  title: "3D Real-time data visualization"
+  description_1: |
+    Tap into the Internet of Things (IoT) to analyze and display real-time data from sensors and devices. 
+    Understand and discover the hidden patterns and trends in your massive datasets by applying spatiotemporal 
+    analytics that utilizes distributed computing.
+  description_2: |
+    Our solution displays the scene in real time through 3D animation and charts, and provides user interaction 
+    interfaces and simulation functionalities in a gamification environment. This solution realistically visualizes 
+    the real world to support the user's decision.
+
+_3d_syntethic_data:
+  enable: true
+  image: "/assets/images/what_we_do/domain_randomization.gif"
+  title: "3D Synthetic Data"
+  description_1: |
+    Building computer vision systems that use synthetic data is a transformative shift from ones that use real data. 
+    While real-world data requires painstaking collection and annotation, a synthetic dataset can be constructed in a 
+    matter of minutes by a single machine learning (ML) engineer, enabling a rapid, data-centric development cycle.
+  description_2: |
+    We can render the training data from synthetic objects only. To cover all cases in real world, we randomize 
+    the properties of our simulation to create a distribution over data randomizing lights, camera, shapes, textures and so on.
+
+_3d_webconfigurator:
+  enable: true
+  image: "/assets/images/what_we_do/configurator_3d.gif"
+  title: "3D Web Configurators"
+  description_1: |
+    We develop web applications for product 3D configuration, user can configure any part or area of the 
+    product that needs new materials, textures or colours in a simple and intuitive way.
+  description_2: |
+    The 3D web configurator is a tool that allows a potential customer to customize and visualize the product, 
+    directly on his browser. User can choose all the possible compositions and combinations of the selected product.
+
+_3d_scientific:
+  enable: true
+  image: "/assets/images/what_we_do/applications_3d.jpg"
+  title: "3D Scientific Visualization"
+  description_1: |
+    We develop dedicated 3D desktop and mobile applications for the exploration and visual analysis of scientific data through real-time 
+    and immersive interactions, advanced visualization technologies and computational tasks.
+  description_2: |
+    We believe that 3D direct-manipulation techniques for interactively controlling visualization tools will provide opportunities for 
+    powerful and useful interfaces with which scientists can more effectively explore their datasets.
+---
+
+<div class="wrapper overflow-top">
+  <div class="container inner">
+    {% if page.video_area.enable %}
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-center">
+        {% assign id = page.video_area.vimeo_video_id %}
+        <div
+          class="player"
+          data-plyr-provider="vimeo"
+          data-plyr-embed-id="{{id}}"
+        ></div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+
+    <!-- 3D Real time data -->
+    {% if page._3d_visualization.enable %}
+    <div class="space160"></div>
+    <div class="row align-items-center">
+      {% if page._3d_visualization.video %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <video
+          preload="metadata"
+          poster="{{page._3d_visualization.video}}"
+          muted
+          width="100%"
+          max-height="100%"
+          autoplay
+          loop
+        >
+          <source src="{{page._3d_visualization.video}}" type="video/mp4" />
+        </video>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page._3d_visualization.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page._3d_visualization.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page._3d_visualization.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- 3D Synthetic -->
+    {% if page._3d_syntethic_data.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page._3d_syntethic_data.image}}"
+            alt="{{page._3d_syntethic_data.title}}"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page._3d_syntethic_data.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page._3d_syntethic_data.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page._3d_syntethic_data.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- 3D Configurator -->
+    {% if page._3d_webconfigurator.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page._3d_webconfigurator.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page._3d_webconfigurator.image}}"
+            alt="{{page._3d_webconfigurator.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page._3d_webconfigurator.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page._3d_webconfigurator.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page._3d_webconfigurator.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- 3D Synthetic -->
+    {% if page._3d_scientific.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page._3d_scientific.image}}"
+            alt="{{page._3d_scientific.title}}"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page._3d_scientific.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page._3d_scientific.description_1}}</p>
+        <p style="text-align: justify">{{page._3d_scientific.description_2}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>

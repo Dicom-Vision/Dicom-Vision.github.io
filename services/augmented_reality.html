@@ -1,0 +1,111 @@
+---
+layout: page
+title: "Augmented Reality"
+custom_css: cobalt
+custom_font: font4
+header_image: "/assets/images/art/bg5.jpg"
+white_menu: true
+header_style: "one"
+
+video_area:
+  enable: false
+  vimeo_video_id: 124071444
+
+ar_mobile:
+  enable: true
+  image: "/assets/images/what_we_do/ar_mobile.gif"
+  title: "Augmented Reality for Mobile Applications"
+  description_1: |
+    AR is all about superimposing computer-generated images on top of your view of reality, thus creating a composite view 
+    that augments the real world. In essence, this technology augments the vision you experience in your real world.
+  description_2: |
+    Mobile Augmented Reality now makes it possible and accessible for all of us to enjoy the magic and benefits that AR technology brings.
+    Augmented Reality technology expands the physical world adding multi-layers of digital information onto what we can see 
+    with the naked eye. It augments our surroundings by adding sound, video, and graphics. Augmented Reality can be used to 
+    enhance life, education, and work.
+
+ar_iot:
+  enable: true
+  image: "/assets/images/what_we_do/ar_iot.jpg"
+  title: "Augmented Reality for IoT Data Exploration"
+  description_1: |
+    AR is emerging as the key that will unlock the full potential of the Internet of Things (IoT).
+  description_2: |
+    IoT devices capture data from the physical world so that it can be analyzed, and AR devices take that digital data 
+    and render it back on the physical world for people to view and interact with.
+---
+
+<div class="wrapper overflow-top">
+  <div class="container inner">
+    {% if page.video_area.enable %}
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-center">
+        {% assign id = page.video_area.vimeo_video_id %}
+        <div
+          class="player"
+          data-plyr-provider="vimeo"
+          data-plyr-embed-id="{{id}}"
+        ></div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+
+    <!-- AR Mobile -->
+    {% if page.ar_mobile.enable %}
+    <div class="space160"></div>
+    <div class="row align-items-center">
+      {% if page.ar_mobile.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img src="{{page.ar_mobile.image}}" alt="{{page.ar_mobile.title}}" />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.ar_mobile.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.ar_mobile.description_1}}</p>
+        <p style="text-align: justify">{{page.ar_mobile.description_2}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- AR IoT -->
+    {% if page.ar_iot.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.ar_iot.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img src="{{page.ar_iot.image}}" alt="{{page.ar_iot.title}}" />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.ar_iot.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.ar_iot.description_1}}</p>
+        <p style="text-align: justify">{{page.ar_iot.description_2}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>

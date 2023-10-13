@@ -1,0 +1,218 @@
+---
+layout: page
+title: "Medical Imaging Visualization"
+custom_css: cobalt
+custom_font: font4
+header_image: "/assets/images/art/bg5.jpg"
+white_menu: true
+header_style: "one"
+
+video_area:
+  enable: false
+  vimeo_video_id: 124071444
+
+medical_imaging_visualization:
+  enable: true
+  image: "/assets/images/what_we_do/viewer_2d.gif"
+  title: "Visualization of 2D DICOM images"
+  description_1: |
+    We develop software applications for DICOM imaging management, parsing, anonymization, visualization, interactions and simple annotations. 
+    Our solution is developed using responsive design, that enables medical images to be accessed from any device and currently supports any type of DICOM image.
+  description_2: |
+    The core is released open-source and available for the <a href="http://larvitar.dvisionlab.com" target="_blank">community</a>.
+
+medical_imaging_annotation:
+  enable: true
+  image: "/assets/images/what_we_do/annotations.png"
+  title: "Image Annotation"
+  description_1: |
+    We develop software applications for 2D segmentation masks visualization, interaction and editing. Our segmentation editor supports standard editing tools 
+    such as common brush and smart annotation algorithms (region growing, interpolation...) for an enhanced user experience.
+  description_2: |
+    We develop services for AI image classifications or segmentation tasks. We integrate AI algorithms for image pre-annotation, we take care of data storage 
+    and version control for datasets and we finally integrate automated tasks for re-training and performance evaluation.
+
+_3d_visualizations:
+  enable: true
+  image: "/assets/images/what_we_do/mpr-fast.gif"
+  title: "3D Visualizations"
+  description_1: |
+    We provide multi-planar (MPR) real-time interactive algorithms for DICOM image 3D visualizations, including MIP, MinIP and Avg visualizations.
+    Segmentation masks can be visualized in a 3D view using a physically based rendering (PBR) algorithm.
+  description_2: |
+    All these visualizations run into your web browser, from any device. For high-computing tasks we also provide server-side rendering solutions.
+  description_3: |
+    The core is released open-source and available for the <a href="http://diglettk.dvisionlab.com" target="_blank">community</a>.
+
+volume_rendering:
+  enable: true
+  image: "/assets/images/what_we_do/volume_rendering.png"
+  title: "Volume Rendering"
+  description_1: |
+    We provide real-time volumetric rendering (VR) of DICOM images into web browser, from any device. User can interact with lights, camera and colors.
+    Cropping algorithms and 3D measurements are available for advanced visualization analysis. For high-computing tasks we also provide server-side rendering solutions.
+  description_2: |
+    The core is released open-source and available for the <a href="http://diglettk.dvisionlab.com" target="_blank">community</a>.
+---
+
+<div class="wrapper overflow-top">
+  <div class="container inner">
+    <!--/ video_top -->
+    {% if page.video_area.enable %}
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-center">
+        {% assign id = page.video_area.vimeo_video_id %}
+        <div
+          class="player"
+          data-plyr-provider="vimeo"
+          data-plyr-embed-id="{{id}}"
+        ></div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+
+    <!--/ medical_imaging_visualization -->
+    {% if page.medical_imaging_visualization.enable %}
+    <div class="space160"></div>
+    <div class="row align-items-center">
+      {% if page.medical_imaging_visualization.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.medical_imaging_visualization.image}}"
+            alt="{{page.medical_imaging_visualization.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.medical_imaging_visualization.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.medical_imaging_visualization.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.medical_imaging_visualization.description_2}}
+        </p>
+      </div>
+
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!--/ medical_imaging_annotation -->
+    {% if page.medical_imaging_annotation.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.medical_imaging_annotation.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.medical_imaging_annotation.image}}"
+            alt="{{page.medical_imaging_annotation.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.medical_imaging_annotation.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.medical_imaging_annotation.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.medical_imaging_annotation.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!--/ 3d_visualizations -->
+    {% if page._3d_visualizations.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page._3d_visualizations.image}}"
+            alt="{{page._3d_visualizations.title}}"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page._3d_visualizations.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page._3d_visualizations.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page._3d_visualizations.description_2}}
+        </p>
+        <p style="text-align: justify">
+          {{page._3d_visualizations.description_3}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!--/ volume_rendering -->
+    {% if page.volume_rendering.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.volume_rendering.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.volume_rendering.image}}"
+            alt="{{page.volume_rendering.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.volume_rendering.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.volume_rendering.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.volume_rendering.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>

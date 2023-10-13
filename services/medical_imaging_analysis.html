@@ -1,0 +1,213 @@
+---
+layout: page
+title: "Medical Imaging Analysis"
+custom_css: cobalt
+custom_font: font4
+header_image: "/assets/images/art/bg5.jpg"
+white_menu: true
+header_style: "one"
+
+video_area:
+  enable: false
+  vimeo_video_id: 124071444
+
+_3d_reconstructions:
+  enable: true
+  image: "/assets/images/what_we_do/reconstructions.png"
+  title: "3D Reconstructions"
+  description_1: |
+    We develop image segmentation algorithms and patient-specific image-based 3D reconstructions.
+    Reconstruction allows us to gain insight into qualitative features of the object which 
+    cannot be deduced from a single plane of sight, such as volume and the object relative 
+    position to others in the scene.
+  description_2: |
+    3D reconstruction of medical images plays a vital role in clinical medicine and medical research. 
+    It serves as a powerful tool to help doctors analyze multiple 2D medical images in a 3D perspective.
+
+geometric_analysis:
+  enable: true
+  image: "/assets/images/what_we_do/geometric_analysis.png"
+  title: "Geometric Analysis"
+  description_1: |
+    We develop automated and smart algorithms for geometric and morphological image analysis.
+  description_2: |
+    Providing accurate morphometric information requires extensive knowledge and computational skills. 
+    Therefore, a mean to easily and accurately calculate such information is necessary to assess morphometrics in clinical settings.
+
+image_analysis:
+  enable: true
+  image: "/assets/images/what_we_do/image_analysis.png"
+  title: "Image Analysis"
+  description_1: |
+    We develop image analysis algorithms, mathematical models, machine learning and deep learning algorithms to analyze
+    dicom images in order to identify anomalies and patterns for medical diagnostics.
+  description_2: |
+    Machine learning, including DL, is a fast-moving research field that has great promise for future applications in 
+    imaging and therapy. It is evident that DL has already pervaded almost every aspect of medical image analysis. 
+    “Conventional” image analysis methods were never intended to replace radiologists but rather to serve as a second opinion.
+
+image_registration:
+  enable: true
+  image: "/assets/images/what_we_do/image_registration.gif"
+  title: "Image Registration"
+  description_1: |
+    We develop algorithms that are commonly used to solve medical image registration problems: the process of aligning two or more images. 
+    The goal of an image registration method is to find the optimal transformation that best aligns the structures of interest in the input images.
+  description_2: |
+    Image registration is a crucial step for image analysis in which valuable information is conveyed in more than one 
+    image; i.e., images acquired at different times, from distinct viewpoints or by different sensors can be complementary. 
+    Therefore,  accurate integration (or fusion) of  the useful information from two or more images is very important.
+---
+
+<div class="wrapper overflow-top">
+  <div class="container inner">
+    {% if page.video_area.enable %}
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-center">
+        {% assign id = page.video_area.vimeo_video_id %}
+        <div
+          class="player"
+          data-plyr-provider="vimeo"
+          data-plyr-embed-id="{{id}}"
+        ></div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% endif %}
+
+    <!-- 3D Reconstructions -->
+    {% if page._3d_reconstructions.enable %}
+    <div class="space160"></div>
+    <div class="row align-items-center">
+      {% if page._3d_reconstructions.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page._3d_reconstructions.image}}"
+            alt="{{page._3d_reconstructions.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page._3d_reconstructions.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page._3d_reconstructions.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page._3d_reconstructions.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- geometric_analysis -->
+    {% if page.geometric_analysis.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.geometric_analysis.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.geometric_analysis.image}}"
+            alt="{{page.geometric_analysis.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.geometric_analysis.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.geometric_analysis.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.geometric_analysis.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- image_analysis -->
+    {% if page.image_analysis.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.image_analysis.image}}"
+            alt="{{page.image_analysis.title}}"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.image_analysis.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.image_analysis.description_1}}</p>
+        <p style="text-align: justify">{{page.image_analysis.description_2}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+
+    <!-- image_registration -->
+    {% if page.image_registration.enable %}
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      {% if page.image_registration.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.image_registration.image}}"
+            alt="{{page.image_registration.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.image_registration.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.image_registration.description_1}}
+        </p>
+        <p style="text-align: justify">
+          {{page.image_registration.description_2}}
+        </p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endif %}
+  </div>
+</div>

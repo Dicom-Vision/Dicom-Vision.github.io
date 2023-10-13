@@ -1,0 +1,656 @@
+---
+layout: default
+title: D/Vision Lab
+custom_css: cobalt
+custom_font: font4
+
+our_story:
+  enable: true
+  # image: "/assets/images/logo_squared.png"
+  title: "The Data Visualization Company"
+  text: "We are a technology start-up specialized in data visualization that
+  operates in the scientific, medical, engineering and services domains. 
+  Our main products are software applications for the exploration and visual analysis of data through real-time and immersive interactions,
+  advanced visualization technologies and artificial intelligence to enable fast, intuitive and deep understanding of the business processes."
+
+medical_imaging_visualization:
+  enable: true
+  image: "/assets/images/home/mpr-fast.gif"
+  title: "Medical Imaging Visualization"
+  text: "We develop dedicated software applications for many clinical problems: surgical planning, diagnosis support systems and custom user experience for the medical sector.</br>
+  We create cloud-based, mobile and desktop solutions for 2D and 3D visualizations and for the annotations of DICOM images."
+  btn_text: "Discover More" 
+  btn_url: "/services/medical_imaging_visualization.html"
+
+medical_imaging_analysis:
+  enable: true
+  image: "/assets/images/home/image_analysis.gif"
+  title: "Medical Imaging Analysis"
+  text: "We create algorithms for the analysis of DICOM images: co-registration of images, segmentation of anatomical structures and identification
+  of lesions with artificial intelligence, 3D reconstructions, geometric and morphological analyzes and reformatting of DICOM images starting from curvilinear paths."
+  btn_text: "Discover More" 
+  btn_url: "/services/medical_imaging_analysis.html" 
+
+rendering_3d:
+  enable: true
+  image: "/assets/images/home/rendering.gif"
+  title: "3D Visualizations"
+  text: "We provide a series of technologies to build a 3D solution designed on the customer's needs, starting from the cloud infrastructure up to
+  data visualization, we design the application together with the customer. </br>
+  In particular, we create applications for 3D data visualization, 3D synthetic data and 3D models, 3D configurators for websites and interactive 3D scenarios."
+  btn_text: "Discover More" 
+  btn_url: "/services/3d_visualization.html" 
+
+data_analytics:
+  enable: true
+  image: "/assets/images/home/dashboard.gif"
+  title: "Data Analytics"
+  text: "We develop cloud applications for data collection, real-time monitoring, control and reporting of data in different application scenarios: IoT devices,
+  geo-localized data with interactive maps, cameras, smart-factories, etc."
+  btn_text: "Discover More" 
+  btn_url: "/services/data_analytics.html"
+
+augmented_reality:
+  enable: true
+  image: "/assets/images/home/ar.gif"
+  title: "Augmented Reality"
+  text: "We develop mobile solutions with augmented reality which allows you to superimpose digital content and information on the physical world.
+  The camera reads the object in the frame, the system recognizes it and activates a new level of communication that overlaps and
+  integrate perfectly with reality, enhancing the amount of detail data in relation to that object."
+  btn_text: "Discover More" 
+  btn_url: "/services/augmented_reality.html"
+
+dicom_vision:
+  enable: true
+  image: "/assets/images/home/dicom_vision.png"
+  title: "DICOM Vision"
+  text: "Our medical technologies have been integrated into DICOM Vision. This product is a cloud-based AI-powered medical viewer for collaborative data visualization
+  and analysis for healthcare professionists."
+  btn_text: "Discover More" 
+  btn_url: "https://www.dicom.vision"
+
+---
+
+{% include header.html container_class="container" extra_class="absolute
+transparent inverse-text nav-uppercase" light_logo="true" %}
+<!-- Home video wrapper -->
+<div class="video-wrapper inverse-text" data-aos="fade">
+  <div class="video-wrapper-inner">
+    <video
+      preload="metadata"
+      poster="{{relative_url}}/assets/media/movie.webm"
+      muted
+      autoplay
+    >
+      <source
+        src="{{relative_url}}/assets/media/movie.webm"
+        type="video/mp4"
+      />
+    </video>
+  </div>
+  <!-- /.video-wrapper-inner -->
+</div>
+<!-- End Home video wrapper -->
+
+<!-- Chi siamo e cosa facciamo -->
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-7 mx-auto">
+        <h3 class="display-3 text-center">
+          Advanced Technologies for Data Visualization and Analysis
+        </h3>
+        <div class="space40"></div>
+      </div>
+    </div>
+    <!-- OUR STORY -->
+    <div class="row align-items-center">
+      <!--
+      {% if page.our_story.image %}
+      <div class="col-lg-6">
+        <figure>
+          <img src="{{page.our_story.image}}" alt="{{page.our_story.title}}" />
+        </figure>
+      </div>
+      {% endif %}
+      -->
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div class="col-lg-12 pl-60 pl-md-15">
+        <h3 class="display-3">{{page.our_story.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.our_story.text}}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <!-- MEDICAL IMAGING VISUALIZATION -->
+    <div class="row align-items-center">
+      {% if page.medical_imaging_visualization.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.medical_imaging_visualization.image}}"
+            alt="{{page.medical_imaging_visualization.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h3 class="display-3">{{page.medical_imaging_visualization.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.medical_imaging_visualization.text}}
+        </p>
+        {% if page.medical_imaging_visualization.btn_text %}
+        <div class="space10"></div>
+        <a href="{{page.medical_imaging_visualization.btn_url}}" class="btn"
+          >{{page.medical_imaging_visualization.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <!-- MEDICAL IMAGING ANALYSIS  -->
+    <div class="row align-items-center">
+      {% if page.medical_imaging_analysis.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <figure>
+          <img
+            src="{{page.medical_imaging_analysis.image}}"
+            alt="{{page.medical_imaging_analysis.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h3 class="display-3">{{page.medical_imaging_analysis.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">
+          {{page.medical_imaging_analysis.text}}
+        </p>
+        {% if page.medical_imaging_analysis.btn_text %}
+        <div class="space10"></div>
+        <a href="{{page.medical_imaging_analysis.btn_url}}" class="btn"
+          >{{page.medical_imaging_analysis.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <!-- RENDERING 3D -->
+    <div class="row align-items-center">
+      {% if page.rendering_3d.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="300">
+        <figure>
+          <img
+            src="{{page.rendering_3d.image}}"
+            alt="{{page.rendering_3d.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h3 class="display-3">{{page.rendering_3d.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.rendering_3d.text}}</p>
+        {% if page.rendering_3d.btn_text %}
+        <div class="space10"></div>
+        <a href="{{page.rendering_3d.btn_url}}" class="btn"
+          >{{page.rendering_3d.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <!-- INDUSTRIA 4.0 -->
+    <div class="row align-items-center">
+      {% if page.data_analytics.image %}
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.data_analytics.image}}"
+            alt="{{page.data_analytics.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pl-60 pl-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.data_analytics.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.data_analytics.text}}</p>
+        {% if page.data_analytics.btn_text %}
+        <div class="space10"></div>
+        <a href="{{page.data_analytics.btn_url}}" class="btn"
+          >{{page.data_analytics.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <!-- AUGMENTED REALITY -->
+    <div class="row align-items-center">
+      {% if page.augmented_reality.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.augmented_reality.image}}"
+            alt="{{page.augmented_reality.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.augmented_reality.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.augmented_reality.text}}</p>
+        {% if page.augmented_reality.btn_text %}
+        <div class="space10"></div>
+        <a href="{{page.augmented_reality.btn_url}}" class="btn"
+          >{{page.augmented_reality.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<!-- End chi siamo, mission e vision -->
+
+<!-- Le nostre Skills -->
+<div class="wrapper gray-wrapper">
+  <div class="container inner" data-aos="fade-up" data-aos-delay="200">
+    <h2 class="section-title mb-40 text-center">Our Skills</h2>
+    <div class="row gutter-50">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-rose color-rose mr-25">
+              <i class="icofont-dashboard-web"></i>
+            </div>
+          </div>
+          <div>
+            <h5>UI and Apps</h5>
+            <p>
+              Custom User Interfaces, web-based, desktop and mobile applications
+              for fancy data visualization experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-blue color-blue mr-25">
+              <i class="icofont-cloudapp"></i>
+            </div>
+          </div>
+          <div>
+            <h5>Cloud</h5>
+            <p>
+              Cloud Infrastructure, distributed data management and AI computing
+              services for advanced data analytics.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="space30 d-none d-md-block d-lg-none"></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-green color-green mr-25">
+              <i class="icofont-ui-play"></i>
+            </div>
+          </div>
+          <div>
+            <h5>Real-Time</h5>
+            <p>
+              Real-time data streaming, visualization and interaction for
+              analyzing data in motion and gain valuable insights.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="space30 d-none d-lg-block"></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-purple color-purple mr-25">
+              <i class="icofont-brain-alt"></i>
+            </div>
+          </div>
+          <div>
+            <h5>Artificial Intelligence</h5>
+            <p>
+              Machine learning and deep learning algorithms for decision-making
+              systems, problem solving and data analysis
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="space30 d-none d-md-block d-lg-none"></div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-orange color-orange mr-25">
+              <i class="icofont-heart-alt"></i>
+            </div>
+          </div>
+          <div>
+            <h5>Medical Data</h5>
+            <p>
+              Fully customized applications for medical data, from dicom
+              management to image analysis and visualizations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-violet color-violet mr-25">
+              <i class="icofont-ui-user"></i>
+            </div>
+          </div>
+          <div>
+            <h5>Immersive UX</h5>
+            <p>
+              3D and Augmented Reality applications for immersive and dedicated
+              user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- End i nostri settori wrapper -->
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <!-- DICOM VISION -->
+    <div class="row align-items-center">
+      {% if page.dicom_vision.image %}
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+        <figure>
+          <img
+            src="{{page.dicom_vision.image}}"
+            alt="{{page.dicom_vision.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/column -->
+      <div class="space40 d-lg-none"></div>
+      <div
+        class="col-lg-6 pr-60 pr-md-15"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h3 class="display-3">{{page.dicom_vision.title}}</h3>
+        <div class="space20"></div>
+        <p style="text-align: justify">{{page.dicom_vision.text}}</p>
+        {% if page.dicom_vision.btn_text %}
+        <div class="space10"></div>
+        <a href="{{page.dicom_vision.btn_url}}" target="_blank" class="btn"
+          >{{page.dicom_vision.btn_text}}</a
+        >
+        {% endif %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+</div>
+
+<!-- Clients and Partners -->
+<div class="wrapper white-wrapper">
+  <div class="container inner">
+    <h2 class="section-title mb-40 text-center">Our Clients and Partners</h2>
+    <div
+      class="carousel owl-carousel clients"
+      data-margin="30"
+      data-loop="true"
+      data-dots="false"
+      data-autoplay="true"
+      data-autoplay-timeout="1500"
+      data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1140":{"items": "6"}}'
+    >
+      <div class="item pl-15 pr-15">
+        <a href="http://www.gmmspa.com" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/gmm.png"
+            alt="GMM Group"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="http://www.imsgiotto.com" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/ims.png"
+            alt="IMS Giotto"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.esaote.com/healthcare-it/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/ebit.png"
+            alt="Ebit Esaote"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.camelotbio.com/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/camelot.png"
+            alt="Camelot Biomedical Systems"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.dicom.vision/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/dicomvision.png"
+            alt="Dicom Vision"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.aisent.io" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/aisent.png"
+            alt="AiSent"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.221e.com" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/221e.png"
+            alt="221e"
+          />
+        </a>
+      </div>
+      <!-- <div class="item pl-15 pr-15">
+        <a href="https://www.pradella.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/pradella.png"
+            alt="Pradella Sistemi"
+            height="100%"
+          />
+        </a>
+      </div> -->
+      <div class="item pl-15 pr-15">
+        <a href="https://www.rawbiomed.com" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/raw.jfif"
+            alt="Raw Biomed"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.aimsacademy.org/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/aims.jfif"
+            alt="Aims Academy"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.marionegri.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/mni.png"
+            alt="Mario Negri Institute"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.evarplanning.com" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/evar.jpg"
+            alt="Evar Planning"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.software-medico.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/arzamed.png"
+            alt="Arzamed"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.confindustriabergamo.it/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/confindustria.png"
+            alt="Confindustria BG"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.unibg.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/unibg.png"
+            alt="UniBG"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.unimi.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/unimi.png"
+            alt="UniMi"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://printmed-3d.com/en/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/printmed.svg"
+            alt="PrintMed3D"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.bergamosviluppo.it/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/bg_sviluppo.png"
+            alt="Bergamo Sviluppo"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.inventawide.com/en/" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/iw.jfif"
+            alt="Inventa Wide"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.aruba.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/aruba.png"
+            alt="Aruba"
+          />
+        </a>
+      </div>
+    </div>
+    <!-- /.owl-carousel -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- End Clients and Partners -->
+
+{% include footer.html %}
