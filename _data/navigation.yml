@@ -1,27 +1,10 @@
 main_menu:
-  - text: "What We Do"
-    menu_type: dropdown
-    submenu:
-      - text: MEDICAL IMAGING VISUALIZATION
-        url: /services/medical_imaging_visualization.html
-      - text: MEDICAL IMAGING ANALYSIS
-        url: /services/medical_imaging_analysis.html
-      - text: 3D VISUALIZATIONS
-        url: /services/3d_visualization.html
-      - text: DATA ANALYTICS
-        url: /services/data_analytics.html
-      - text: AUGMENTED REALITY
-        url: /services/augmented_reality.html
+  - text: "Home"
+    url: "/"
 
-  - text: "Dicom Vision"
-    url: "https://www.dicom.vision"
+  - text: "Demo"
+    url: "https://app.dicom.vision"
     external: true
-
-  - text: "Who We Are"
-    url: "/about/who_we_are"
-
-  - text: "Careers"
-    url: "/careers/careers"
 
   - text: "Contact Us"
     url: "/contact/contact"
