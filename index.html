@@ -16,7 +16,7 @@ general:
 
 zero_footprint:
   enable: true
-  image: "/assets/images/home/mpr-fast.gif"
+  image: "/assets/images/home/viewer_2d.gif"
   title: "Zero-Footprint Viewer"
   text: "This means that no additional software or plugins need 
   to be installed on the user's device. The viewer can be accessed 
@@ -35,7 +35,7 @@ dicom_storage:
  
 views:
   enable: true
-  image: "/assets/images/home/mpr-fast.gif"
+  image: "/assets/images/home/3d.png"
   title: "2D and 3D Views"
   text: "The viewer supports not only 2D image views but also advanced 
   3D views. This is particularly useful for creating three-dimensional 
@@ -44,7 +44,7 @@ views:
 
 remote_collaboration:
   enable: true
-  image: "/assets/images/home/mpr-fast.gif"
+  image: "/assets/images/home/collaborative.png"
   title: "Remote Collaboration"
   text: "One of the key features of DICOM Vision is its ability to support
   remote collaboration. Healthcare professionals can easily share images 
@@ -53,7 +53,7 @@ remote_collaboration:
 
 artificial_intelligence:
   enable: true
-  image: "/assets/images/home/mpr-fast.gif"
+  image: "/assets/images/home/ai.png"
   title: "Artificial Intelligence"
   text: "The viewer can integrate artificial intelligence (AI) features for 
   automatic image analysis. This may include anomaly detection, anatomical 
@@ -84,48 +84,102 @@ pacs:
 {% include header.html container_class="container" extra_class="absolute
 transparent inverse-text nav-uppercase" light_logo="true" %}
 
-<div class="wrapper dark-wrapper">
-  <div class="rev_slider_wrapper fullwidth-container">
-    <div id="slider10" class="rev_slider fullwidthbanner" data-version="5.4.7">
+<div class="wrapper bg-dark inverse-text">
+  <div class="rev_slider_wrapper fullwidth-container dark-spinner">
+    <div
+      id="slider6"
+      class="rev_slider fullwidthbanner light-gallery-wrapper"
+      data-version="5.4.7"
+    >
       <ul>
         <li data-transition="fade" data-thumb="">
           <img
-            src="/assets/images/art/bg5.jpg"
-            alt="DICOM Vision: The Smart Cloud Platform for Medical Imaging"
+            src="/assets/images/dummy.png"
+            style="background: transparent"
+            alt="hero"
           />
+
           <div
-            class="tp-caption font-weight-600 color-white text-center"
-            data-x="center"
+            class="tp-caption font-weight-600 inverse-text"
+            data-x="['left','left','center','center']"
             data-y="middle"
-            data-voffset="['-45','-45','-45','-45']"
-            data-fontsize="['50','50','40','36']"
-            data-lineheight="['65','65','55','51']"
-            data-width="['550','550','550','340']"
-            data-textAlign="['center','center','center','center']"
+            data-hoffset="['50','30','0','0']"
+            data-voffset="['-80','-80','-260','-190']"
+            data-fontsize="['40','40','34','32']"
+            data-lineheight="['50','50','44','42']"
+            data-width="['350','350','650','340']"
+            data-textAlign="['left','left','center','center']"
             data-whitespace="['normal','normal','normal','normal']"
-            data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+            data-frames='[{"delay":1500,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             data-responsive="on"
             data-responsive_offset="on"
             style="z-index: 9"
           >
-            DICOM Vision: The Smart Cloud Platform for Medical Imaging
+            DICOM Vision
           </div>
-          <a
-            class="tp-caption btn btn-l btn-white btn-strong-hover scroll"
-            data-x="center"
+          <!-- /.tp-caption -->
+
+          <div
+            class="tp-caption font-weight-400 inverse-text"
+            data-x="['left','left','center','center']"
             data-y="middle"
-            data-voffset="['85','85','85','85']"
-            data-width="['auto','auto','auto','auto']"
-            data-textAlign="['center','center','center','center']"
-            data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+            data-hoffset="['50','30','0','0']"
+            data-voffset="['30','30','-200','-90']"
+            data-fontsize="['26','26','22','20']"
+            data-lineheight="['36','36','32','30']"
+            data-width="['350','350','650','340']"
+            data-textAlign="['left','left','center','center']"
+            data-whitespace="['normal','normal','normal','normal']"
+            data-frames='[{"delay":2000,"speed":1200,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             data-responsive="on"
             data-responsive_offset="on"
             style="z-index: 9"
-            href="https://app.dicom.vision"
+          >
+            The Smart Cloud Platform for Medical Imaging
+          </div>
+          <!-- /.tp-caption -->
+
+          <a
+            class="tp-caption btn btn-l btn-leaf"
+            data-x="['left','left','center','center']"
+            data-y="middle"
+            data-hoffset="['50','30','0','0']"
+            data-voffset="['125','125','-130','0']"
+            data-width="['auto','auto','auto','auto']"
+            data-textAlign="['left','left','center','center']"
+            data-frames='[{"delay":2500,"speed":1200,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+            data-responsive="on"
+            data-responsive_offset="on"
+            style="z-index: 9"
+            href="https://app.dicom.vision/"
             target="_blank"
           >
-            Demo
+            <span class="btn-play btn-play-s"></span
+            ><span class="h6 pl-10 font-weight-600">See the demo</span>
           </a>
+          <!-- /.tp-caption -->
+
+          <div
+            class="tp-caption"
+            data-x="['right','right','center','center']"
+            data-y="middle"
+            data-hoffset="['60','30','0','0']"
+            data-voffset="['30','30','160','205']"
+            data-frames='[{"delay":500,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+            data-visibility="['on','on','on','on']"
+            data-width="none"
+            data-height="none"
+            data-type="image"
+            data-responsive_offset="on"
+            style="z-index: 5"
+          >
+            <img
+              data-lazyload=""
+              src="/assets/images/logo-dicom-black-trim.png"
+              alt=""
+            />
+          </div>
+          <!-- /.tp-caption -->
         </li>
       </ul>
       <div class="tp-bannertimer tp-bottom"></div>
@@ -137,7 +191,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
 <!-- /.wrapper -->
 
 <!-- Descrizione generale-->
-<div class="wrapper gray-wrapper">
+<div class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <div class="row">
       <div class="col-md-7 mx-auto">
@@ -159,7 +213,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper light-wrapper">
+<div class="wrapper bg-default inverse-text">
   <div class="container inner">
     <!-- ZERO FOOTPRINT -->
     <div class="row align-items-center">
@@ -190,7 +244,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper gray-wrapper">
+<div class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <!-- DICOM STORAGE -->
     <div class="row align-items-center">
@@ -221,7 +275,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper light-wrapper">
+<div class="wrapper bg-default inverse-text">
   <div class="container inner">
     <!-- 2D 3D VIEWS -->
     <div class="row align-items-center">
@@ -249,7 +303,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper gray-wrapper">
+<div class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <!-- REMOTE COLLABORATION -->
     <div class="row align-items-center">
@@ -280,7 +334,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper light-wrapper">
+<div class="wrapper bg-default inverse-text">
   <div class="container inner">
     <!-- ARTIFICIAL INTELLIGENCE -->
     <div class="row align-items-center">
@@ -311,7 +365,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper gray-wrapper">
+<div class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <!-- MEASUREMENT TOOLS -->
     <div class="row align-items-center">
@@ -342,7 +396,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
   </div>
 </div>
 
-<div class="wrapper light-wrapper">
+<div class="wrapper bg-default inverse-text">
   <div class="container inner">
     <!-- PACS INTEGRATION -->
     <div class="row align-items-center">
@@ -371,7 +425,7 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
 </div>
 
 <!-- Application Fields -->
-<div class="wrapper gray-wrapper">
+<div class="wrapper dark-wrapper inverse-text">
   <div class="container inner" data-aos="fade-up" data-aos-delay="200">
     <h2 class="section-title mb-40 text-center">Application Fields</h2>
     <p class="mb-60">
