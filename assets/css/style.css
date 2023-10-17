@@ -417,6 +417,7 @@ canvas {
 .divider svg {
   vertical-align: bottom;
 }
+
 .pointer-none {
   pointer-events: none;
 }
