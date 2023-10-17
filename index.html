@@ -17,7 +17,7 @@ general:
 zero_footprint:
   enable: true
   image: "/assets/images/home/viewer_2d.gif"
-  title: "Zero-Footprint Viewer"
+  title: "ZERO-FOOTPRINT VIEWER"
   text: "This means that no additional software or plugins need 
   to be installed on the user's device. The viewer can be accessed 
   through a web browser, making access to medical images extremely 
@@ -26,7 +26,7 @@ zero_footprint:
 dicom_storage:
   enable: true
   image: "/assets/images/home/mpr-fast.gif"
-  title: "DICOM Storage and Display"
+  title: "DICOM STORAGE AND DISPLAY"
   text: "DICOM Vision is designed to handle medical images 
   in the DICOM format, which is a widely used standard in the 
   field of medical imaging. It can store and display a wide range
@@ -36,7 +36,7 @@ dicom_storage:
 views:
   enable: true
   image: "/assets/images/home/3d.png"
-  title: "2D and 3D Views"
+  title: "2D AND 3D VIEWS"
   text: "The viewer supports not only 2D image views but also advanced 
   3D views. This is particularly useful for creating three-dimensional 
   models from imaging data, allowing for a better understanding of anatomical
@@ -45,7 +45,7 @@ views:
 remote_collaboration:
   enable: true
   image: "/assets/images/home/collaborative.png"
-  title: "Remote Collaboration"
+  title: "REMOTE COLLABORATION"
   text: "One of the key features of DICOM Vision is its ability to support
   remote collaboration. Healthcare professionals can easily share images 
   with colleagues or specialists around the world, enabling quicker and 
@@ -54,7 +54,7 @@ remote_collaboration:
 artificial_intelligence:
   enable: true
   image: "/assets/images/home/ai.png"
-  title: "Artificial Intelligence"
+  title: "ARTIFICIAL INTELLIGENCE"
   text: "The viewer can integrate artificial intelligence (AI) features for 
   automatic image analysis. This may include anomaly detection, anatomical 
   structure segmentation, and other advanced AI applications for image interpretation."
@@ -62,7 +62,7 @@ artificial_intelligence:
 measurement_tools:
   enable: true
   image: "/assets/images/home/measurements.png"
-  title: "Measurement Tools"
+  title: "MEASUREMENT TOOLS"
   text: "DICOM Vision offers a range of measurement tools that allow users to make 
   precise measurements directly on images. This is essential for diagnostic and 
   patient monitoring purposes."
@@ -70,7 +70,7 @@ measurement_tools:
 pacs:
   enable: true
   image: "/assets/images/home/pacs.gif"
-  title: "PACS Integration"
+  title: "PACS INTEGRATION"
   text: "DICOM Vision supports PACS storage and communication, making it a seamless 
   solution for healthcare facilities that rely on PACS systems to manage and distribute 
   medical images efficiently. This ensures easy integration with existing infrastructure 
@@ -190,239 +190,24 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
 </div>
 <!-- /.wrapper -->
 
-<!-- Descrizione generale-->
-<div class="wrapper dark-wrapper inverse-text">
+<!-- /.wrapper -->
+<div
+  class="wrapper image-wrapper bg-image inverse-text"
+  data-image-src="/assets/images/home/measurements.png"
+>
   <div class="container inner">
+    <h2 class="section-title mb-40 text-center">Revolutionizing Healtcare</h2>
     <div class="row">
-      <div class="col-md-7 mx-auto">
-        <h3 class="display-3 text-center">Revolutionizing Healtcare</h3>
-        <div class="space40"></div>
+      <div class="col-lg-8 offset-lg-2">
+        <p>{{page.general.text}}</p>
       </div>
+      <!-- /column -->
     </div>
-    <!-- GENERAL -->
-    <div class="row align-items-center">
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div class="col-lg-12 pl-60 pl-md-15">
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.general.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
+    <!-- /.row -->
   </div>
+  <!-- /.container -->
 </div>
-
-<div class="wrapper bg-default inverse-text">
-  <div class="container inner">
-    <!-- ZERO FOOTPRINT -->
-    <div class="row align-items-center">
-      {% if page.zero_footprint.image %}
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-        <figure>
-          <img
-            src="{{page.zero_footprint.image}}"
-            alt="{{page.zero_footprint.title}}"
-          />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pr-60 pr-md-15"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        <h3 class="display-3">{{page.zero_footprint.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.zero_footprint.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
-
-<div class="wrapper dark-wrapper inverse-text">
-  <div class="container inner">
-    <!-- DICOM STORAGE -->
-    <div class="row align-items-center">
-      {% if page.dicom_storage.image %}
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <figure>
-          <img
-            src="{{page.dicom_storage.image}}"
-            alt="{{page.dicom_storage.title}}"
-          />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pl-60 pl-md-15"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        <h3 class="display-3">{{page.dicom_storage.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.dicom_storage.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
-
-<div class="wrapper bg-default inverse-text">
-  <div class="container inner">
-    <!-- 2D 3D VIEWS -->
-    <div class="row align-items-center">
-      {% if page.views.image %}
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="300">
-        <figure>
-          <img src="{{page.views.image}}" alt="{{page.views.title}}" />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pr-60 pr-md-15"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        <h3 class="display-3">{{page.views.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.views.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
-
-<div class="wrapper dark-wrapper inverse-text">
-  <div class="container inner">
-    <!-- REMOTE COLLABORATION -->
-    <div class="row align-items-center">
-      {% if page.remote_collaboration.image %}
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <figure>
-          <img
-            src="{{page.remote_collaboration.image}}"
-            alt="{{page.remote_collaboration.title}}"
-          />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pl-60 pl-md-15"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <h3 class="display-3">{{page.remote_collaboration.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.remote_collaboration.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
-
-<div class="wrapper bg-default inverse-text">
-  <div class="container inner">
-    <!-- ARTIFICIAL INTELLIGENCE -->
-    <div class="row align-items-center">
-      {% if page.artificial_intelligence.image %}
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-        <figure>
-          <img
-            src="{{page.artificial_intelligence.image}}"
-            alt="{{page.artificial_intelligence.title}}"
-          />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pr-60 pr-md-15"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <h3 class="display-3">{{page.artificial_intelligence.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.artificial_intelligence.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
-
-<div class="wrapper dark-wrapper inverse-text">
-  <div class="container inner">
-    <!-- MEASUREMENT TOOLS -->
-    <div class="row align-items-center">
-      {% if page.measurement_tools.image %}
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <figure>
-          <img
-            src="{{page.measurement_tools.image}}"
-            alt="{{page.measurement_tools.title}}"
-          />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pl-60 pl-md-15"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <h3 class="display-3">{{page.measurement_tools.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.measurement_tools.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
-
-<div class="wrapper bg-default inverse-text">
-  <div class="container inner">
-    <!-- PACS INTEGRATION -->
-    <div class="row align-items-center">
-      {% if page.pacs.image %}
-      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-        <figure>
-          <img src="{{page.pacs.image}}" alt="{{page.pacs.title}}" />
-        </figure>
-      </div>
-      {% endif %}
-      <!--/column -->
-      <div class="space40 d-lg-none"></div>
-      <div
-        class="col-lg-6 pr-60 pr-md-15"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <h3 class="display-3">{{page.pacs.title}}</h3>
-        <div class="space20"></div>
-        <p style="text-align: justify">{{page.pacs.text}}</p>
-      </div>
-      <!--/column -->
-    </div>
-    <!--/.row -->
-  </div>
-</div>
+<!-- /.wrapper -->
 
 <!-- Application Fields -->
 <div class="wrapper dark-wrapper inverse-text">
@@ -555,6 +340,99 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
       <!--/column -->
     </div>
     <!--/.row -->
+
+    <div class="two-column-one">
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+          <div class="space180"></div>
+          <h2 class="title-color color-white text-center">
+            {{page.general.title}}
+          </h2>
+          <div class="space50"></div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <figure>
+            <img src="/assets/images/home/mpr-fast.gif" alt="MPR" />
+          </figure>
+        </div>
+
+        <div class="space40 d-lg-none"></div>
+        <div class="col-lg-6 pl-60 pl-md-15">
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.zero_footprint.title}}</h4>
+            <p>{{page.zero_footprint.text}}</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.dicom_storage.title}}</h4>
+            <p>{{page.dicom_storage.text}}</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.pacs.title}}</h4>
+            <p>{{page.pacs.text}}</p>
+          </div>
+        </div>
+      </div>
+      <!--/.row -->
+    </div>
+
+    <div class="two-column-two">
+      <div class="space150"></div>
+      <div class="row align-items-center">
+        <div
+          class="col-lg-6 order-lg-2"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <figure><img src="/assets/images/home/3d.png" alt="" /></figure>
+        </div>
+
+        <div class="space40 d-lg-none"></div>
+        <div class="col-lg-6 pr-60 pr-md-15">
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.views.title}}</h4>
+            <p>{{page.views.text}}</p>
+          </div>
+          <div class="space30"></div>
+
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.measurement_tools.title}}</h4>
+            <p>{{page.measurement_tools.text}}</p>
+          </div>
+          <div class="space30"></div>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+
+    <div class="two-column-three">
+      <div class="space150"></div>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <figure>
+            <img src="/assets/images/home/collaborative.png" alt="MPR" />
+          </figure>
+        </div>
+
+        <div class="space40 d-lg-none"></div>
+        <div class="col-lg-6 pl-60 pl-md-15">
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.remote_collaboration.title}}</h4>
+            <p>{{page.remote_collaboration.text}}</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="800">
+            <h4>{{page.artificial_intelligence.title}}</h4>
+            <p>{{page.artificial_intelligence.text}}</p>
+          </div>
+        </div>
+      </div>
+      <!--/.row -->
+    </div>
   </div>
   <!-- /.container -->
 </div>
@@ -610,6 +488,14 @@ transparent inverse-text nav-uppercase" light_logo="true" %}
           <img
             src="{{relative_url}}/assets/images/clients/arzamed.png"
             alt="Arzamed"
+          />
+        </a>
+      </div>
+      <div class="item pl-15 pr-15">
+        <a href="https://www.polimi.it" target="_blank">
+          <img
+            src="{{relative_url}}/assets/images/clients/polimi.png"
+            alt="PoliMI"
           />
         </a>
       </div>
