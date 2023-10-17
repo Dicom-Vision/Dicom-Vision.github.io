@@ -1,5 +1,5 @@
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.dvisionlab.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.dicom.vision" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: "/:title"
 
 # Build settings
