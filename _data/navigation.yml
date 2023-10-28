@@ -7,4 +7,4 @@ main_menu:
     external: true
 
   - text: "Contact Us"
-    url: "/contact/contact"
+    url: "/contact"
