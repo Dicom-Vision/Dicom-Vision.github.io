@@ -9,5 +9,5 @@ main_menu:
   - text: "Contact Us"
     url: "/contact"
 
-  - text: "Web Privacy Policy & Cookies"
-    url: "/web-privacy-policy-cookie"
+  #- text: "Web Privacy Policy & Cookies"
+  #  url: "/web-privacy-policy-cookie"
