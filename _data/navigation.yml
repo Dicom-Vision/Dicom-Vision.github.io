@@ -1,13 +1,13 @@
 main_menu:
-  - text: "Home"
+  - text: "HOME"
     url: "/"
 
-  - text: "Demo"
+  - text: "DEMO"
     url: "https://app.dicom.vision"
     external: true
 
-  - text: "Contact Us"
+  - text: "CONTACT US"
     url: "/contact"
 
-  #- text: "Web Privacy Policy & Cookies"
-  #  url: "/web-privacy-policy-cookie"
+  - text: "WEB PRIVACY POLICY & COOKIES"
+    url: "/web-privacy-policy-cookie"

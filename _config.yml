@@ -20,7 +20,9 @@ collections:
 # Site configuration for the Jekyll 3 Pagination Gem
 # The values here represent the defaults if nothing is set
 # Produces a cleaner folder structure when using categories
+
 pagination:
+
   # Site-wide kill switch, disabled here it doesn't run at all
   enabled: true
 
@@ -84,6 +86,7 @@ pagination:
 tag_page_layout: tag_page
 tag_page_dir: tag
 tag_permalink_style: pretty
+markdown: kramdown
 
 jekyll-archives:
   enabled: all
