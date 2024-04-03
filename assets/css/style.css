@@ -7229,3 +7229,16 @@ footer.inverse-text address {
 .overflow-hidden {
   overflow: hidden;
 }
+
+.logo {
+  max-width: 100%; 
+  height: auto; 
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
