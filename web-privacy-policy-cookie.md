@@ -3,7 +3,7 @@ layout: page
 custom_css: meander
 custom_font: font4
 ---
-##### **INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI PER IL SITO WEB “[www.dicom.vsion](http://www.dicom.vision)“**
+##### **INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI PER IL SITO WEB “[www.dicom.vision](http://www.dicom.vision)“**
 
 La presente Informativa (di seguito, “Informativa”) ha lo scopo di descrivere le modalità di trattamento dei dati personali di coloro che consultano il sito di DICOM Vision S.r.l. (di seguito “DICOM Vision” o “Società”) ed è resa ai sensi del Regolamento 2016/679/UE (Regolamento generale sulla protezione dei dati, di seguito “GDPR”) e in linea con quanto previsto dal Modello Organizzativo Data Protection adottato dalla Società.
 L’Informativa è resa per il solo sito sopra menzionato e relativi possibili sottodomini, e non per altri siti web eventualmente consultati dall’utente tramite appositi link ipertestuali eventualmente pubblicati nel Sito ma riferiti a domini web esterni.
