@@ -25,9 +25,9 @@
   --roll-ms: 650ms;
   --roll-item: 1em;
   --roll-gap: 0;
-  --roll-shift: 20px;
+  --roll-shift: 0px;
   font-size: clamp(1.65rem, 4.2vw, 2.5rem);
-  line-height: 4rem;
+  line-height: 1.1;
   margin-left: auto;
   margin-right: auto;
   max-width: 90vw;
@@ -43,6 +43,7 @@
   vertical-align: baseline;
   transform: translateY(var(--roll-shift, 0px));
   box-sizing: content-box;
+  white-space: nowrap;
 }
 
 .hero-tagline .tag-rot__items {
@@ -59,4 +60,45 @@
   height: var(--roll-item);
   line-height: var(--roll-item);
   white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+  .hero-tagline {
+    white-space: nowrap;
+  }
+}
+
+.hero-pen-block {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.hero-pen-block .hero-pen-heading {
+  font-size: clamp(0.9rem, 4.5vw, 1.9rem);
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+
+.hero-pen-block .pen-line {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.hero-pen-block .pen-change {
+  position: relative;
+  white-space: nowrap;
+}
+
+.hero-pen-block .pen-change .new {
+  position: absolute;
+  user-select: none;
+  left: 0px;
+  bottom: 0.9em;
+  opacity: 0;
+}
+
+.hero-pen-block .pen-change .old {
+  display: inline-block;
+  position: relative;
+  top: 0px;
 }

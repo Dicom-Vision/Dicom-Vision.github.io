@@ -130,13 +130,23 @@ pacs:
           </div>
 
             {% if page.hero_tagline.enabled %}
-            <h1 class="display-1 hero-tagline" data-ignore-reduced-motion="{{ page.hero_tagline.ignore_reduced_motion | default: false }}" aria-label="{{ page.hero_tagline.static_prefix }} {{ page.hero_tagline.rotate_a[0] }} {{ page.hero_tagline.rotate_b[0] }} {{ page.hero_tagline.static_infix }} {{ page.hero_tagline.rotate_c[0] }}">
-              {{ page.hero_tagline.static_prefix }}
-              <span class="tag-rot tag-a" data-words='{{ page.hero_tagline.rotate_a | jsonify }}'>{{ page.hero_tagline.rotate_a[0] }}</span>
-              <span class="tag-rot tag-b" data-words='{{ page.hero_tagline.rotate_b | jsonify }}'>{{ page.hero_tagline.rotate_b[0] }}</span>
-              {{ page.hero_tagline.static_infix }}
-              <span class="tag-rot tag-c" data-words='{{ page.hero_tagline.rotate_c | jsonify }}'>{{ page.hero_tagline.rotate_c[0] }}</span>
-            </h1>
+            <div class="hero-pen-block" data-ignore-reduced-motion="{{ page.hero_tagline.ignore_reduced_motion | default: false }}">
+              <h2 class="hero-pen-heading">
+                The
+                <span class="pen-change" data-words='{{ page.hero_tagline.rotate_a | jsonify }}'>
+                  <span class="old">{{ page.hero_tagline.rotate_a[0] }}</span>
+                </span>
+                <span class="pen-change" data-words='{{ page.hero_tagline.rotate_b | jsonify }}'>
+                  <span class="old">{{ page.hero_tagline.rotate_b[0] }}</span>
+                </span>
+                <span class="pen-line">
+                  for
+                  <span class="pen-change" data-words='{{ page.hero_tagline.rotate_c | jsonify }}'>
+                    <span class="old">{{ page.hero_tagline.rotate_c[0] }}</span>
+                  </span>
+                </span>
+              </h2>
+            </div>
             {% else %}
             <h1 class="display-1">The Smart Cloud Platform for Medical Imaging</h1>
             {% endif %}
