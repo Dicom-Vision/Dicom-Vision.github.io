@@ -14,67 +14,99 @@ general:
   tool for healthcare professionals who rely on diagnostic images to 
   provide high-quality patient care."
 
+hero_tagline:
+  enabled: true
+  ignore_reduced_motion: true
+  static_prefix: "The"
+  static_infix: "for"
+  rotate_a:
+    - "Secure"
+    - "Compliant"
+    - "Collaborative"
+    - "Enterprise"
+    - "Scalable"
+  rotate_b:
+    - "AI Platform"
+    - "Cloud Backbone"
+    - "Workflow Engine"
+    - "Enterprise Platform"
+    - "Data Fabric"
+  rotate_c:
+    - "Clinical Imaging"
+    - "Medical Imaging"
+    - "Diagnostic Imaging"
+    - "DICOM Workflows"
+    - "Radiology Operations"
+  timing:
+    hold_ms: 4200
+    fade_ms: 280
+  behavior:
+    mode: "paired"
+
 zero_footprint:
   enable: true
   image: "/assets/images/home/viewer_2d.gif"
   title: "ZERO-FOOTPRINT VIEWER"
-  text: "This means that no additional software or plugins need 
+  text: "This means that <strong>no additional software or plugins</strong> need 
   to be installed on the user's device. The viewer can be accessed 
-  through a web browser, making access to medical images extremely 
-  convenient and flexible."
+  through a <strong>web browser</strong>, making access to medical images 
+  extremely convenient and flexible."
 
 dicom_storage:
   enable: true
   image: "/assets/images/home/mpr-fast.gif"
   title: "DICOM STORAGE AND DISPLAY"
   text: "DICOM Vision is designed to handle medical images 
-  in the DICOM format, which is a widely used standard in the 
+  in the <strong>DICOM format</strong>, which is a widely used standard in the 
   field of medical imaging. It can store and display a wide range
-  of diagnostic images, including X-rays, CT scans, MRIs, ultrasounds, 
+  of <strong>diagnostic images</strong>, including <strong>X-rays</strong>, 
+  <strong>CT scans</strong>, <strong>MRIs</strong>, <strong>ultrasounds</strong>, 
   and more."
  
 views:
   enable: true
   image: "/assets/images/home/3d.png"
   title: "2D AND 3D VIEWS"
-  text: "The viewer supports not only 2D image views but also advanced 
-  3D views. This is particularly useful for creating three-dimensional 
-  models from imaging data, allowing for a better understanding of anatomical
-  structures."
+  text: "The viewer supports not only <strong>2D image views</strong> but also 
+  <strong>advanced 3D views</strong>. This is particularly useful for creating 
+  <strong>three-dimensional models</strong> from imaging data, allowing for a 
+  better understanding of anatomical structures."
 
 remote_collaboration:
   enable: true
   image: "/assets/images/home/collaborative.png"
   title: "REMOTE COLLABORATION"
   text: "One of the key features of DICOM Vision is its ability to support
-  remote collaboration. Healthcare professionals can easily share images 
-  with colleagues or specialists around the world, enabling quicker and 
-  more convenient consultation and second opinions."
+  <strong>remote collaboration</strong>. Healthcare professionals can easily 
+  <strong>share images</strong> with colleagues or specialists around the world, 
+  enabling quicker and more convenient consultation and <strong>second opinions</strong>."
 
 artificial_intelligence:
   enable: true
   image: "/assets/images/home/ai.png"
   title: "ARTIFICIAL INTELLIGENCE"
-  text: "The viewer can integrate artificial intelligence (AI) features for 
-  automatic image analysis. This may include anomaly detection, anatomical 
-  structure segmentation, and other advanced AI applications for image interpretation."
+  text: "The viewer can integrate <strong>artificial intelligence (AI)</strong> 
+  features for <strong>automatic image analysis</strong>. This may include 
+  <strong>anomaly detection</strong>, <strong>anatomical structure segmentation</strong>, 
+  and other advanced AI applications for image interpretation."
  
 measurement_tools:
   enable: true
   image: "/assets/images/home/measurements.png"
   title: "MEASUREMENT TOOLS"
-  text: "DICOM Vision offers a range of measurement tools that allow users to make 
-  precise measurements directly on images. This is essential for diagnostic and 
-  patient monitoring purposes."
+  text: "DICOM Vision offers a range of <strong>measurement tools</strong> that 
+  allow users to make <strong>precise measurements</strong> directly on images. 
+  This is essential for <strong>diagnostic</strong> and <strong>patient monitoring</strong> purposes."
 
 pacs:
   enable: true
   image: "/assets/images/home/pacs.gif"
   title: "PACS INTEGRATION"
-  text: "DICOM Vision supports PACS storage and communication, making it a seamless 
-  solution for healthcare facilities that rely on PACS systems to manage and distribute 
-  medical images efficiently. This ensures easy integration with existing infrastructure 
-  and simplifies the sharing and retrieval of patient data within healthcare networks."
+  text: "DICOM Vision supports <strong>PACS storage and communication</strong>, 
+  making it a seamless solution for healthcare facilities that rely on PACS systems 
+  to manage and distribute medical images efficiently. This ensures easy 
+  <strong>integration</strong> with existing infrastructure and simplifies the 
+  <strong>sharing and retrieval</strong> of patient data within healthcare networks."
 
 
   
@@ -97,16 +129,30 @@ pacs:
             <img src="/assets/images/logo-dicom-black-trim-text.png" alt="dicom vision logo" class="logo">
           </div>
 
-          <h1 class="display-1">
-            The Smart Cloud Platform for Medical Imaging
-          </h1>
+            {% if page.hero_tagline.enabled %}
+            <h1 class="display-1 hero-tagline" data-ignore-reduced-motion="{{ page.hero_tagline.ignore_reduced_motion | default: false }}" aria-label="{{ page.hero_tagline.static_prefix }} {{ page.hero_tagline.rotate_a[0] }} {{ page.hero_tagline.rotate_b[0] }} {{ page.hero_tagline.static_infix }} {{ page.hero_tagline.rotate_c[0] }}">
+              {{ page.hero_tagline.static_prefix }}
+              <span class="tag-rot tag-a" data-words='{{ page.hero_tagline.rotate_a | jsonify }}'>{{ page.hero_tagline.rotate_a[0] }}</span>
+              <span class="tag-rot tag-b" data-words='{{ page.hero_tagline.rotate_b | jsonify }}'>{{ page.hero_tagline.rotate_b[0] }}</span>
+              {{ page.hero_tagline.static_infix }}
+              <span class="tag-rot tag-c" data-words='{{ page.hero_tagline.rotate_c | jsonify }}'>{{ page.hero_tagline.rotate_c[0] }}</span>
+            </h1>
+            {% else %}
+            <h1 class="display-1">The Smart Cloud Platform for Medical Imaging</h1>
+            {% endif %}
 
           <div class="space20"></div>
           <a
             href="https://app.dicom.vision"
             target="_blank"
-            class="btn btn-l btn-meander scroll"
+            class="btn btn-l btn-green scroll"
             >Launch App</a
+          >
+          <a
+            href="https://rapid-credit-55b6.daniele-ciriello.workers.dev"
+            target="_blank"
+            class="btn btn-l btn-white btn-demo-outline"
+            >View Live Demo</a
           >
         </div>
       </div>
@@ -126,12 +172,24 @@ pacs:
 </div>
 
 <!-- /.wrapper -->
-<div class="wrapper gray-wrapper">
+<div class="wrapper gray-wrapper" id="about">
   <div class="container pt-40 pb-40">
-    <h2 class="section-title mb-40 text-center">Revolutionizing Healthcare</h2>
+    <h2 class="section-title mb-40 text-center">
+      Transforming Clinical Imaging Workflows
+    </h2>
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
-        <p>{{page.general.text}}</p>
+        <p>
+          From <strong>zero-footprint viewing</strong> to
+          <strong>AI-driven analysis</strong> and
+          <strong>advanced 3D visualization</strong>, DICOM Vision streamlines
+          <strong>diagnostic workflows</strong> across radiology and clinical
+          departments. Built for <strong>scalability</strong> and
+          <strong>secure integration</strong> within hospital infrastructures,
+          it enables <strong>faster clinical decisions</strong>,
+          <strong>improved collaboration</strong>, and
+          <strong>efficient management</strong> of medical imaging data.
+        </p>
       </div>
       <!-- /column -->
     </div>
@@ -145,11 +203,13 @@ pacs:
   <div class="container pt-40 pb-40" data-aos="fade-up" data-aos-delay="200">
     <h2 class="section-title mb-40 text-center">Application Fields</h2>
     <p class="mb-60">
-      DICOM Vision's zero-footprint viewer, AI capabilities, 3D visualization,
-      and secure access to medical images enhance the quality of patient care,
-      research, teaching, and diagnostic accuracy. Its flexibility and
-      adaptability make it a valuable asset for professionals in various
-      healthcare-related fields.
+      DICOM Vision's <strong>zero-footprint viewer</strong>,
+      <strong>AI capabilities</strong>, <strong>3D visualization</strong>, and
+      <strong>secure access</strong> to medical images enhance the quality of
+      <strong>patient care</strong>, research, teaching, and
+      <strong>diagnostic accuracy</strong>. Its flexibility and adaptability
+      make it a valuable asset for professionals in various healthcare-related
+      fields.
     </p>
     <div class="row gutter-50">
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -162,10 +222,11 @@ pacs:
           <div>
             <h5>Radiology</h5>
             <p>
-              DICOM Vision is well-suited for radiology practices, allowing
-              radiologists to view and analyze medical images such as X-rays, CT
-              scans, and MRIs with ease. Its advanced features, like 3D
-              visualization and AI integration, enhance diagnostic capabilities.
+              DICOM Vision is well-suited for <strong>radiology practices</strong>,
+              allowing radiologists to view and analyze medical images such as
+              <strong>X-rays, CT scans, and MRIs</strong> with ease. Its advanced
+              features, like <strong>3D visualization</strong> and
+              <strong>AI integration</strong>, enhance diagnostic capabilities.
             </p>
           </div>
         </div>
@@ -181,10 +242,11 @@ pacs:
           <div>
             <h5>Surgical Planning</h5>
             <p>
-              Surgeons can use DICOM Vision to plan surgeries more effectively
-              by visualizing patient-specific anatomical structures and
-              pathology in 2D and 3D. This aids in preoperative assessment and
-              strategizing.
+              Surgeons can use DICOM Vision to <strong>plan surgeries</strong>
+              more effectively by visualizing
+              <strong>patient-specific anatomical structures</strong> and
+              pathology in <strong>2D and 3D</strong>. This aids in
+              <strong>preoperative assessment</strong> and strategizing.
             </p>
           </div>
         </div>
@@ -202,8 +264,9 @@ pacs:
             <h5>Research</h5>
             <p>
               Medical researchers can utilize DICOM Vision to access and analyze
-              large sets of medical imaging data. The AI capabilities assist in
-              automating certain tasks, while 3D visualization can help in
+              large sets of <strong>medical imaging data</strong>. The
+              <strong>AI capabilities</strong> assist in automating certain
+              tasks, while <strong>3D visualization</strong> can help in
               understanding complex anatomical relationships.
             </p>
           </div>
@@ -221,10 +284,30 @@ pacs:
           <div>
             <h5>Education</h5>
             <p>
-              In medical education, DICOM Vision is a valuable tool for teaching
-              anatomy and diagnostic skills. It allows educators to demonstrate
-              real clinical cases to students, fostering a better understanding
-              of medical imaging.
+              In <strong>medical education</strong>, DICOM Vision is a valuable
+              tool for teaching anatomy and <strong>diagnostic skills</strong>.
+              It allows educators to demonstrate <strong>real clinical cases</strong>
+              to students, fostering a better understanding of medical imaging.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex flex-row justify-content-center">
+          <div>
+            <div class="icon icon-blob icon-blob-violet color-violet mr-25">
+              <i class="icofont-cloudapp"></i>
+            </div>
+          </div>
+          <div>
+            <h5>Telemedicine</h5>
+            <p>
+              DICOM Vision's <strong>remote collaboration</strong> features are
+              particularly beneficial in telemedicine. Healthcare providers can
+              <strong>share and discuss medical images</strong> with colleagues
+              and specialists across distances, making
+              <strong>telemedicine consultations</strong> more effective.
             </p>
           </div>
         </div>
@@ -241,29 +324,12 @@ pacs:
           <div>
             <h5>Veterinary</h5>
             <p>
-              The application of DICOM Vision extends to veterinary medicine.
-              Veterinarians can use the viewer for diagnosing and planning
-              treatment for animals, particularly for conditions that require
-              imaging, like fractures and internal diseases.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--/column -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="d-flex flex-row justify-content-center">
-          <div>
-            <div class="icon icon-blob icon-blob-violet color-violet mr-25">
-              <i class="icofont-cloudapp"></i>
-            </div>
-          </div>
-          <div>
-            <h5>Telemedicine</h5>
-            <p>
-              DICOM Vision's remote collaboration features are particularly
-              beneficial in telemedicine. Healthcare providers can share and
-              discuss medical images with colleagues and specialists across
-              distances, making telemedicine consultations more effective.
+              The application of DICOM Vision extends to
+              <strong>veterinary medicine</strong>. Veterinarians can use the
+              viewer for <strong>diagnosing and planning treatment</strong> for
+              animals, particularly for conditions that require
+              <strong>imaging</strong>, like
+              <strong>fractures and internal diseases</strong>.
             </p>
           </div>
         </div>
@@ -274,7 +340,7 @@ pacs:
   </div>
 </div>
 
-<div class="wrapper bg-default">
+<div class="wrapper bg-default" id="technology">
   <div class="container pt-40 pb-40" data-aos="fade-up" data-aos-delay="200">
     <div class="two-column-one">
       <div class="row align-items-center">
@@ -371,10 +437,73 @@ pacs:
 </div>
 <!-- End i nostri settori wrapper -->
 
-<!-- Clients and Partners -->
+<!-- Clinical Partners -->
+<div class="wrapper light-wrapper" id="clinical-partners">
+  <div class="container inner inner-tight-bottom inner-no-bottom">
+    <h2 class="section-title larger mb-40 text-center">Clinical Partners</h2>
+    <div
+      class="carousel owl-carousel clients"
+      data-margin="30"
+      data-loop="true"
+      data-dots="false"
+      data-autoplay="true"
+      data-autoplay-timeout="1500"
+      data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1140":{"items": "6"}}'
+    >
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/gaslini.jpg"
+          alt="Ospedale Gaslini"
+        />
+      </div>
+
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/mni.png"
+          alt="Mario Negri Institute"
+        />
+      </div>
+
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/arzamed.png"
+          alt="Arzamed"
+        />
+      </div>
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/76-fondazione.jpg"
+          alt="Fondazione IRCCS Istituto Nazionale dei Tumori."
+        />
+      </div>
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/ismett_logo_svg_20231102.svg"
+          alt="ISMETT (Istituto Mediterraneo per i Trapianti e Terapie ad Alta Specializzazione, Palermo)"
+        />
+      </div>
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/OVUlogo.jpg"
+          alt="Ospedale Veterinario Universitario di Lodi"
+        />
+      </div>
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/sandonato.jpg"
+          alt="Gruppo Ospedaliero San Donato"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Clinical Partners -->
+ <!-- Strategic & Institutional Partners -->
 <div class="wrapper light-wrapper">
-  <div class="container inner">
-    <h2 class="section-title mb-40 text-center">Our Clients and Partners</h2>
+  <div class="container inner inner-no-top">
+    <h2 class="section-title larger mb-40 text-center">
+      Strategic & Institutional Partners
+    </h2>
     <div
       class="carousel owl-carousel clients"
       data-margin="30"
@@ -392,67 +521,67 @@ pacs:
           />
         </a>
       </div>
+
       <div class="item ps-15 pe-15">
-        <a href="http://www.gmmspa.com" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/gmm.png"
-            alt="GMM Group"
-          />
-        </a>
+        <img
+          src="{{relative_url}}/assets/images/clients/gmm.png"
+          alt="GMM Group"
+        />
+      </div>
+
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/polimi.png"
+          alt="PoliMI"
+        />
+      </div>
+
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/unibg.png"
+          alt="UniBG"
+        />
+      </div>
+
+      <div class="item ps-15 pe-15">
+        <img
+          src="{{relative_url}}/assets/images/clients/bg_sviluppo.png"
+          alt="Bergamo Sviluppo"
+        />
       </div>
       <div class="item ps-15 pe-15">
-        <a href="https://www.gaslini.org" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/gaslini.jpg"
-            alt="Ospedale Gaslini"
-          />
-        </a>
+        <img
+          src="{{relative_url}}/assets/images/clients/logo-01-ims-giotto-new.jpg"
+          alt="IMS GIOTTO Mammography Systems, Digital Breast Tomoshyntesis"
+        />
       </div>
       <div class="item ps-15 pe-15">
-        <a href="https://www.marionegri.it" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/mni.png"
-            alt="Mario Negri Institute"
-          />
-        </a>
+        <img
+          src="{{relative_url}}/assets/images/clients/logo-UNIPV.png"
+          alt="Universita degli Studi di Pavia"
+        />
       </div>
       <div class="item ps-15 pe-15">
-        <a href="https://www.software-medico.it" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/arzamed.png"
-            alt="Arzamed"
-          />
-        </a>
+        <img
+          src="{{relative_url}}/assets/images/clients/mio-dottore-logo-copertina.png"
+          alt="MioDottore.it - Trova un dottore e prenota la tua visita online"
+        />
       </div>
       <div class="item ps-15 pe-15">
-        <a href="https://www.polimi.it" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/polimi.png"
-            alt="PoliMI"
-          />
-        </a>
+        <img
+          src="{{relative_url}}/assets/images/clients/UniPa-Universita-degli-studi-di-Palermo.jpg"
+          alt="Universita degli Studi di Palermo"
+        />
       </div>
       <div class="item ps-15 pe-15">
-        <a href="https://www.unibg.it" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/unibg.png"
-            alt="UniBG"
-          />
-        </a>
-      </div>
-      <div class="item ps-15 pe-15">
-        <a href="https://www.bergamosviluppo.it/" target="_blank">
-          <img
-            src="{{relative_url}}/assets/images/clients/bg_sviluppo.png"
-            alt="Bergamo Sviluppo"
-          />
-        </a>
+        <img
+          src="{{relative_url}}/assets/images/clients/universita-lodi.jpg"
+          alt="Universita degli Studi di Milano - Statale"
+        />
       </div>
     </div>
-    <!-- /.owl-carousel -->
   </div>
-  <!-- /.container -->
 </div>
-<!-- End Clients and Partners -->
+<!-- End Strategic & Institutional Partners -->
 
 {% include footer.html %}

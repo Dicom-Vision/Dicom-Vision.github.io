@@ -3,7 +3,7 @@ main_menu:
     url: "/"
 
   - text: "DEMO"
-    url: "https://app.dicom.vision"
+    url: "https://rapid-credit-55b6.daniele-ciriello.workers.dev"
     external: true
 
   - text: "CONTACT US"

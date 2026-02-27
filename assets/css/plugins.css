@@ -9,18 +9,18 @@
 07. UTILITIES
 -------------------------------------------------------------------------------------*/
 :root {
-	--color-default: #848abd;
+	--color-default: #6fd1b8;
     --color-dark: #404040;
     --color-gray: #999;
 	--color-white: #FFF;
 	--color-red: #d75959;
-	--color-orange: #fb9d7e;
-	--color-yellow: #f5c463;
-	--color-green: #9ccd7e;
+	--color-orange: #f0bd4a;
+	--color-yellow: #f0bd4a;
+	--color-green: #4395a3;
 	--color-leaf: #a4bf9e;
 	--color-teal: #58b39a;
 	--color-aqua: #78cbea;
-	--color-meander: #98bec8;
+	--color-meander: #6fd1b8;
 	--color-blue: #5ca7db;
 	--color-cobalt: #3c71d3;
 	--color-sky: #5f86be;
@@ -30,19 +30,19 @@
 	--color-rose: #d16b86;
 	--color-hibiscus: #ad7c83;
 	--color-brown: #9e887a;
-	--rgb-default: 132, 138, 189;
+	--rgb-default: 111, 209, 184;
 	--rgb-white: 255, 255, 255;
 	--rgb-black: 0, 0, 0;
 	--rgb-dark: 30, 30, 30;
 	--rgb-gray: 144, 144, 144;
 	--rgb-red: 215, 89, 89;
-	--rgb-orange: 251, 157, 126;
-	--rgb-yellow: 245, 196, 99;
-	--rgb-green: 156, 205, 126;
+	--rgb-orange: 240, 189, 74;
+	--rgb-yellow: 240, 189, 74;
+	--rgb-green: 111, 209, 184;
 	--rgb-leaf: 164, 191, 158;
 	--rgb-teal: 88, 179, 154;
 	--rgb-aqua: 120, 203, 234;
-	--rgb-meander: 152, 190, 200;
+	--rgb-meander: 111, 209, 184;
 	--rgb-blue: 92, 167, 219;
 	--rgb-cobalt: 60, 113, 211;
 	--rgb-sky: 95, 134, 190;

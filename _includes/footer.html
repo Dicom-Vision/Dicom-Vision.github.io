@@ -1,43 +1,112 @@
-<footer class="dark-wrapper inverse-text">
+{% unless page.url contains 'contact' %}
+<div class="wrapper bg-default footer-cta">
+  <div class="container footer-cta-inner text-center">
+    <div class="footer-cta-text">Interested in clinical collaboration?</div>
+    <div class="footer-cta-subtext">
+      Partner with our team to validate and deploy clinical imaging workflows.
+    </div>
+    <a
+      class="btn btn-s btn-strong-hover footer-cta-btn"
+      href="{{ '/contact' | relative_url }}"
+      >Contact our team</a
+    >
+  </div>
+</div>
+{% endunless %}
+
+<footer class="dark-wrapper inverse-text site-footer">
   <div class="container inner pt-80 pb-50">
     <div class="row">
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-4">
             <div class="widget">
-              <h3 class="widget-title">Our Location</h3>
-              {% if site.data.general_settings.address_01 %}
-              <address class="mb-0">
-                {{site.data.general_settings.address_01}}
-              </address>
-              {% endif %}
+              <div class="footer-brand">DICOM Vision</div>
+              <div class="footer-tagline">
+                AI-powered Medical Imaging Solutions
+              </div>
+              <div class="footer-subtagline">
+                Medical AI for Radiology &amp; Clinical Imaging
+              </div>
+              <div class="footer-addresses">
+                {% if site.data.general_settings.address_01 %}
+                <div class="footer-address">
+                  {{site.data.general_settings.address_01}}
+                </div>
+                {% endif %} {% if site.data.general_settings.address_02 %}
+                <div class="footer-address">
+                  {{site.data.general_settings.address_02}}
+                </div>
+                {% endif %} {% if site.data.general_settings.address_03 %}
+                <div class="footer-address">
+                  {{site.data.general_settings.address_03}}
+                </div>
+                {% endif %}
+              </div>
+              <div class="footer-contact">
+                <a href="mailto:{{site.data.general_settings.email}}"
+                  >{{site.data.general_settings.email}}</a
+                >
+                {% if site.data.general_settings.phone_number and site.data.general_settings.phone_number != "" %}
+                <span class="footer-contact-divider">•</span>
+                <a href="tel:{{site.data.general_settings.phone_number}}"
+                  >{{site.data.general_settings.phone_number}}</a
+                >
+                {% endif %}
+              </div>
             </div>
             <!-- /.widget -->
           </div>
           <!-- /column -->
-          <div class="col-md-4">
+          <div class="col-md-4 footer-col-center text-center">
             <div class="widget">
-              <h3 class="widget-title">Follow</h3>
-              <ul class="social social-mute social-s">
-                {% for social_info in
-                site.data.general_settings.social_accounts.links %}
+              <h3 class="widget-title">Company</h3>
+              <ul class="list-unstyled footer-links">
+                <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+                <li><a href="{{ '/' | relative_url }}#technology">Technology</a></li>
                 <li>
-                  <a target="_blank" href="{{social_info.url}}"
-                    ><i class="{{social_info.icon}}"></i
-                  ></a>
+                  <a href="{{ '/' | relative_url }}#clinical-partners"
+                    >Clinical Partners</a
+                  >
                 </li>
-                {% endfor %}
+                <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
               </ul>
+              <div class="footer-social footer-follow">
+                <span class="footer-social-label">Follow</span>
+                <ul class="social social-mute social-s">
+                  {% for social_info in
+                  site.data.general_settings.social_accounts.links %}
+                  <li>
+                    <a target="_blank" href="{{social_info.url}}"
+                      ><i class="{{social_info.icon}}"></i
+                    ></a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
             </div>
             <!-- /.widget -->
           </div>
           <!-- /column -->
-          <div class="col-md-4">
+          <div class="col-md-4 footer-col-right text-end">
             <div class="widget">
-              <h3 class="widget-title">Contact</h3>
-              {{site.data.general_settings.vat}}
-              <br />
-              {{site.data.general_settings.capsoc}}
+              <h3 class="widget-title">Legal</h3>
+              <div class="footer-legal">
+                <div>{{site.data.general_settings.vat}}</div>
+                <div>{{site.data.general_settings.capsoc}}</div>
+              </div>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <a href="{{ '/web-privacy-policy-cookie' | relative_url }}"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="{{ '/web-privacy-policy-cookie' | relative_url }}"
+                    >Cookie Policy</a
+                  >
+                </li>
+              </ul>
             </div>
             <!-- /.widget -->
           </div>
