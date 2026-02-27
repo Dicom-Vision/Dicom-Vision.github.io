@@ -4,11 +4,27 @@
   <div
     class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center"
   >
-    <div class="navbar-other ml-auto order-lg-3">
+    <div class="navbar-brand">
+      <a href="{{ '/' | relative_url }}">
+        <img
+          src="{{ site.data.general_settings.black_logo_1x | relative_url }}"
+          srcset="{{ site.data.general_settings.black_logo_1x | relative_url }} 1x, {{ site.data.general_settings.black_logo_2x | relative_url }} 2x"
+          class="logo-dark"
+          alt="{{ site.data.general_settings.title }}"
+        />
+        <img
+          src="{{ site.data.general_settings.light_logo_1x | relative_url }}"
+          srcset="{{ site.data.general_settings.light_logo_1x | relative_url }} 1x, {{ site.data.general_settings.light_logo_2x | relative_url }} 2x"
+          class="logo-light"
+          alt="{{ site.data.general_settings.title }}"
+        />
+      </a>
+    </div>
+    <div class="navbar-other ms-auto order-lg-3">
       <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
         <li class="nav-item">
-          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
-            <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+          <div class="navbar-hamburger d-lg-none d-xl-none ms-auto">
+            <button class="hamburger animate plain" data-bs-toggle="offcanvas-nav" data-bs-target=".offcanvas-nav">
               <span></span>
             </button>
           </div>
@@ -21,15 +37,13 @@
     <!-- /.navbar-other -->
     <div class="navbar-collapse offcanvas-nav">
       <div class="offcanvas-header d-lg-none d-xl-none">
-        <a href="{{site.url}}">
+        <a href="{{ '/' | relative_url }}">
           <img
-            src="{{site.data.general_settings.light_logo_1x}}"
-            srcset="
-              {{site.data.general_settings.light_logo_1x}} 1x,
-              {{site.data.general_settings.light_logo_2x}} 2x
-            "
-            alt="{{site.data.general_settings.title}}"
-        /></a>
+            src="{{ site.data.general_settings.light_logo_1x | relative_url }}"
+            srcset="{{ site.data.general_settings.light_logo_1x | relative_url }} 1x, {{ site.data.general_settings.light_logo_2x | relative_url }} 2x"
+            alt="{{ site.data.general_settings.title }}"
+          />
+        </a>
         <button class="plain offcanvas-close offcanvas-nav-close">
           <i class="jam jam-close"></i>
         </button>

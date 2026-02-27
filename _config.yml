@@ -1,5 +1,5 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.dicom.vision" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "http://localhost:4000"
 permalink: "/:title"
 
 # Build settings
@@ -8,6 +8,18 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-archives
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO & Social
+author: "Dicom Vision"
+twitter:
+  username: "dicomvision"
+logo: "/assets/images/logo-dicom-black-trim-text.png"
+description: "The Smart Cloud Platform for Medical Imaging. Zero-footprint DICOM viewer with AI, 3D visualization, and remote collaboration."
+
+# Analytics
+google_analytics: "G-XXXXXXXXXX" # TODO: Replace with real ID
 
 collections:
   authors:

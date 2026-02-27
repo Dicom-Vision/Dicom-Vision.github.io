@@ -1,0 +1,22 @@
+/* Hero Section modernization */
+.hero-area {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+  .wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  // Ensure the content is vertically centered
+  .inner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

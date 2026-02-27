@@ -1,0 +1,776 @@
+/*  61. COLORS
+/*-----------------------------------------------------------------------------------*/
+$border-radius-modern: 0.75rem;
+
+.color-default,
+.bullet-default > li:before,
+.bullet-default i {
+  color: var(--color-default) !important;
+}
+.color-white,
+.bullet-white > li:before,
+.bullet-white i {
+  color: var(--color-white) !important;
+}
+.color-gray,
+.bullet-gray > li:before,
+.bullet-gray i {
+  color: var(--color-gray) !important;
+}
+.color-dark,
+.bullet-dark > li:before,
+.bullet-dark i {
+  color: var(--color-dark) !important;
+}
+.color-red,
+.bullet-red > li:before,
+.bullet-red i {
+  color: var(--color-red) !important;
+}
+.color-orange,
+.bullet-orange > li:before,
+.bullet-orange i {
+  color: var(--color-orange) !important;
+}
+.color-yellow,
+.bullet-yellow > li:before,
+.bullet-yellow i {
+  color: var(--color-yellow) !important;
+}
+.color-green,
+.bullet-green > li:before,
+.bullet-green i {
+  color: var(--color-green) !important;
+}
+.color-leaf,
+.bullet-leaf > li:before,
+.bullet-leaf i {
+  color: var(--color-leaf) !important;
+}
+.color-teal,
+.bullet-teal > li:before,
+.bullet-teal i {
+  color: var(--color-teal) !important;
+}
+.color-aqua,
+.bullet-aqua > li:before,
+.bullet-aqua i {
+  color: var(--color-aqua) !important;
+}
+.color-meander,
+.bullet-meander > li:before,
+.bullet-meander i {
+  color: var(--color-meander) !important;
+}
+.color-blue,
+.bullet-blue > li:before,
+.bullet-blue i {
+  color: var(--color-blue) !important;
+}
+.color-cobalt,
+.bullet-cobalt > li:before,
+.bullet-cobalt i {
+  color: var(--color-cobalt) !important;
+}
+.color-sky,
+.bullet-sky > li:before,
+.bullet-sky i {
+  color: var(--color-sky) !important;
+}
+.color-purple,
+.bullet-purple > li:before,
+.bullet-purple i {
+  color: var(--color-purple) !important;
+}
+.color-violet,
+.bullet-violet > li:before,
+.bullet-violet i {
+  color: var(--color-violet) !important;
+}
+.color-pink,
+.bullet-pink > li:before,
+.bullet-pink i {
+  color: var(--color-pink) !important;
+}
+.color-rose,
+.bullet-rose > li:before,
+.bullet-rose i {
+  color: var(--color-rose) !important;
+}
+.color-hibiscus,
+.bullet-hibiscus > li:before,
+.bullet-hibiscus i {
+  color: var(--color-hibiscus) !important;
+}
+.color-brown,
+.bullet-brown > li:before,
+.bullet-brown i {
+  color: var(--color-brown) !important;
+}
+.bg-default {
+  background: var(--color-default);
+}
+.bg-dark {
+  background: var(--color-dark);
+}
+.bg-gray {
+  background: var(--color-gray);
+}
+.bg-white {
+  background: var(--color-white);
+}
+.bg-red {
+  background: var(--color-red);
+}
+.bg-orange {
+  background: var(--color-orange);
+}
+.bg-yellow {
+  background: var(--color-yellow);
+}
+.bg-green {
+  background: var(--color-green);
+}
+.bg-leaf {
+  background: var(--color-leaf);
+}
+.bg-teal {
+  background: var(--color-teal);
+}
+.bg-aqua {
+  background: var(--color-aqua);
+}
+.bg-meander {
+  background: var(--color-meander);
+}
+.bg-blue {
+  background: var(--color-blue);
+}
+.bg-cobalt {
+  background: var(--color-cobalt);
+}
+.bg-sky {
+  background: var(--color-sky);
+}
+.bg-purple {
+  background: var(--color-purple);
+}
+.bg-violet {
+  background: var(--color-violet);
+}
+.bg-pink {
+  background: var(--color-pink);
+}
+.bg-rose {
+  background: var(--color-rose);
+}
+.bg-hibiscus {
+  background: var(--color-hibiscus);
+}
+.bg-brown {
+  background: var(--color-brown);
+}
+.title-bg.bg-default {
+  background: rgba(var(--rgb-default), 0.15);
+}
+.title-bg.bg-dark {
+  background: rgba(var(--rgb-dark), 0.15) !important;
+}
+.title-bg.bg-gray {
+  background: rgba(var(--rgb-gray), 0.15);
+}
+.title-bg.bg-white {
+  background: rgba(var(--rgb-white), 0.15);
+}
+.title-bg.bg-red {
+  background: rgba(var(--rgb-red), 0.1);
+}
+.title-bg.bg-orange {
+  background: rgba(var(--rgb-orange), 0.15);
+}
+.title-bg.bg-yellow {
+  background: rgba(var(--rgb-yellow), 0.15);
+}
+.title-bg.bg-green {
+  background: rgba(var(--rgb-green), 0.15);
+}
+.title-bg.bg-leaf {
+  background: rgba(var(--rgb-leaf), 0.15);
+}
+.title-bg.bg-teal {
+  background: rgba(var(--rgb-teal), 0.15);
+}
+.title-bg.bg-aqua {
+  background: rgba(var(--rgb-aqua), 0.15);
+}
+.title-bg.bg-meander {
+  background: rgba(var(--rgb-meander), 0.15);
+}
+.title-bg.bg-blue {
+  background: rgba(var(--rgb-blue), 0.1);
+}
+.title-bg.bg-cobalt {
+  background: rgba(var(--rgb-cobalt), 0.1);
+}
+.title-bg.bg-sky {
+  background: rgba(var(--rgb-sky), 0.15);
+}
+.title-bg.bg-purple {
+  background: rgba(var(--rgb-purple), 0.15);
+}
+.title-bg.bg-violet {
+  background: rgba(var(--rgb-violet), 0.15);
+}
+.title-bg.bg-pink {
+  background: rgba(var(--rgb-pink), 0.15);
+}
+.title-bg.bg-rose {
+  background: rgba(var(--rgb-rose), 0.15);
+}
+.title-bg.bg-hibiscus {
+  background: rgba(var(--rgb-hibiscus), 0.15);
+}
+.title-bg.bg-brown {
+  background: rgba(var(--rgb-brown), 0.15);
+}
+.fill-default {
+  fill: var(--color-default);
+}
+.fill-dark {
+  fill: var(--color-dark);
+}
+.fill-white {
+  fill: var(--color-white);
+}
+.fill-red {
+  fill: var(--color-red);
+}
+.fill-orange {
+  fill: var(--color-orange);
+}
+.fill-yellow {
+  fill: var(--color-yellow);
+}
+.fill-green {
+  fill: var(--color-green);
+}
+.fill-leaf {
+  fill: var(--color-leaf);
+}
+.fill-teal {
+  fill: var(--color-teal);
+}
+.fill-aqua {
+  fill: var(--color-aqua);
+}
+.fill-meander {
+  fill: var(--color-meander);
+}
+.fill-blue {
+  fill: var(--color-blue);
+}
+.fill-cobalt {
+  fill: var(--color-cobalt);
+}
+.fill-sky {
+  fill: var(--color-sky);
+}
+.fill-purple {
+  fill: var(--color-purple);
+}
+.fill-violet {
+  fill: var(--color-violet);
+}
+.fill-pink {
+  fill: var(--color-pink);
+}
+.fill-rose {
+  fill: var(--color-rose);
+}
+.fill-hibiscus {
+  fill: var(--color-hibiscus);
+}
+.fill-brown {
+  fill: var(--color-brown);
+}
+.bg-opacity-default {
+  background: rgba(var(--rgb-default), 0.085);
+}
+.bg-opacity-dark {
+  background: rgba(var(--rgb-dark), 0.085);
+}
+.bg-opacity-white {
+  background: rgba(var(--rgb-white), 0.085);
+}
+.bg-opacity-red {
+  background: rgba(var(--rgb-red), 0.065);
+}
+.bg-opacity-orange {
+  background: rgba(var(--rgb-orange), 0.085);
+}
+.bg-opacity-yellow {
+  background: rgba(var(--rgb-yellow), 0.085);
+}
+.bg-opacity-green {
+  background: rgba(var(--rgb-green), 0.085);
+}
+.bg-opacity-leaf {
+  background: rgba(var(--rgb-leaf), 0.085);
+}
+.bg-opacity-teal {
+  background: rgba(var(--rgb-teal), 0.085);
+}
+.bg-opacity-aqua {
+  background: rgba(var(--rgb-aqua), 0.085);
+}
+.bg-opacity-meander {
+  background: rgba(var(--rgb-meander), 0.08);
+}
+.bg-opacity-blue {
+  background: rgba(var(--rgb-blue), 0.065);
+}
+.bg-opacity-cobalt {
+  background: rgba(var(--rgb-cobalt), 0.065);
+}
+.bg-opacity-sky {
+  background: rgba(var(--rgb-sky), 0.085);
+}
+.bg-opacity-purple {
+  background: rgba(var(--rgb-purple), 0.085);
+}
+.bg-opacity-violet {
+  background: rgba(var(--rgb-violet), 0.085);
+}
+.bg-opacity-pink {
+  background: rgba(var(--rgb-pink), 0.085);
+}
+.bg-opacity-rose {
+  background: rgba(var(--rgb-rose), 0.085);
+}
+.bg-opacity-hibiscus {
+  background: rgba(var(--rgb-hibiscus), 0.085);
+}
+.bg-opacity-brown {
+  background: rgba(var(--rgb-brown), 0.085);
+}
+.bg-transparent-default {
+  background: rgba(var(--rgb-default), 0.85);
+}
+.bg-transparent-dark {
+  background: rgba(var(--rgb-dark), 0.85);
+}
+.bg-transparent-white {
+  background: rgba(var(--rgb-white), 0.88);
+}
+.bg-transparent-red {
+  background: rgba(var(--rgb-red), 0.88);
+}
+.bg-transparent-orange {
+  background: rgba(var(--rgb-orange), 0.88);
+}
+.bg-transparent-yellow {
+  background: rgba(var(--rgb-yellow), 0.88);
+}
+.bg-transparent-green {
+  background: rgba(var(--rgb-green), 0.88);
+}
+.bg-transparent-leaf {
+  background: rgba(var(--rgb-leaf), 0.88);
+}
+.bg-transparent-teal {
+  background: rgba(var(--rgb-teal), 0.88);
+}
+.bg-transparent-aqua {
+  background: rgba(var(--rgb-aqua), 0.88);
+}
+.bg-transparent-meander {
+  background: rgba(var(--rgb-meander), 0.88);
+}
+.bg-transparent-blue {
+  background: rgba(var(--rgb-blue), 0.88);
+}
+.bg-transparent-cobalt {
+  background: rgba(var(--rgb-cobalt), 0.88);
+}
+.bg-transparent-sky {
+  background: rgba(var(--rgb-sky), 0.88);
+}
+.bg-transparent-purple {
+  background: rgba(var(--rgb-purple), 0.88);
+}
+.bg-transparent-violet {
+  background: rgba(var(--rgb-violet), 0.88);
+}
+.bg-transparent-pink {
+  background: rgba(var(--rgb-pink), 0.88);
+}
+.bg-transparent-rose {
+  background: rgba(var(--rgb-rose), 0.88);
+}
+.bg-transparent-hibiscus {
+  background: rgba(var(--rgb-hibiscus), 0.88);
+}
+.bg-transparent-brown {
+  background: rgba(var(--rgb-brown), 0.88);
+}
+.fill-opacity-default {
+  fill: rgba(var(--rgb-default), 0.08);
+}
+.fill-opacity-dark {
+  fill: rgba(var(--rgb-dark), 0.08);
+}
+.fill-opacity-white {
+  fill: rgba(var(--rgb-white), 0.08);
+}
+.fill-opacity-red {
+  fill: rgba(var(--rgb-red), 0.08);
+}
+.fill-opacity-orange {
+  fill: rgba(var(--rgb-orange), 0.08);
+}
+.fill-opacity-yellow {
+  fill: rgba(var(--rgb-yellow), 0.08);
+}
+.fill-opacity-green {
+  fill: rgba(var(--rgb-green), 0.08);
+}
+.fill-opacity-leaf {
+  fill: rgba(var(--rgb-leaf), 0.08);
+}
+.fill-opacity-teal {
+  fill: rgba(var(--rgb-teal), 0.08);
+}
+.fill-opacity-aqua {
+  fill: rgba(var(--rgb-aqua), 0.08);
+}
+.fill-opacity-meander {
+  fill: rgba(var(--rgb-meander), 0.08);
+}
+.fill-opacity-blue {
+  fill: rgba(var(--rgb-blue), 0.08);
+}
+.fill-opacity-cobalt {
+  fill: rgba(var(--rgb-cobalt), 0.08);
+}
+.fill-opacity-sky {
+  fill: rgba(var(--rgb-sky), 0.08);
+}
+.fill-opacity-purple {
+  fill: rgba(var(--rgb-purple), 0.08);
+}
+.fill-opacity-violet {
+  fill: rgba(var(--rgb-violet), 0.08);
+}
+.fill-opacity-pink {
+  fill: rgba(var(--rgb-pink), 0.08);
+}
+.fill-opacity-rose {
+  fill: rgba(var(--rgb-rose), 0.08);
+}
+.fill-opacity-hibiscus {
+  fill: rgba(var(--rgb-hibiscus), 0.08);
+}
+.fill-opacity-brown {
+  fill: rgba(var(--rgb-brown), 0.08);
+}
+.icon-blob-default:after {
+  color: rgba(var(--rgb-default), 0.25);
+}
+.icon-blob-dark:after {
+  color: rgba(var(--rgb-dark), 0.25);
+}
+.icon-blob-white:after {
+  color: rgba(var(--rgb-white), 0.25);
+}
+.icon-blob-red:after {
+  color: rgba(var(--rgb-red), 0.25);
+}
+.icon-blob-orange:after {
+  color: rgba(var(--rgb-orange), 0.25);
+}
+.icon-blob-yellow:after {
+  color: rgba(var(--rgb-yellow), 0.3);
+}
+.icon-blob-green:after {
+  color: rgba(var(--rgb-green), 0.25);
+}
+.icon-blob-leaf:after {
+  color: rgba(var(--rgb-leaf), 0.3);
+}
+.icon-blob-teal:after {
+  color: rgba(var(--rgb-teal), 0.25);
+}
+.icon-blob-aqua:after {
+  color: rgba(var(--rgb-aqua), 0.25);
+}
+.icon-blob-meander:after {
+  color: rgba(var(--rgb-meander), 0.3);
+}
+.icon-blob-blue:after {
+  color: rgba(var(--rgb-blue), 0.25);
+}
+.icon-blob-cobalt:after {
+  color: rgba(var(--rgb-cobalt), 0.25);
+}
+.icon-blob-sky:after {
+  color: rgba(var(--rgb-sky), 0.25);
+}
+.icon-blob-purple:after {
+  color: rgba(var(--rgb-purple), 0.25);
+}
+.icon-blob-violet:after {
+  color: rgba(var(--rgb-violet), 0.25);
+}
+.icon-blob-pink:after {
+  color: rgba(var(--rgb-pink), 0.25);
+}
+.icon-blob-rose:after {
+  color: rgba(var(--rgb-rose), 0.25);
+}
+.icon-blob-hibiscus:after {
+  color: rgba(var(--rgb-hibiscus), 0.25);
+}
+.icon-blob-brown:after {
+  color: rgba(var(--rgb-brown), 0.25);
+}
+.icon-bg-default {
+  background-color: rgba(var(--rgb-default), 0.25);
+}
+.icon-bg-dark {
+  background-color: rgba(var(--rgb-dark), 0.25);
+}
+.icon-bg-white {
+  background-color: rgba(var(--rgb-white), 0.25);
+}
+.icon-bg-red {
+  background-color: rgba(var(--rgb-red), 0.25);
+}
+.icon-bg-orange {
+  background-color: rgba(var(--rgb-orange), 0.25);
+}
+.icon-bg-yellow {
+  background-color: rgba(var(--rgb-yellow), 0.25);
+}
+.icon-bg-green {
+  background-color: rgba(var(--rgb-green), 0.25);
+}
+.icon-bg-leaf {
+  background-color: rgba(var(--rgb-leaf), 0.25);
+}
+.icon-bg-teal {
+  background-color: rgba(var(--rgb-teal), 0.25);
+}
+.icon-bg-aqua {
+  background-color: rgba(var(--rgb-aqua), 0.25);
+}
+.icon-bg-meander {
+  background-color: rgba(var(--rgb-meander), 0.25);
+}
+.icon-bg-blue {
+  background-color: rgba(var(--rgb-blue), 0.25);
+}
+.icon-bg-cobalt {
+  background-color: rgba(var(--rgb-cobalt), 0.25);
+}
+.icon-bg-sky {
+  background-color: rgba(var(--rgb-sky), 0.25);
+}
+.icon-bg-purple {
+  background-color: rgba(var(--rgb-purple), 0.25);
+}
+.icon-bg-violet {
+  background-color: rgba(var(--rgb-violet), 0.25);
+}
+.icon-bg-pink {
+  background-color: rgba(var(--rgb-pink), 0.25);
+}
+.icon-bg-rose {
+  background-color: rgba(var(--rgb-rose), 0.25);
+}
+.icon-bg-hibiscus {
+  background-color: rgba(var(--rgb-hibiscus), 0.25);
+}
+.icon-bg-brown {
+  background-color: rgba(var(--rgb-brown), 0.25);
+}
+.nav-tabs .nav-link:hover .icon-blob-default:after,
+.nav-tabs .nav-link.active .icon-blob-default:after,
+.dial-item:hover .icon-blob-default:after,
+.dial-item.active .icon-blob-default:after {
+  color: rgba(var(--rgb-default), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-dark:after,
+.nav-tabs .nav-link.active .icon-blob-dark:after,
+.dial-item:hover .icon-blob-dark:after,
+.dial-item.active .icon-blob-dark:after {
+  color: rgba(var(--rgb-dark), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-white:after,
+.nav-tabs .nav-link.active .icon-blob-white:after,
+.dial-item:hover .icon-blob-white:after,
+.dial-item.active .icon-blob-white:after {
+  color: rgba(var(--rgb-white), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-red:after,
+.nav-tabs .nav-link.active .icon-blob-red:after,
+.dial-item:hover .icon-blob-red:after,
+.dial-item.active .icon-blob-red:after {
+  color: rgba(var(--rgb-red), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-orange:after,
+.nav-tabs .nav-link.active .icon-blob-orange:after,
+.dial-item:hover .icon-blob-orange:after,
+.dial-item.active .icon-blob-orange:after {
+  color: rgba(var(--rgb-orange), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-yellow:after,
+.nav-tabs .nav-link.active .icon-blob-yellow:after,
+.dial-item:hover .icon-blob-yellow:after,
+.dial-item.active .icon-blob-yellow:after {
+  color: rgba(var(--rgb-yellow), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-green:after,
+.nav-tabs .nav-link.active .icon-blob-green:after,
+.dial-item:hover .icon-blob-green:after,
+.dial-item.active .icon-blob-green:after {
+  color: rgba(var(--rgb-green), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-leaf:after,
+.nav-tabs .nav-link.active .icon-blob-leaf:after,
+.dial-item:hover .icon-blob-leaf:after,
+.dial-item.active .icon-blob-leaf:after {
+  color: rgba(var(--rgb-leaf), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-teal:after,
+.nav-tabs .nav-link.active .icon-blob-teal:after,
+.dial-item:hover .icon-blob-teal:after,
+.dial-item.active .icon-blob-teal:after {
+  color: rgba(var(--rgb-teal), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-aqua:after,
+.nav-tabs .nav-link.active .icon-blob-aqua:after,
+.dial-item:hover .icon-blob-aqua:after,
+.dial-item.active .icon-blob-aqua:after {
+  color: rgba(var(--rgb-aqua), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-meander:after,
+.nav-tabs .nav-link.active .icon-blob-meander:after,
+.dial-item:hover .icon-blob-meander:after,
+.dial-item.active .icon-blob-meander:after {
+  color: rgba(var(--rgb-meander), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-blue:after,
+.nav-tabs .nav-link.active .icon-blob-blue:after,
+.dial-item:hover .icon-blob-blue:after,
+.dial-item.active .icon-blob-blue:after {
+  color: rgba(var(--rgb-blue), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-cobalt:after,
+.nav-tabs .nav-link.active .icon-blob-cobalt:after,
+.dial-item:hover .icon-blob-cobalt:after,
+.dial-item.active .icon-blob-cobalt:after {
+  color: rgba(var(--rgb-cobalt), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-sky:after,
+.nav-tabs .nav-link.active .icon-blob-sky:after,
+.dial-item:hover .icon-blob-sky:after,
+.dial-item.active .icon-blob-sky:after {
+  color: rgba(var(--rgb-sky), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-purple:after,
+.nav-tabs .nav-link.active .icon-blob-purple:after,
+.dial-item:hover .icon-blob-purple:after,
+.dial-item.active .icon-blob-purple:after {
+  color: rgba(var(--rgb-purple), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-violet:after,
+.nav-tabs .nav-link.active .icon-blob-violet:after,
+.dial-item:hover .icon-blob-violet:after,
+.dial-item.active .icon-blob-violet:after {
+  color: rgba(var(--rgb-violet), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-pink:after,
+.nav-tabs .nav-link.active .icon-blob-pink:after,
+.dial-item:hover .icon-blob-pink:after,
+.dial-item.active .icon-blob-pink:after {
+  color: rgba(var(--rgb-pink), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-rose:after,
+.nav-tabs .nav-link.active .icon-blob-rose:after,
+.dial-item:hover .icon-blob-rose:after,
+.dial-item.active .icon-blob-rose:after {
+  color: rgba(var(--rgb-rose), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-hibiscus:after,
+.nav-tabs .nav-link.active .icon-blob-hibiscus:after,
+.dial-item:hover .icon-blob-hibiscus:after,
+.dial-item.active .icon-blob-hibiscus:after {
+  color: rgba(var(--rgb-hibiscus), 0.75);
+}
+.nav-tabs .nav-link:hover .icon-blob-brown:after,
+.nav-tabs .nav-link.active .icon-blob-brown:after,
+.dial-item:hover .icon-blob-brown:after,
+.dial-item.active .icon-blob-brown:after {
+  color: rgba(var(--rgb-brown), 0.75);
+}
+.progressbar.default svg path:last-child {
+  stroke: var(--color-default);
+}
+.progressbar.dark svg path:last-child {
+  stroke: var(--color-dark);
+}
+.progressbar.white svg path:last-child {
+  stroke: var(--color-white);
+}
+.progressbar.red svg path:last-child {
+  stroke: var(--color-red);
+}
+.progressbar.orange svg path:last-child {
+  stroke: var(--color-orange);
+}
+.progressbar.yellow svg path:last-child {
+  stroke: var(--color-yellow);
+}
+.progressbar.green svg path:last-child {
+  stroke: var(--color-green);
+}
+.progressbar.leaf svg path:last-child {
+  stroke: var(--color-leaf);
+}
+.progressbar.teal svg path:last-child {
+  stroke: var(--color-teal);
+}
+.progressbar.aqua svg path:last-child {
+  stroke: var(--color-aqua);
+}
+.progressbar.meander svg path:last-child {
+  stroke: var(--color-meander);
+}
+.progressbar.blue svg path:last-child {
+  stroke: var(--color-blue);
+}
+.progressbar.cobalt svg path:last-child {
+  stroke: var(--color-cobalt);
+}
+.progressbar.sky svg path:last-child {
+  stroke: var(--color-sky);
+}
+.progressbar.purple svg path:last-child {
+  stroke: var(--color-purple);
+}
+.progressbar.violet svg path:last-child {
+  stroke: var(--color-violet);
+}
+.progressbar.pink svg path:last-child {
+  stroke: var(--color-pink);
+}
+.progressbar.rose svg path:last-child {
+  stroke: var(--color-rose);
+}
+.progressbar.hibiscus svg path:last-child {
+  stroke: var(--color-hibiscus);
+}
+.progressbar.brown svg path:last-child {
+  stroke: var(--color-brown);
+}
+/*-----------------------------------------------------------------------------------*/

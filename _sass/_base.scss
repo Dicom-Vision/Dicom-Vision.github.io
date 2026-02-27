@@ -1,0 +1,346 @@
+/*  01. RESET
+/*-----------------------------------------------------------------------------------*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus {
+  outline: 0;
+}
+.fit-vids-style {
+  display: none;
+}
+iframe {
+  border: none;
+}
+.clearfix {
+  clear: both;
+}
+::-moz-selection {
+  background: rgba(var(--rgb-default), 0.7);
+  color: var(--color-white);
+}
+::selection {
+  background: rgba(var(--rgb-default), 0.7);
+  color: var(--color-white);
+}
+.bg-default ::-moz-selection {
+  background: var(--color-white);
+  color: #606060;
+}
+.bg-default ::selection {
+  background: var(--color-white);
+  color: #606060;
+}
+br {
+  line-height: 0;
+}
+button:focus {
+  outline: none !important;
+}
+/*-----------------------------------------------------------------------------------*/
+/*  02. GENERAL
+/*-----------------------------------------------------------------------------------*/
+html {
+  font-size: 20px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #606060;
+  font-size: 0.8rem;
+  background: #f9fafb;
+  overflow-x: hidden;
+  position: relative;
+}
+.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+body,
+li,
+address {
+  line-height: 1.4rem;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+strong {
+  font-weight: bold;
+}
+p {
+  margin: 0 0 1rem;
+}
+.hover {
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+a.hover {
+  -webkit-transition: border 150ms ease-in-out;
+  -o-transition: border 150ms ease-in-out;
+  transition: border 150ms ease-in-out;
+  padding-bottom: 0;
+  border-bottom: 1px solid transparent;
+}
+a.hover:hover {
+  border-bottom: 1px solid var(--color-default);
+  -webkit-transition: border 150ms ease-in-out;
+  -o-transition: border 150ms ease-in-out;
+  transition: border 150ms ease-in-out;
+}
+a {
+  color: var(--color-default);
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.post-title a,
+a.nocolor {
+  color: inherit;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--color-default);
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.font-weight-700 {
+  font-weight: 700;
+}
+strong {
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: #404040;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin-bottom: 0.8rem;
+}
+h1,
+.h1 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+h2,
+.h2 {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+h3,
+.h3 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+h4,
+.h4 {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+h5,
+.h5 {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+h6,
+.h6 {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+h1.text-uppercase,
+.h1.text-uppercase {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+h2.text-uppercase,
+.h2.text-uppercase {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+h3.text-uppercase,
+.h3.text-uppercase {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+h4.text-uppercase,
+.h4.text-uppercase {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+h5.text-uppercase,
+.h5.text-uppercase {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+h6.text-uppercase,
+.h6.text-uppercase {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+.grid-view h2.post-title {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+.classic-view h2.post-title,
+.caption-overlay h3 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+.widget-title {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+.section-title {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+.section-title.larger {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+.section-title.text-uppercase {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+}
+.section-title.larger.text-uppercase {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.title-color {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  margin-bottom: 1.05rem;
+  text-transform: uppercase;
+}
+.title-bg {
+  font-size: 0.55rem;
+  line-height: 1rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 10rem;
+  padding: 0.35rem 0.7rem 0.3rem;
+}
+.page-title {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  margin-bottom: 1rem;
+}
+.hero {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+}
+.display-1 {
+  font-size: 2.5rem;
+  line-height: 3.1rem;
+  font-weight: 500;
+}
+.display-2 {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+.display-3 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: normal;
+}
+.display-4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.lead {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.page-title-wrapper .lead {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.lead.larger {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+.text-muted {
+  color: #808080 !important;
+}
+.inner {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.inner-top {
+  padding-top: 6rem;
+}
+.inner-bottom {
+  padding-bottom: 6rem;
+}
+footer .inner {
+  padding-bottom: 5rem;
+}
+.page-title-wrapper .inner {
+  padding-top: 5rem;
+  padding-bottom: 0;
+}
+.page-title-wrapper.image-wrapper .inner {
+  padding-bottom: 6rem;
+}
+.google-map iframe {
+  display: block;
+}
+.google-map.map-full {
+  height: 100%;
+}
+#wave {
+  margin: 0;
+}
+canvas {
+  vertical-align: bottom;
+}
+.divider svg {
+  vertical-align: bottom;
+}
+
+.pointer-none {
+  pointer-events: none;
+}
+/*-----------------------------------------------------------------------------------*/

@@ -1,0 +1,285 @@
+Bundler 2.3.25 is running, but your lockfile was generated with 2.3.7. Installing Bundler 2.3.7 and restarting using that version.
+Fetching gem metadata from https://rubygems.org/.
+Fetching bundler 2.3.7
+Installing bundler 2.3.7
+Fetching gem metadata from https://rubygems.org/.........
+Fetching https://github.com/eventmachine/eventmachine.git
+Using concurrent-ruby 1.1.10
+Using minitest 5.15.0
+Using thread_safe 0.3.6
+Fetching zeitwerk 2.5.4
+Fetching public_suffix 4.0.7
+Installing zeitwerk 2.5.4
+Installing public_suffix 4.0.7
+Using bundler 2.3.7
+Fetching coffee-script-source 1.11.1
+Using execjs 2.8.1
+Using colorator 1.1.0
+Fetching commonmarker 0.23.5
+Installing coffee-script-source 1.11.1
+Fetching unf_ext 0.0.8.2
+Installing commonmarker 0.23.5 with native extensions
+Installing unf_ext 0.0.8.2 with native extensions
+Using eventmachine 1.2.7 from https://github.com/eventmachine/eventmachine.git (at v1.2.7@9cb13a8)
+Using http_parser.rb 0.8.0
+Using ffi 1.15.5
+Fetching faraday-net_http 2.0.3
+Installing faraday-net_http 2.0.3
+Using ruby2_keywords 0.0.5
+Using forwardable-extended 2.6.0
+Using gemoji 3.0.1
+Fetching rb-fsevent 0.11.1
+Installing rb-fsevent 0.11.1
+Using rexml 3.2.5
+Using liquid 4.0.3
+Using mercenary 0.3.6
+Fetching rouge 3.26.0
+Installing rouge 3.26.0
+Using safe_yaml 1.0.5
+Using racc 1.6.0
+Using jekyll-paginate 1.1.0
+Fetching rubyzip 2.3.2
+Installing rubyzip 2.3.2
+Fetching jekyll-swiss 1.0.0
+Installing jekyll-swiss 1.0.0
+Using unicode-display_width 1.8.0
+Fetching nuggets 1.6.1
+Installing nuggets 1.6.1
+Fetching webrick 1.7.0
+Installing webrick 1.7.0
+Using i18n 0.9.5
+Fetching tzinfo 1.2.9
+Installing tzinfo 1.2.9
+Fetching addressable 2.8.0
+Installing addressable 2.8.0
+Using coffee-script 2.4.1
+Fetching unf 0.1.4
+Installing unf 0.1.4
+Using jekyll-commonmark 1.4.0
+Fetching ethon 0.15.0
+Installing ethon 0.15.0
+Using rb-inotify 0.10.1
+Fetching faraday 2.3.0
+Installing faraday 2.3.0
+Using pathutil 0.16.2
+Fetching kramdown 2.3.2
+Installing kramdown 2.3.2
+Fetching nokogiri 1.13.6 (x86_64-linux)
+Fetching terminal-table 1.8.0
+Installing nokogiri 1.13.6 (x86_64-linux)
+Installing terminal-table 1.8.0
+Fetching jekyll-tagging 1.1.0
+Installing jekyll-tagging 1.1.0
+Fetching activesupport 6.0.5
+Installing activesupport 6.0.5
+Fetching jekyll-coffeescript 1.1.1
+Fetching simpleidn 0.2.1
+Installing jekyll-coffeescript 1.1.1
+Using typhoeus 1.4.0
+Using sass-listen 4.0.0
+Using listen 3.7.1
+Fetching sawyer 0.9.1
+Installing simpleidn 0.2.1
+Using kramdown-parser-gfm 1.1.0
+Using em-websocket 0.5.3
+Fetching html-pipeline 2.14.1
+Installing sawyer 0.9.1
+Installing html-pipeline 2.14.1
+Using sass 3.7.4
+Using jekyll-watch 2.2.1
+Fetching dnsruby 1.61.9
+Fetching octokit 4.23.0
+Installing octokit 4.23.0
+Installing dnsruby 1.61.9
+Using jekyll-sass-converter 1.5.2
+Fetching jekyll-gist 1.5.0
+Using jekyll 3.9.2
+Fetching github-pages-health-check 1.17.9
+Installing jekyll-gist 1.5.0
+Fetching jekyll-avatar 0.7.0
+Installing github-pages-health-check 1.17.9
+Fetching jekyll-commonmark-ghpages 0.2.0
+Installing jekyll-avatar 0.7.0
+Fetching jekyll-default-layout 0.1.4
+Installing jekyll-commonmark-ghpages 0.2.0
+Fetching jekyll-feed 0.15.1
+Installing jekyll-default-layout 0.1.4
+Fetching jekyll-github-metadata 2.13.0
+Installing jekyll-feed 0.15.1
+Fetching jekyll-include-cache 0.2.1
+Installing jekyll-github-metadata 2.13.0
+Using jekyll-mentions 1.6.0
+Fetching jekyll-optional-front-matter 0.3.2
+Installing jekyll-include-cache 0.2.1
+Fetching jekyll-readme-index 0.3.0
+Installing jekyll-optional-front-matter 0.3.2
+Using jekyll-redirect-from 0.16.0
+Fetching jekyll-relative-links 0.6.1
+Installing jekyll-readme-index 0.3.0
+Fetching jekyll-remote-theme 0.4.3
+Installing jekyll-relative-links 0.6.1
+Using jekyll-seo-tag 2.8.0
+Installing jekyll-remote-theme 0.4.3
+Using jekyll-sitemap 1.4.0
+Fetching jekyll-titles-from-headings 0.5.3
+Using jemoji 0.12.0
+Fetching jekyll-archives 2.2.1
+Installing jekyll-titles-from-headings 0.5.3
+Fetching jekyll-paginate-v2 3.0.0
+Installing jekyll-archives 2.2.1
+Fetching jekyll-theme-architect 0.2.0
+Installing jekyll-paginate-v2 3.0.0
+Fetching jekyll-theme-cayman 0.2.0
+Installing jekyll-theme-architect 0.2.0
+Fetching jekyll-theme-dinky 0.2.0
+Installing jekyll-theme-cayman 0.2.0
+Fetching jekyll-theme-hacker 0.2.0
+Installing jekyll-theme-dinky 0.2.0
+Fetching jekyll-theme-leap-day 0.2.0
+Installing jekyll-theme-hacker 0.2.0
+Fetching jekyll-theme-merlot 0.2.0
+Installing jekyll-theme-merlot 0.2.0
+Fetching jekyll-theme-midnight 0.2.0
+Installing jekyll-theme-midnight 0.2.0
+Fetching jekyll-theme-minimal 0.2.0
+Installing jekyll-theme-minimal 0.2.0
+Fetching jekyll-theme-modernist 0.2.0
+Installing jekyll-theme-modernist 0.2.0
+Fetching jekyll-theme-primer 0.6.0
+Installing jekyll-theme-primer 0.6.0
+Fetching jekyll-theme-slate 0.2.0
+Installing jekyll-theme-slate 0.2.0
+Fetching jekyll-theme-tactile 0.2.0
+Installing jekyll-theme-tactile 0.2.0
+Fetching jekyll-theme-time-machine 0.2.0
+Installing jekyll-theme-leap-day 0.2.0
+Using minima 2.5.1
+Installing jekyll-theme-time-machine 0.2.0
+Fetching github-pages 226
+Installing github-pages 226
+Bundle complete! 14 Gemfile dependencies, 96 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+ruby 3.1.1p18 (2022-02-18 revision 53f5fc4236) [x86_64-linux-musl]
+  Logging at level: debug
+Configuration file: /srv/jekyll/_config.yml
+             Theme: minima
+      Theme source: /usr/gem/gems/minima-2.5.1
+      GitHub Pages: github-pages v226
+      GitHub Pages: jekyll v3.9.2
+             Theme: minima
+      Theme source: /usr/gem/gems/minima-2.5.1
+         Requiring: jekyll-feed
+         Requiring: jekyll-seo-tag
+         Requiring: jekyll-feed
+         Requiring: jekyll-seo-tag
+         Requiring: jekyll-sitemap
+         Requiring: jekyll-coffeescript
+         Requiring: jekyll-commonmark-ghpages
+         Requiring: jekyll-gist
+         Requiring: jekyll-github-metadata
+Dotenv not found. Skipping 
+         Requiring: jekyll-paginate
+         Requiring: jekyll-relative-links
+         Requiring: jekyll-optional-front-matter
+         Requiring: jekyll-readme-index
+         Requiring: jekyll-default-layout
+         Requiring: jekyll-titles-from-headings
+   GitHub Metadata: Initializing...
+            Source: /srv/jekyll
+       Destination: /srv/jekyll/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       EntryFilter: excluded /Gemfile
+       EntryFilter: excluded /Gemfile.lock
+       EntryFilter: excluded /CNAME
+        Generating: Jekyll::Tagger finished in 3.4975e-05 seconds.
+        Generating: JekyllOptionalFrontMatter::Generator finished in 0.00036833 seconds.
+        Generating: Jekyll::Archives::Archives finished in 3.1038e-05 seconds.
+        Generating: JekyllReadmeIndex::Generator finished in 0.000153478 seconds.
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Starting
+[33m        Pagination: Is enabled, but I couldn't find any pagination page. Skipping pagination. Pages must have 'pagination: enabled: true' in their front-matter for pagination to work.[0m
+        Pagination: Complete, processed pagination page(s)
+        Generating: Jekyll::PaginateV2::Generator::PaginationGenerator finished in 0.000242935 seconds.
+       Jekyll Feed: Generating feed for posts
+        Generating: JekyllFeed::Generator finished in 0.000756767 seconds.
+        Generating: JekyllRelativeLinks::Generator finished in 0.00183706 seconds.
+        Generating: Jekyll::Paginate::Pagination finished in 1.565e-05 seconds.
+        Generating: Jekyll::JekyllSitemap finished in 0.002901082 seconds.
+        Generating: JekyllDefaultLayout::Generator finished in 0.000118692 seconds.
+         Requiring: kramdown-parser-gfm
+        Generating: JekyllTitlesFromHeadings::Generator finished in 0.009061596 seconds.
+         Rendering: 404.html
+  Pre-Render Hooks: 404.html
+  Rendering Markup: 404.html
+  Rendering Layout: 404.html
+     Layout source: site
+[33m   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.[0m
+   GitHub Metadata: Generating for Dicom-Vision/Dicom-Vision.github.io
+         Rendering: contact.html
+  Pre-Render Hooks: contact.html
+  Rendering Liquid: contact.html
+  Rendering Markup: contact.html
+  Rendering Layout: contact.html
+     Layout source: site
+         Rendering: index.html
+  Pre-Render Hooks: index.html
+  Rendering Liquid: index.html
+  Rendering Markup: index.html
+  Rendering Layout: index.html
+     Layout source: site
+         Rendering: assets/css/main.scss
+  Pre-Render Hooks: assets/css/main.scss
+  Rendering Markup: assets/css/main.scss
+         Rendering: robots.txt
+  Pre-Render Hooks: robots.txt
+  Rendering Liquid: robots.txt
+  Rendering Markup: robots.txt
+  Rendering Layout: robots.txt
+         Rendering: web-privacy-policy-cookie.md
+  Pre-Render Hooks: web-privacy-policy-cookie.md
+  Rendering Markup: web-privacy-policy-cookie.md
+  Rendering Layout: web-privacy-policy-cookie.md
+     Layout source: site
+         Rendering: assets/main.scss
+  Pre-Render Hooks: assets/main.scss
+  Rendering Markup: assets/main.scss
+         Rendering: DOCKER_DEV.md
+  Pre-Render Hooks: DOCKER_DEV.md
+  Rendering Markup: DOCKER_DEV.md
+  Rendering Layout: DOCKER_DEV.md
+     Layout source: site
+         Rendering: MODERNIZATION_PLAN.md
+  Pre-Render Hooks: MODERNIZATION_PLAN.md
+  Rendering Markup: MODERNIZATION_PLAN.md
+  Rendering Layout: MODERNIZATION_PLAN.md
+     Layout source: site
+         Rendering: terms-of-service.md
+  Pre-Render Hooks: terms-of-service.md
+  Rendering Markup: terms-of-service.md
+  Rendering Layout: terms-of-service.md
+     Layout source: site
+         Rendering: index.xml
+  Pre-Render Hooks: index.xml
+  Rendering Liquid: index.xml
+  Rendering Markup: index.xml
+  Rendering Layout: index.xml
+         Rendering: sitemap.xml
+  Pre-Render Hooks: sitemap.xml
+  Rendering Liquid: sitemap.xml
+  Rendering Markup: sitemap.xml
+  Rendering Layout: sitemap.xml
+           Writing: /srv/jekyll/_site/404.html
+           Writing: /srv/jekyll/_site/contact.html
+           Writing: /srv/jekyll/_site/index.html
+           Writing: /srv/jekyll/_site/assets/css/main.css
+           Writing: /srv/jekyll/_site/robots.txt
+           Writing: /srv/jekyll/_site/web-privacy-policy-cookie.html
+           Writing: /srv/jekyll/_site/assets/main.css
+           Writing: /srv/jekyll/_site/DOCKER_DEV.html
+           Writing: /srv/jekyll/_site/MODERNIZATION_PLAN.html
+           Writing: /srv/jekyll/_site/terms-of-service.html
+           Writing: /srv/jekyll/_site/index.xml
+           Writing: /srv/jekyll/_site/sitemap.xml
+                    done in 1.654 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

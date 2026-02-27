@@ -1,0 +1,14 @@
+:root {
+	--color-default: #1a73e8;
+	--rgb-default: 26, 115, 232;
+	--btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.25);
+}
+.icon-blob-default:after {
+    color: rgba(var(--rgb-default), 0.3);
+}
+.bg-opacity-default {
+    background: rgba(var(--rgb-default), 0.08);
+}
+.title-bg.bg-default {
+    background: rgba(var(--rgb-default), 0.1);
+}
