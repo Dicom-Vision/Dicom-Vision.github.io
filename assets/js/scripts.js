@@ -39,6 +39,33 @@ document.addEventListener('DOMContentLoaded', function() {
 		var banner = new Headhesive('.navbar', options);
 	}
 	/*-----------------------------------------------------------------------------------*/
+	/*	REGISTERED MARK POSITIONING
+	/*-----------------------------------------------------------------------------------*/
+	const logoMarks = document.querySelectorAll('.logo-with-mark');
+	const updateLogoMark = (wrap) => {
+		const img = wrap.querySelector('img');
+		if (!img) return;
+		const rect = img.getBoundingClientRect();
+		if (!rect.height) return;
+		const markSize = Math.max(8, Math.round(rect.height * 0.22));
+		wrap.style.setProperty('--logo-mark-size', `${markSize}px`);
+	};
+	const updateAllLogoMarks = () => {
+		logoMarks.forEach(updateLogoMark);
+	};
+	if (logoMarks.length) {
+		logoMarks.forEach((wrap) => {
+			const img = wrap.querySelector('img');
+			if (!img) return;
+			if (img.complete) {
+				updateLogoMark(wrap);
+			} else {
+				img.addEventListener('load', () => updateLogoMark(wrap), { once: true });
+			}
+		});
+		window.addEventListener('resize', updateAllLogoMarks);
+	}
+	/*-----------------------------------------------------------------------------------*/
 	/*	HEADER BUTTONS
 	/*-----------------------------------------------------------------------------------*/
 	const header_hamburger = document.querySelector('.hamburger.animate');

@@ -5,7 +5,7 @@
     class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center"
   >
     <div class="navbar-brand">
-      <a href="{{ '/' | relative_url }}">
+      <a href="{{ '/' | relative_url }}" class="logo-with-mark">
         <img
           src="{{ site.data.general_settings.black_logo_1x | relative_url }}"
           srcset="{{ site.data.general_settings.black_logo_1x | relative_url }} 1x, {{ site.data.general_settings.black_logo_2x | relative_url }} 2x"

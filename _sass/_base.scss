@@ -245,6 +245,38 @@ h6.text-uppercase,
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
+.certification-strip {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.certification-text {
+  max-width: 600px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+  color: #3f3f3f;
+}
+.certification-link {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-weight: 600;
+  color: #2f7f8b;
+  text-decoration: none;
+}
+.certification-link:hover {
+  text-decoration: underline;
+}
+.certification-badge img {
+  height: 42px;
+  width: auto;
+  opacity: 0.9;
+}
+.certification-badge:hover img {
+  opacity: 1;
+}
 .title-color {
   font-size: 0.8rem;
   line-height: 1.1rem;
@@ -333,6 +365,26 @@ h6.text-uppercase,
   line-height: 1.2rem;
   color: rgba(var(--rgb-white), 0.7);
 }
+.logo-with-mark {
+  position: relative;
+  display: inline-block;
+}
+.logo-with-mark::after {
+  content: "®";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, -30%);
+  font-size: var(--logo-mark-size, 0.6rem);
+  font-weight: 600;
+  color: #1e1e1e;
+}
+.inverse-text .logo-with-mark::after,
+.navbar.transparent .logo-with-mark::after,
+.navbar.fixed.banner--stick .logo-with-mark::after,
+.dark-wrapper .logo-with-mark::after {
+  color: #f5f5f5;
+}
 .footer-subtagline {
   margin-top: 0.2rem;
   font-size: 0.8rem;
@@ -403,6 +455,28 @@ h6.text-uppercase,
   margin-bottom: 0.75rem;
   color: rgba(var(--rgb-white), 0.7);
   line-height: 1.3rem;
+}
+.footer-certification {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+.footer-certification-badge img {
+  height: 28px;
+  width: auto;
+  opacity: 0.9;
+}
+.footer-certification-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-decoration: none;
+}
+.footer-certification-text:hover {
+  text-decoration: underline;
 }
 .footer-cta {
   text-align: center;
