@@ -1,6 +1,32 @@
 baseurl: ""
-url: "http://localhost:4000"
+url: "https://dicom.vision"
+title: "DICOM Vision"
+tagline: "AI-Powered Medical Imaging Platform"
+lang: "en"
+locale: "en_US"
+support_url: "https://dicomvision.atlassian.net/servicedesk/customer/portals"
 permalink: "/:title"
+
+# Pricing (Stripe-derived)
+pricing:
+  currency: "EUR"
+  plans:
+    - name: "DICOM Vision"
+      interval: "month"
+      price: 8
+      stripe_price_id: "price_1T2ErBP21DGvyqlHsLXCtTJR"
+    - name: "DICOM Vision"
+      interval: "year"
+      price: 72
+      stripe_price_id: "price_1T2ErcP21DGvyqlHWFAXRkvx"
+    - name: "DICOM Vision Pro"
+      interval: "month"
+      price: 48
+      stripe_price_id: "price_1T2EpdP21DGvyqlHkGHb3Q1w"
+    - name: "DICOM Vision Pro"
+      interval: "year"
+      price: 456
+      stripe_price_id: "price_1T2EqIP21DGvyqlHhdzaEYNy"
 
 # Build settings
 theme: minima
@@ -15,8 +41,15 @@ plugins:
 author: "Dicom Vision"
 twitter:
   username: "dicomvision"
+  card: "summary_large_image"
 logo: "/assets/images/logo-dicom-black-trim-text.png"
 description: "The Smart Cloud Platform for Medical Imaging. Zero-footprint DICOM viewer with AI, 3D visualization, and remote collaboration."
+social:
+  name: "DICOM Vision"
+  links:
+    - "https://www.linkedin.com/company/74176613"
+    - "https://github.com/Dicom-Vision"
+    - "https://x.com/DicomVision"
 
 # Analytics
 google_analytics: "G-XXXXXXXXXX" # TODO: Replace with real ID

@@ -1,8 +1,10 @@
 ---
 layout: default
-title: DICOM Vision
+title: "DICOM Vision | Zero-footprint DICOM viewer & AI imaging platform"
 custom_css: meander
 custom_font: plus-jakarta-sans
+description: "DICOM Vision is a secure zero-footprint DICOM viewer and AI-powered cloud platform for medical imaging, 3D visualization, and remote clinical collaboration."
+image: "/assets/images/logo-dicom-black-trim-text.png"
 
 general:
   enable: true
@@ -131,8 +133,8 @@ pacs:
 
             {% if page.hero_tagline.enabled %}
             <div class="hero-pen-block" data-ignore-reduced-motion="{{ page.hero_tagline.ignore_reduced_motion | default: false }}">
-              <h2 class="hero-pen-heading">
-                The
+              <h1 class="hero-pen-heading">
+                <span class="sr-only">DICOM Vision — </span>The
                 <span class="pen-change" data-words='{{ page.hero_tagline.rotate_a | jsonify }}'>
                   <span class="old">{{ page.hero_tagline.rotate_a[0] }}</span>
                 </span>
@@ -145,7 +147,7 @@ pacs:
                     <span class="old">{{ page.hero_tagline.rotate_c[0] }}</span>
                   </span>
                 </span>
-              </h2>
+              </h1>
             </div>
             {% else %}
             <h1 class="display-1">The Smart Cloud Platform for Medical Imaging</h1>
@@ -221,6 +223,7 @@ pacs:
             <img
               src="{{ '/assets/certifications/27001_SG_SSI_sg05-xs.jpg' | relative_url }}"
               alt="IMQ Certified badge for ISO 13485 – Quality Management System for Medical Devices"
+              loading="lazy"
             />
           </a>
         </div>
@@ -380,7 +383,7 @@ pacs:
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
           <figure>
-            <img src="/assets/images/home/mpr-fast.gif" alt="MPR" />
+            <img src="/assets/images/home/mpr-fast.gif" alt="MPR" loading="lazy" />
           </figure>
         </div>
 
@@ -454,7 +457,7 @@ pacs:
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
           <figure>
-            <img src="/assets/images/home/3d.png" alt="MPR" />
+            <img src="/assets/images/home/3d.png" alt="MPR" loading="lazy" />
           </figure>
         </div>
 
@@ -495,6 +498,7 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/gaslini.jpg"
           alt="Ospedale Gaslini"
+          loading="lazy"
         />
       </div>
 
@@ -502,6 +506,7 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/mni.png"
           alt="Mario Negri Institute"
+          loading="lazy"
         />
       </div>
 
@@ -509,30 +514,35 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/arzamed.png"
           alt="Arzamed"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/76-fondazione.jpg"
           alt="Fondazione IRCCS Istituto Nazionale dei Tumori."
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/ismett_logo_svg_20231102.svg"
           alt="ISMETT (Istituto Mediterraneo per i Trapianti e Terapie ad Alta Specializzazione, Palermo)"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/OVUlogo.jpg"
           alt="Ospedale Veterinario Universitario di Lodi"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/sandonato.jpg"
           alt="Gruppo Ospedaliero San Donato"
+          loading="lazy"
         />
       </div>
     </div>
@@ -559,6 +569,7 @@ pacs:
           <img
             src="{{relative_url}}/assets/images/clients/dv.png"
             alt="D/Vision Lab"
+            loading="lazy"
           />
         </a>
       </div>
@@ -567,6 +578,7 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/gmm.png"
           alt="GMM Group"
+          loading="lazy"
         />
       </div>
 
@@ -574,6 +586,7 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/polimi.png"
           alt="PoliMI"
+          loading="lazy"
         />
       </div>
 
@@ -581,6 +594,7 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/unibg.png"
           alt="UniBG"
+          loading="lazy"
         />
       </div>
 
@@ -588,36 +602,42 @@ pacs:
         <img
           src="{{relative_url}}/assets/images/clients/bg_sviluppo.png"
           alt="Bergamo Sviluppo"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/logo-01-ims-giotto-new.jpg"
           alt="IMS GIOTTO Mammography Systems, Digital Breast Tomoshyntesis"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/logo-UNIPV.png"
           alt="Universita degli Studi di Pavia"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/mio-dottore-logo-copertina.png"
           alt="MioDottore.it - Trova un dottore e prenota la tua visita online"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/UniPa-Universita-degli-studi-di-Palermo.jpg"
           alt="Universita degli Studi di Palermo"
+          loading="lazy"
         />
       </div>
       <div class="item ps-15 pe-15">
         <img
           src="{{relative_url}}/assets/images/clients/universita-lodi.jpg"
           alt="Universita degli Studi di Milano - Statale"
+          loading="lazy"
         />
       </div>
     </div>
