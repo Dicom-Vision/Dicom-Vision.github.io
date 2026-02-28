@@ -16,6 +16,18 @@ iframe {
   border: none;
 }
 
+.jam-x {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background: url("/assets/images/icons/X-logo-white.png") no-repeat center / contain;
+}
+
+.jam-x::before {
+  content: "";
+}
+
 .video-embed {
   position: relative;
   width: 100%;
