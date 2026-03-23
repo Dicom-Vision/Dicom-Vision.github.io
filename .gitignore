@@ -14,3 +14,4 @@ _output/
 _output_en/
 _output_it/
 firebase-debug.log
+.firebase/
