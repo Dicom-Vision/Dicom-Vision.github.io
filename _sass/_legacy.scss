@@ -1610,7 +1610,8 @@ figure {
   margin: 0;
   padding: 0;
 }
-figure img {
+figure img,
+figure video {
   max-width: 100%;
   border-radius: $border-radius-modern;
 }
