@@ -216,6 +216,31 @@
 .navbar-other .nav-item + .nav-item.search-dropdown {
   padding-left: 1rem !important;
 }
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.lang-current {
+  opacity: 1;
+  color: inherit;
+}
+.lang-link {
+  opacity: 0.45;
+  text-decoration: none !important;
+}
+.lang-link:hover {
+  opacity: 1;
+}
+.lang-switcher .lang-current::after {
+  content: "|";
+  margin-left: 0.15rem;
+  opacity: 0.35;
+}
 abbr[title],
 acronym[title] {
   cursor: help !important;
