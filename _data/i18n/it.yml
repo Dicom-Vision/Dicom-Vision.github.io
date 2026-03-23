@@ -31,26 +31,26 @@ home:
   view_demo: "Guarda la Demo"
 
   hero_tagline:
-    static_prefix: "La"
-    static_infix: "per"
+    static_prefix: "The"
+    static_infix: "for"
     rotate_a:
-      - "Sicura"
-      - "Conforme"
-      - "Collaborativa"
-      - "Scalabile"
+      - "Secure"
+      - "Compliant"
+      - "Collaborative"
+      - "Scalable"
     rotate_b:
-      - "Piattaforma IA"
-      - "Infrastruttura Cloud"
-      - "Motore di Workflow"
-      - "Piattaforma Enterprise"
-      - "Fabric dei Dati"
+      - "AI Platform"
+      - "Cloud Backbone"
+      - "Workflow Engine"
+      - "Enterprise Platform"
+      - "Data Fabric"
     rotate_c:
-      - "l'Imaging Clinico"
-      - "l'Imaging Medicale"
-      - "l'Imaging Diagnostico"
-      - "i Workflow DICOM"
-      - "le Operazioni Radiologiche"
-  hero_fallback: "La Piattaforma Cloud Intelligente per l'Imaging Medicale"
+      - "Clinical Imaging"
+      - "Medical Imaging"
+      - "Diagnostic Imaging"
+      - "DICOM Workflows"
+      - "Radiology Operations"
+  hero_fallback: "The Smart Cloud Platform for Medical Imaging"
 
   about_title: "Trasformiamo i Flussi di Lavoro dell'Imaging Clinico"
   about_text: >-
