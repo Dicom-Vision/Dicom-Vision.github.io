@@ -1,0 +1,278 @@
+- slug: radiology
+  slug_it: radiologia
+  en:
+    name: "Radiology"
+    title: "DICOM Viewer for Radiology | DICOM Vision"
+    description: "Zero-footprint DICOM viewer optimized for radiology workflows. AI-powered analysis, 3D MPR, and PACS integration for radiologists."
+    headline: "DICOM Viewer for Radiology"
+    intro: "DICOM Vision provides radiologists with a <strong>zero-footprint DICOM viewer</strong> optimized for high-volume reading workflows. From routine X-rays to complex CT and MRI studies, access all your images from any browser with <strong>AI-assisted analysis</strong> and <strong>advanced 3D visualization</strong>."
+    features:
+      - "AI-powered anomaly detection for chest X-rays, CT, and MRI"
+      - "Multi-Planar Reconstruction (MPR) and 3D Volume Rendering"
+      - "Hanging protocols and customizable reading layouts"
+      - "Integrated measurement tools (distance, area, HU density)"
+      - "PACS/RIS/HIS integration via DICOM and HL7"
+      - "Prior study comparison and cross-reference"
+    use_case: "Radiologists use DICOM Vision to streamline their reading workflow — from emergency CT reads with AI triage to outpatient MRI follow-ups with automated volumetric analysis."
+  it:
+    name: "Radiologia"
+    title: "Visualizzatore DICOM per Radiologia | DICOM Vision"
+    description: "Visualizzatore DICOM zero-footprint ottimizzato per la radiologia. Analisi IA, MPR 3D e integrazione PACS per radiologi."
+    headline: "Visualizzatore DICOM per Radiologia"
+    intro: "DICOM Vision offre ai radiologi un <strong>visualizzatore DICOM zero-footprint</strong> ottimizzato per flussi di lavoro ad alto volume. Dalle radiografie di routine agli studi TAC e RM complessi, accedi a tutte le immagini da qualsiasi browser con <strong>analisi assistita dall'IA</strong> e <strong>visualizzazione 3D avanzata</strong>."
+    features:
+      - "Rilevamento anomalie con IA per radiografie, TAC e RM"
+      - "Ricostruzione Multi-Planare (MPR) e Volume Rendering 3D"
+      - "Protocolli di visualizzazione e layout di lettura personalizzabili"
+      - "Strumenti di misurazione integrati (distanza, area, densità HU)"
+      - "Integrazione PACS/RIS/HIS via DICOM e HL7"
+      - "Confronto studi precedenti e cross-reference"
+    use_case: "I radiologi utilizzano DICOM Vision per ottimizzare il flusso di lettura — dalla lettura urgente di TAC con triage IA ai follow-up RM ambulatoriali con analisi volumetrica automatica."
+
+- slug: cardiology
+  slug_it: cardiologia
+  en:
+    name: "Cardiology"
+    title: "DICOM Viewer for Cardiology | Cardiac Imaging Platform"
+    description: "Cardiac imaging viewer with echocardiography, cardiac CT/MRI support, and AI analysis. Zero-footprint cloud platform for cardiologists."
+    headline: "DICOM Viewer for Cardiology"
+    intro: "DICOM Vision delivers a specialized <strong>cardiac imaging experience</strong> with support for <strong>echocardiography</strong>, <strong>cardiac CT angiography</strong>, and <strong>cardiac MRI</strong>. Visualize cardiac function, measure ejection fraction, and collaborate with cardiac surgeons — all from the browser."
+    features:
+      - "Echocardiography playback with cine loop support"
+      - "Cardiac CT angiography with 3D coronary visualization"
+      - "Cardiac MRI with functional analysis"
+      - "Automated ejection fraction and wall motion analysis"
+      - "Multi-frame DICOM support for dynamic cardiac studies"
+      - "Remote consultation with cardiac surgeons"
+    use_case: "Cardiologists use DICOM Vision to review echocardiograms, plan interventions with cardiac CT, and share complex cases with surgeons in real-time."
+  it:
+    name: "Cardiologia"
+    title: "Visualizzatore DICOM per Cardiologia | Imaging Cardiaco"
+    description: "Visualizzatore imaging cardiaco con ecocardiografia, TAC/RM cardiaca e analisi IA. Piattaforma cloud zero-footprint per cardiologi."
+    headline: "Visualizzatore DICOM per Cardiologia"
+    intro: "DICOM Vision offre un'esperienza di <strong>imaging cardiaco specializzata</strong> con supporto per <strong>ecocardiografia</strong>, <strong>angio-TAC cardiaca</strong> e <strong>RM cardiaca</strong>. Visualizza la funzione cardiaca, misura la frazione di eiezione e collabora con i cardiochirurghi — tutto dal browser."
+    features:
+      - "Riproduzione ecocardiografia con supporto cine loop"
+      - "Angio-TAC cardiaca con visualizzazione 3D delle coronarie"
+      - "RM cardiaca con analisi funzionale"
+      - "Analisi automatica della frazione di eiezione e del movimento parietale"
+      - "Supporto DICOM multi-frame per studi cardiaci dinamici"
+      - "Consulto remoto con cardiochirurghi"
+    use_case: "I cardiologi utilizzano DICOM Vision per rivedere ecocardiogrammi, pianificare interventi con TAC cardiaca e condividere casi complessi con i chirurghi in tempo reale."
+
+- slug: orthopedics
+  slug_it: ortopedia
+  en:
+    name: "Orthopedics"
+    title: "DICOM Viewer for Orthopedics | Musculoskeletal Imaging"
+    description: "Orthopedic DICOM viewer with fracture detection AI, 3D bone reconstruction, and surgical planning tools. Cloud-based MSK imaging platform."
+    headline: "DICOM Viewer for Orthopedics"
+    intro: "DICOM Vision supports <strong>musculoskeletal imaging workflows</strong> with <strong>AI fracture detection</strong>, <strong>3D bone reconstruction</strong>, and precise measurement tools. From emergency fracture assessment to pre-surgical planning, orthopedic surgeons get the visualization they need."
+    features:
+      - "AI-powered fracture detection on X-rays and CT"
+      - "3D bone surface reconstruction for surgical planning"
+      - "Angular and linear measurement tools"
+      - "Weight-bearing and alignment analysis"
+      - "Pre-operative templating and implant sizing"
+      - "Multi-planar reconstruction for complex fracture patterns"
+    use_case: "Orthopedic surgeons use DICOM Vision to assess fractures in the ER, plan joint replacements with 3D models, and track bone healing over serial follow-up studies."
+  it:
+    name: "Ortopedia"
+    title: "Visualizzatore DICOM per Ortopedia | Imaging Muscoloscheletrico"
+    description: "Visualizzatore DICOM ortopedico con IA per rilevamento fratture, ricostruzione 3D ossea e strumenti di pianificazione chirurgica."
+    headline: "Visualizzatore DICOM per Ortopedia"
+    intro: "DICOM Vision supporta i <strong>flussi di imaging muscoloscheletrico</strong> con <strong>rilevamento fratture tramite IA</strong>, <strong>ricostruzione 3D ossea</strong> e strumenti di misurazione precisi. Dalla valutazione delle fratture in emergenza alla pianificazione pre-chirurgica."
+    features:
+      - "Rilevamento fratture con IA su radiografie e TAC"
+      - "Ricostruzione 3D della superficie ossea per pianificazione chirurgica"
+      - "Strumenti di misurazione angolare e lineare"
+      - "Analisi del carico e dell'allineamento"
+      - "Templating pre-operatorio e dimensionamento impianti"
+      - "Ricostruzione multiplanare per pattern fratturativi complessi"
+    use_case: "I chirurghi ortopedici utilizzano DICOM Vision per valutare fratture in PS, pianificare protesi articolari con modelli 3D e monitorare la guarigione ossea nei follow-up."
+
+- slug: neurology
+  slug_it: neurologia
+  en:
+    name: "Neurology"
+    title: "DICOM Viewer for Neurology | Brain Imaging & Neuroimaging"
+    description: "Neuroimaging DICOM viewer with brain MRI analysis, AI lesion detection, and volumetric brain segmentation. Cloud platform for neurologists."
+    headline: "DICOM Viewer for Neurology"
+    intro: "DICOM Vision provides <strong>neuroimaging tools</strong> for brain MRI, head CT, and spine imaging. <strong>AI-powered lesion detection</strong>, <strong>volumetric brain analysis</strong>, and <strong>multi-sequence comparison</strong> support neurologists in diagnosing stroke, tumors, MS, and degenerative diseases."
+    features:
+      - "Brain MRI multi-sequence visualization (T1, T2, FLAIR, DWI)"
+      - "AI lesion detection for stroke, tumors, and white matter disease"
+      - "Volumetric brain segmentation and atrophy analysis"
+      - "Perfusion and diffusion mapping"
+      - "Spine MRI with disc and nerve root visualization"
+      - "Longitudinal comparison for MS and tumor monitoring"
+    use_case: "Neurologists use DICOM Vision for acute stroke evaluation with DWI/perfusion, MS lesion tracking over time, and brain tumor monitoring with volumetric analysis."
+  it:
+    name: "Neurologia"
+    title: "Visualizzatore DICOM per Neurologia | Imaging Cerebrale e Neuroimaging"
+    description: "Visualizzatore DICOM neuroimaging con analisi RM cerebrale, rilevamento lesioni IA e segmentazione volumetrica cerebrale."
+    headline: "Visualizzatore DICOM per Neurologia"
+    intro: "DICOM Vision fornisce <strong>strumenti di neuroimaging</strong> per RM cerebrale, TAC cranio e imaging spinale. <strong>Rilevamento lesioni con IA</strong>, <strong>analisi volumetrica cerebrale</strong> e <strong>confronto multi-sequenza</strong> supportano i neurologi nella diagnosi di ictus, tumori, SM e malattie degenerative."
+    features:
+      - "Visualizzazione RM cerebrale multi-sequenza (T1, T2, FLAIR, DWI)"
+      - "Rilevamento lesioni IA per ictus, tumori e malattia della sostanza bianca"
+      - "Segmentazione volumetrica cerebrale e analisi dell'atrofia"
+      - "Mappatura di perfusione e diffusione"
+      - "RM spinale con visualizzazione dischi e radici nervose"
+      - "Confronto longitudinale per monitoraggio SM e tumori"
+    use_case: "I neurologi utilizzano DICOM Vision per la valutazione dell'ictus acuto con DWI/perfusione, il monitoraggio delle lesioni SM nel tempo e il monitoraggio dei tumori cerebrali con analisi volumetrica."
+
+- slug: oncology
+  slug_it: oncologia
+  en:
+    name: "Oncology"
+    title: "DICOM Viewer for Oncology | Cancer Imaging Platform"
+    description: "Oncology imaging platform with tumor measurement, RECIST criteria tracking, PET-CT fusion, and AI tumor detection. Cloud DICOM viewer for oncologists."
+    headline: "DICOM Viewer for Oncology"
+    intro: "DICOM Vision supports <strong>oncology imaging workflows</strong> with <strong>RECIST measurement tools</strong>, <strong>PET-CT fusion</strong>, and <strong>AI tumor detection</strong>. Track tumor response, compare serial studies, and collaborate with tumor boards — all in one cloud platform."
+    features:
+      - "RECIST and WHO criteria measurement tools"
+      - "PET-CT fusion and SUV analysis"
+      - "AI tumor detection and volumetric measurement"
+      - "Serial study comparison with automated lesion tracking"
+      - "Tumor board presentation mode"
+      - "Multi-modality image correlation (CT, MRI, PET, US)"
+    use_case: "Oncologists use DICOM Vision to track tumor response across chemotherapy cycles, prepare tumor board presentations, and collaborate with radiologists on staging."
+  it:
+    name: "Oncologia"
+    title: "Visualizzatore DICOM per Oncologia | Piattaforma Imaging Oncologico"
+    description: "Piattaforma imaging oncologica con misurazione tumori, criteri RECIST, fusione PET-TAC e rilevamento tumori con IA."
+    headline: "Visualizzatore DICOM per Oncologia"
+    intro: "DICOM Vision supporta i <strong>flussi di imaging oncologico</strong> con <strong>strumenti di misurazione RECIST</strong>, <strong>fusione PET-TAC</strong> e <strong>rilevamento tumori con IA</strong>. Monitora la risposta tumorale, confronta studi seriali e collabora con i tumor board."
+    features:
+      - "Strumenti di misurazione criteri RECIST e WHO"
+      - "Fusione PET-TAC e analisi SUV"
+      - "Rilevamento tumori con IA e misurazione volumetrica"
+      - "Confronto studi seriali con tracciamento automatico delle lesioni"
+      - "Modalità presentazione tumor board"
+      - "Correlazione immagini multi-modalità (TAC, RM, PET, ecografia)"
+    use_case: "Gli oncologi utilizzano DICOM Vision per monitorare la risposta tumorale durante i cicli di chemioterapia, preparare presentazioni per tumor board e collaborare con i radiologi sulla stadiazione."
+
+- slug: surgery
+  slug_it: chirurgia
+  en:
+    name: "Surgery"
+    title: "DICOM Viewer for Surgical Planning | 3D Surgical Visualization"
+    description: "Surgical planning DICOM viewer with 3D anatomy visualization, virtual resection, and intraoperative image review. Cloud platform for surgeons."
+    headline: "DICOM Viewer for Surgical Planning"
+    intro: "DICOM Vision empowers surgeons with <strong>3D anatomical visualization</strong> for <strong>pre-operative planning</strong>. Explore patient-specific anatomy in 3D, plan resection margins, and review images intraoperatively — from any device, anywhere."
+    features:
+      - "3D Volume Rendering for anatomical exploration"
+      - "Virtual resection and margin planning"
+      - "Patient-specific 3D anatomy from CT and MRI data"
+      - "Intraoperative image review from any device"
+      - "Vascular anatomy mapping for surgical approach planning"
+      - "Remote consultation with surgical teams"
+    use_case: "Surgeons use DICOM Vision to plan complex hepatic resections with 3D vascular mapping, review spine anatomy before instrumentation, and consult with colleagues remotely."
+  it:
+    name: "Chirurgia"
+    title: "Visualizzatore DICOM per Pianificazione Chirurgica | Visualizzazione 3D"
+    description: "Visualizzatore DICOM per pianificazione chirurgica con anatomia 3D, resezione virtuale e revisione immagini intraoperatoria."
+    headline: "Visualizzatore DICOM per Pianificazione Chirurgica"
+    intro: "DICOM Vision fornisce ai chirurghi <strong>visualizzazione anatomica 3D</strong> per la <strong>pianificazione pre-operatoria</strong>. Esplora l'anatomia specifica del paziente in 3D, pianifica i margini di resezione e rivedi le immagini intraoperatoriamente."
+    features:
+      - "Volume Rendering 3D per esplorazione anatomica"
+      - "Resezione virtuale e pianificazione margini"
+      - "Anatomia 3D paziente-specifica da dati TAC e RM"
+      - "Revisione immagini intraoperatoria da qualsiasi dispositivo"
+      - "Mappatura anatomia vascolare per pianificazione approccio chirurgico"
+      - "Consulto remoto con team chirurgici"
+    use_case: "I chirurghi utilizzano DICOM Vision per pianificare resezioni epatiche complesse con mappatura vascolare 3D, rivedere l'anatomia spinale prima della strumentazione e consultare colleghi da remoto."
+
+- slug: emergency-medicine
+  slug_it: medicina-emergenza
+  en:
+    name: "Emergency Medicine"
+    title: "DICOM Viewer for Emergency Medicine | ER Imaging Platform"
+    description: "Emergency radiology DICOM viewer with AI triage, rapid CT review, and instant image sharing. Cloud platform for emergency departments."
+    headline: "DICOM Viewer for Emergency Medicine"
+    intro: "DICOM Vision enables <strong>rapid image review</strong> in emergency departments with <strong>AI-powered triage</strong>, instant study access, and <strong>real-time specialist consultation</strong>. Critical findings are flagged automatically so the most urgent cases are seen first."
+    features:
+      - "AI triage with automatic critical finding detection"
+      - "Sub-second image loading for rapid ER reads"
+      - "Instant sharing with on-call specialists"
+      - "Stroke CT/CTA with AI hemorrhage detection"
+      - "Trauma CT with automated injury flagging"
+      - "Mobile access for physicians on the move"
+    use_case: "ER physicians use DICOM Vision for rapid trauma CT review, stroke protocol imaging with AI hemorrhage detection, and instant specialist consultation for critical findings."
+  it:
+    name: "Medicina d'Emergenza"
+    title: "Visualizzatore DICOM per Medicina d'Emergenza | Imaging Pronto Soccorso"
+    description: "Visualizzatore DICOM per radiologia d'emergenza con triage IA, revisione rapida TAC e condivisione immediata immagini."
+    headline: "Visualizzatore DICOM per Medicina d'Emergenza"
+    intro: "DICOM Vision consente la <strong>revisione rapida delle immagini</strong> nei pronto soccorso con <strong>triage basato su IA</strong>, accesso immediato agli studi e <strong>consulto specialistico in tempo reale</strong>. I reperti critici vengono segnalati automaticamente."
+    features:
+      - "Triage IA con rilevamento automatico reperti critici"
+      - "Caricamento immagini sub-secondo per letture rapide in PS"
+      - "Condivisione istantanea con specialisti reperibili"
+      - "TAC/angio-TAC ictus con rilevamento emorragia IA"
+      - "TAC trauma con segnalazione automatica lesioni"
+      - "Accesso mobile per medici in movimento"
+    use_case: "I medici di PS utilizzano DICOM Vision per la revisione rapida delle TAC trauma, l'imaging del protocollo ictus con rilevamento emorragia IA e il consulto specialistico immediato."
+
+- slug: veterinary
+  slug_it: veterinaria
+  en:
+    name: "Veterinary Medicine"
+    title: "DICOM Viewer for Veterinary | Veterinary Imaging Platform"
+    description: "Veterinary DICOM viewer for animal imaging. X-ray, CT, MRI, and ultrasound viewing with measurement tools. Cloud platform for veterinary clinics."
+    headline: "DICOM Viewer for Veterinary Medicine"
+    intro: "DICOM Vision extends to <strong>veterinary imaging</strong>, providing veterinarians with the same powerful <strong>zero-footprint viewer</strong>, <strong>3D visualization</strong>, and <strong>measurement tools</strong> used in human medicine — adapted for animal anatomy and veterinary workflows."
+    features:
+      - "Multi-modality support (X-ray, CT, MRI, US) for animals"
+      - "Species-specific measurement tools"
+      - "3D reconstruction for complex fracture assessment"
+      - "Cloud storage for multi-clinic veterinary groups"
+      - "Referral image sharing with veterinary specialists"
+      - "Mobile access for field and equine veterinarians"
+    use_case: "Veterinarians use DICOM Vision to diagnose fractures, assess internal conditions with CT/MRI, and share complex cases with veterinary specialists for second opinions."
+  it:
+    name: "Veterinaria"
+    title: "Visualizzatore DICOM per Veterinaria | Imaging Veterinario"
+    description: "Visualizzatore DICOM veterinario per imaging animale. Radiografie, TAC, RM ed ecografie con strumenti di misurazione. Piattaforma cloud per cliniche veterinarie."
+    headline: "Visualizzatore DICOM per Veterinaria"
+    intro: "DICOM Vision si estende all'<strong>imaging veterinario</strong>, fornendo ai veterinari lo stesso potente <strong>visualizzatore zero-footprint</strong>, <strong>visualizzazione 3D</strong> e <strong>strumenti di misurazione</strong> utilizzati in medicina umana — adattati all'anatomia animale."
+    features:
+      - "Supporto multi-modalità (radiografie, TAC, RM, ecografie) per animali"
+      - "Strumenti di misurazione specifici per specie"
+      - "Ricostruzione 3D per valutazione fratture complesse"
+      - "Archiviazione cloud per gruppi veterinari multi-clinica"
+      - "Condivisione immagini per referral con specialisti veterinari"
+      - "Accesso mobile per veterinari sul campo e ippiatri"
+    use_case: "I veterinari utilizzano DICOM Vision per diagnosticare fratture, valutare condizioni interne con TAC/RM e condividere casi complessi con specialisti veterinari."
+
+- slug: teleradiology
+  slug_it: teleradiologia
+  en:
+    name: "Teleradiology"
+    title: "Teleradiology Platform | DICOM Vision Remote Reading"
+    description: "Cloud teleradiology platform with zero-footprint DICOM viewer, remote reporting, and real-time collaboration. Read from anywhere, any device."
+    headline: "Teleradiology Platform"
+    intro: "DICOM Vision is built for <strong>teleradiology</strong>. Read studies from <strong>any location, any device</strong>, with the same tools available at the workstation. <strong>Real-time collaboration</strong>, <strong>AI assistance</strong>, and <strong>zero-footprint access</strong> make remote reading seamless."
+    features:
+      - "Read from any browser — no VPN or dedicated workstation needed"
+      - "Real-time collaboration with on-site teams"
+      - "AI-powered preliminary reads and triage"
+      - "Structured reporting integration"
+      - "Multi-site worklist management"
+      - "Diagnostic-quality viewing on any screen"
+    use_case: "Teleradiologists use DICOM Vision to provide overnight reads, subspecialty consultations, and overflow coverage for hospitals — from home or anywhere with internet."
+  it:
+    name: "Teleradiologia"
+    title: "Piattaforma Teleradiologia | DICOM Vision Lettura Remota"
+    description: "Piattaforma teleradiologia cloud con visualizzatore DICOM zero-footprint, refertazione remota e collaborazione in tempo reale."
+    headline: "Piattaforma di Teleradiologia"
+    intro: "DICOM Vision è costruito per la <strong>teleradiologia</strong>. Leggi studi da <strong>qualsiasi luogo, qualsiasi dispositivo</strong>, con gli stessi strumenti disponibili alla workstation. <strong>Collaborazione in tempo reale</strong>, <strong>assistenza IA</strong> e <strong>accesso zero-footprint</strong>."
+    features:
+      - "Lettura da qualsiasi browser — nessuna VPN o workstation dedicata"
+      - "Collaborazione in tempo reale con i team in sede"
+      - "Letture preliminari e triage con IA"
+      - "Integrazione refertazione strutturata"
+      - "Gestione worklist multi-sede"
+      - "Visualizzazione qualità diagnostica su qualsiasi schermo"
+    use_case: "I teleradiologi utilizzano DICOM Vision per letture notturne, consulenze subspecialistiche e copertura overflow per ospedali — da casa o ovunque con internet."

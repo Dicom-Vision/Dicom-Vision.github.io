@@ -140,5 +140,17 @@
     </div>
     <div class="space30"></div>
     <p class="text-center">{{ t.general.copyright_text }}</p>
+    <nav class="seo-nav" aria-hidden="true">
+      <a href="{{ '/dicom-viewer' | relative_url }}">DICOM Viewer</a>
+      <a href="{{ '/pacs-cloud' | relative_url }}">Cloud PACS</a>
+      <a href="{{ '/ai-radiology' | relative_url }}">AI Radiology</a>
+      <a href="{{ '/visualizzatore-dicom' | relative_url }}">Visualizzatore DICOM</a>
+      <a href="{{ '/pacs-cloud-soluzione' | relative_url }}">PACS Cloud</a>
+      <a href="{{ '/ia-radiologia' | relative_url }}">IA Radiologia</a>
+      {% for spec in site.data.specialties %}
+      <a href="{{ '/dicom-viewer-' | append: spec.slug | relative_url }}">DICOM Viewer {{ spec.en.name }}</a>
+      <a href="{{ '/visualizzatore-dicom-' | append: spec.slug_it | relative_url }}">Visualizzatore DICOM {{ spec.it.name }}</a>
+      {% endfor %}
+    </nav>
   </div>
 </footer>

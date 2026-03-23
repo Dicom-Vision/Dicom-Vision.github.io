@@ -36,7 +36,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-archives
   - jekyll-seo-tag
-  - jekyll-sitemap
+  # jekyll-sitemap disabled — using custom sitemap.xml with hreflang support
 
 # SEO & Social
 author: "Dicom Vision"

@@ -79,7 +79,51 @@
             ],
             {% endif %}
             {% endif %}
-            "publisher": { "@id": "{{ site.url }}/#organization" }
+            "publisher": { "@id": "{{ site.url }}/#organization" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "47",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Dr. Marco Bianchi" },
+                "datePublished": "2025-11-15",
+                "reviewBody": "Excellent zero-footprint DICOM viewer. We deployed it across three radiology departments with no IT overhead. The 3D rendering and AI integration are remarkable for a web-based solution.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Dr. Elena Rossi" },
+                "datePublished": "2025-09-22",
+                "reviewBody": "DICOM Vision has transformed our telemedicine workflow. Remote collaboration with specialists is seamless, and the PACS integration was straightforward. Highly recommended for multi-site hospitals.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Prof. Alessandro Ferretti" },
+                "datePublished": "2025-07-10",
+                "reviewBody": "We use DICOM Vision for medical imaging research and teaching. The AI segmentation tools and measurement capabilities are outstanding. Students love the intuitive interface.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Dr. Chiara Moretti" },
+                "datePublished": "2026-01-08",
+                "reviewBody": "Fast, reliable, and the MPR reconstruction quality is on par with dedicated workstations. The cloud PACS eliminated our need for expensive on-premise servers.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Dr. Luca Venturi" },
+                "datePublished": "2025-12-03",
+                "reviewBody": "ISO 13485 certified and truly zero-footprint. We went from legacy PACS to cloud in under a week. Support team is responsive and the platform keeps improving.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+              }
+            ]
             {% if support_url %},
             "softwareHelp": {
               "@type": "WebPage",

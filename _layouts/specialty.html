@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+{% assign lang = site.lang | default: "en" %}
+{% assign spec = site.data.specialties | where: "slug", page.specialty_slug | first %}
+{% unless spec %}
+  {% assign spec = site.data.specialties | where: "slug_it", page.specialty_slug | first %}
+{% endunless %}
+{% assign s = spec[lang] %}
+
+{% include header.html extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
+
+<div class="wrapper light-wrapper page-title-wrapper">
+  <div class="container inner text-center">
+    <h1 class="page-title">{{ s.headline }}</h1>
+  </div>
+</div>
+
+<div class="wrapper gray-wrapper">
+  <div class="container pt-40 pb-40">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <p class="lead">{{ s.intro }}</p>
+
+        <h2>{% if lang == "it" %}Funzionalità Chiave per {{ s.name }}{% else %}Key Features for {{ s.name }}{% endif %}</h2>
+        <ul>
+          {% for feat in s.features %}
+          <li>{{ feat }}</li>
+          {% endfor %}
+        </ul>
+
+        <h2>{% if lang == "it" %}Caso d'Uso{% else %}Use Case{% endif %}</h2>
+        <p>{{ s.use_case }}</p>
+
+        {{ content }}
+      </div>
+    </div>
+    <div class="text-center mt-40">
+      <a href="https://app.dicom.vision" target="_blank" class="btn btn-l btn-green">{{ t.home.launch_app }}</a>
+      <a href="/contact" class="btn btn-l btn-white">{{ t.footer.cta_button }}</a>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": {{ s.title | jsonify }},
+  "description": {{ s.description | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "inLanguage": {{ lang | jsonify }},
+  "specialty": {
+    "@type": "MedicalSpecialty",
+    "name": {{ s.name | jsonify }}
+  },
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Clinician"
+  },
+  "publisher": { "@id": "{{ site.url }}/#organization" }
+}
+</script>
+
+{% include footer.html %}
