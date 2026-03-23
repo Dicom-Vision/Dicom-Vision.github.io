@@ -1,3 +1,4 @@
+{% assign t = site.data.i18n[site.lang] %}
 <nav
   class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg"
 >
@@ -54,7 +55,7 @@
         {% for menu in site.data.navigation.main_menu %} {% assign check_menu =
         menu.menu_type %} {% case check_menu %} {% when "megamenu" %}
         <li class="nav-item">
-          <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
+          <a class="nav-link" href="{{menu.url}}">{{ t.nav[menu.key] | default: menu.key }}</a>
           <ul class="dropdown-menu mega-menu boxed list-view text-left">
             <li class="mega-menu-content">
               <div class="row">
@@ -63,7 +64,7 @@
                   <ul class="list-unstyled">
                     <li>
                       <a class="dropdown-item" href="{{column.url}}"
-                        >{{column.text}}</a
+                        >{{ t.nav[column.key] | default: column.key }}</a
                       >
                     </li>
                   </ul>
@@ -79,18 +80,18 @@
         </li>
         {% when "dropdown" %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#">{{menu.text}}</a>
+          <a class="nav-link dropdown-toggle" href="#">{{ t.nav[menu.key] | default: menu.key }}</a>
           <ul class="dropdown-menu">
             {% for label_two in menu.label_two %}
             <li class="dropdown">
               <a class="dropdown-item dropdown-toggle" href="#"
-                >{{label_two.sub_menu_text}}</a
+                >{{ t.nav[label_two.key] | default: label_two.sub_menu_text }}</
               >
               <ul class="dropdown-menu">
                 {% for sub_menu in label_two.sub_menu %}
                 <li class="nav-item">
                   <a class="dropdown-item" href="{{sub_menu.url}}"
-                    >{{sub_menu.text}}</a
+                    >{{ t.nav[sub_menu.key] | default: sub_menu.text }}</a
                   >
                 </li>
                 {% endfor %}
@@ -100,7 +101,7 @@
             %}
             <li>
               <a class="dropdown-item" href="{{label_one.url}}"
-                >{{label_one.text}}</a
+                >{{ t.nav[label_one.key] | default: label_one.text }}</a
               >
             </li>
             {% endfor %} {% endif %}
@@ -110,10 +111,10 @@
         <li class="nav-item">
           {% if menu.external %}
           <a class="nav-link" href="{{menu.url}}" target="_blank"
-            >{{menu.text}}</a
+            >{{ t.nav[menu.key] | default: menu.key }}</a
           >
           {% else %}
-          <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
+          <a class="nav-link" href="{{menu.url}}">{{ t.nav[menu.key] | default: menu.key }}</a>
           {% endif %}
         </li>
         {% endcase %} {% endfor %}

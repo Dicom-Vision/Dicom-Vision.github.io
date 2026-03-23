@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% seo %}
+    {% assign alt_lang = "it" %}{% if site.lang == "it" %}{% assign alt_lang = "en" %}{% endif %}
+    <link rel="alternate" hreflang="{{ site.lang | default: 'en' }}" href="{{ site.url }}{{ page.url }}" />
+    <link rel="alternate" hreflang="{{ alt_lang }}" href="{{ site.alternate_url }}{{ page.url }}" />
     {% assign seo_name = page.seo_title | default: page.title | default: site.title %}
     {% assign seo_desc = page.description | default: site.description %}
     {% assign seo_image = page.image | default: site.logo %}
     {% assign support_url = site.support_url %}
+    {% assign t = site.data.i18n[site.lang] %}
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -65,9 +69,9 @@
                 "priceCurrency": {{ site.pricing.currency | jsonify }},
                 "availability": "https://schema.org/InStock",
                 {% if plan.interval == "month" %}
-                "description": "Billed monthly"
+                "description": {{ t.schema.billed_monthly | jsonify }}
                 {% else %}
-                "description": "Billed yearly"
+                "description": {{ t.schema.billed_yearly | jsonify }}
                 {% endif %}
               }{% unless forloop.last %},{% endunless %}
               {% endfor %}

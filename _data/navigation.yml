@@ -1,13 +1,13 @@
 main_menu:
-  - text: "HOME"
+  - key: "home"
     url: "/"
 
-  - text: "DEMO"
+  - key: "demo"
     url: "https://rapid-credit-55b6.daniele-ciriello.workers.dev"
     external: true
 
-  - text: "CONTACT US"
+  - key: "contact"
     url: "/contact"
 
-  - text: "WEB PRIVACY POLICY & COOKIES"
+  - key: "privacy"
     url: "/web-privacy-policy-cookie"

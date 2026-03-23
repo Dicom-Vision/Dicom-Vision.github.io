@@ -1,43 +1,12 @@
 ---
 layout: default
-title: "DICOM Vision | Zero-footprint DICOM viewer & AI imaging platform"
 custom_css: meander
 custom_font: plus-jakarta-sans
-description: "DICOM Vision is a secure zero-footprint DICOM viewer and AI-powered cloud platform for medical imaging, 3D visualization, and remote clinical collaboration."
 image: "/assets/images/logo-dicom-black-trim-text.png"
-
-general:
-  enable: true
-  title: "The Smart Cloud Platform for Medical Imaging"
-  text: " DICOM Vision is a comprehensive and cutting-edge tool 
-  for managing medical images that combines the ease of use of a 
-  zero-footprint viewer with advanced features like 3D visualization, 
-  artificial intelligence, and remote collaboration. It is a valuable 
-  tool for healthcare professionals who rely on diagnostic images to 
-  provide high-quality patient care."
 
 hero_tagline:
   enabled: true
   ignore_reduced_motion: true
-  static_prefix: "The"
-  static_infix: "for"
-  rotate_a:
-    - "Secure"
-    - "Compliant"
-    - "Collaborative"
-    - "Scalable"
-  rotate_b:
-    - "AI Platform"
-    - "Cloud Backbone"
-    - "Workflow Engine"
-    - "Enterprise Platform"
-    - "Data Fabric"
-  rotate_c:
-    - "Clinical Imaging"
-    - "Medical Imaging"
-    - "Diagnostic Imaging"
-    - "DICOM Workflows"
-    - "Radiology Operations"
   timing:
     hold_ms: 4200
     fade_ms: 280
@@ -45,74 +14,22 @@ hero_tagline:
     mode: "paired"
 
 zero_footprint:
-  enable: true
   image: "/assets/images/home/viewer_2d.gif"
-  title: "ZERO-FOOTPRINT VIEWER"
-  text: "This means that <strong>no additional software or plugins</strong> need 
-  to be installed on the user's device. The viewer can be accessed 
-  through a <strong>web browser</strong>, making access to medical images 
-  extremely convenient and flexible."
-
 dicom_storage:
-  enable: true
   image: "/assets/images/home/mpr-fast.gif"
-  title: "DICOM STORAGE AND DISPLAY"
-  text: "DICOM Vision is designed to handle medical images 
-  in the <strong>DICOM format</strong>, which is a widely used standard in the 
-  field of medical imaging. It can store and display a wide range
-  of <strong>diagnostic images</strong>, including <strong>X-rays</strong>, 
-  <strong>CT scans</strong>, <strong>MRIs</strong>, <strong>ultrasounds</strong>, 
-  and more."
- 
 views:
-  enable: true
   image: "/assets/images/home/3d.png"
-  title: "2D AND 3D VIEWS"
-  text: "The viewer supports not only <strong>2D image views</strong> but also 
-  <strong>advanced 3D views</strong>. This is particularly useful for creating 
-  <strong>three-dimensional models</strong> from imaging data, allowing for a 
-  better understanding of anatomical structures."
-
 remote_collaboration:
-  enable: true
   image: "/assets/images/home/collaborative.png"
-  title: "REMOTE COLLABORATION"
-  text: "One of the key features of DICOM Vision is its ability to support
-  <strong>remote collaboration</strong>. Healthcare professionals can easily 
-  <strong>share images</strong> with colleagues or specialists around the world, 
-  enabling quicker and more convenient consultation and <strong>second opinions</strong>."
-
 artificial_intelligence:
-  enable: true
   image: "/assets/images/home/ai.png"
-  title: "ARTIFICIAL INTELLIGENCE"
-  text: "The viewer can integrate <strong>artificial intelligence (AI)</strong> 
-  features for <strong>automatic image analysis</strong>. This may include 
-  <strong>anomaly detection</strong>, <strong>anatomical structure segmentation</strong>, 
-  and other advanced AI applications for image interpretation."
- 
 measurement_tools:
-  enable: true
   image: "/assets/images/home/measurements.png"
-  title: "MEASUREMENT TOOLS"
-  text: "DICOM Vision offers a range of <strong>measurement tools</strong> that 
-  allow users to make <strong>precise measurements</strong> directly on images. 
-  This is essential for <strong>diagnostic</strong> and <strong>patient monitoring</strong> purposes."
-
 pacs:
-  enable: true
   image: "/assets/images/home/pacs.gif"
-  title: "PACS INTEGRATION"
-  text: "DICOM Vision supports <strong>PACS storage and communication</strong>, 
-  making it a seamless solution for healthcare facilities that rely on PACS systems 
-  to manage and distribute medical images efficiently. This ensures easy 
-  <strong>integration</strong> with existing infrastructure and simplifies the 
-  <strong>sharing and retrieval</strong> of patient data within healthcare networks."
-
-
-  
-
 ---
+
+{% assign t = site.data.i18n[site.lang] %}
 
 {% include header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase" light_logo="true" %}
 
@@ -125,7 +42,7 @@ pacs:
       <div class="row">
         <div class="col-md-7 mx-auto">
           <div class="space140"></div>
-          
+
           <div class="logo-container logo-with-mark">
             <img src="/assets/images/logo-dicom-black-trim-text.png" alt="dicom vision logo" class="logo">
           </div>
@@ -133,23 +50,23 @@ pacs:
             {% if page.hero_tagline.enabled %}
             <div class="hero-pen-block" data-ignore-reduced-motion="{{ page.hero_tagline.ignore_reduced_motion | default: false }}">
               <h1 class="hero-pen-heading">
-                The
-                <span class="pen-change" data-words='{{ page.hero_tagline.rotate_a | jsonify }}'>
-                  <span class="old">{{ page.hero_tagline.rotate_a[0] }}</span>
+                {{ t.home.hero_tagline.static_prefix }}
+                <span class="pen-change" data-words='{{ t.home.hero_tagline.rotate_a | jsonify }}'>
+                  <span class="old">{{ t.home.hero_tagline.rotate_a[0] }}</span>
                 </span>
-                <span class="pen-change" data-words='{{ page.hero_tagline.rotate_b | jsonify }}'>
-                  <span class="old">{{ page.hero_tagline.rotate_b[0] }}</span>
+                <span class="pen-change" data-words='{{ t.home.hero_tagline.rotate_b | jsonify }}'>
+                  <span class="old">{{ t.home.hero_tagline.rotate_b[0] }}</span>
                 </span>
                 <span class="pen-line">
-                  for
-                  <span class="pen-change" data-words='{{ page.hero_tagline.rotate_c | jsonify }}'>
-                    <span class="old">{{ page.hero_tagline.rotate_c[0] }}</span>
+                  {{ t.home.hero_tagline.static_infix }}
+                  <span class="pen-change" data-words='{{ t.home.hero_tagline.rotate_c | jsonify }}'>
+                    <span class="old">{{ t.home.hero_tagline.rotate_c[0] }}</span>
                   </span>
                 </span>
               </h1>
             </div>
             {% else %}
-            <h1 class="display-1">The Smart Cloud Platform for Medical Imaging</h1>
+            <h1 class="display-1">{{ t.home.hero_fallback }}</h1>
             {% endif %}
 
           <div class="space20"></div>
@@ -157,13 +74,13 @@ pacs:
             href="https://app.dicom.vision"
             target="_blank"
             class="btn btn-l btn-green scroll"
-            >Launch App</a
+            >{{ t.home.launch_app }}</a
           >
           <a
             href="https://rapid-credit-55b6.daniele-ciriello.workers.dev"
             target="_blank"
             class="btn btn-l btn-white btn-demo-outline"
-            >View Live Demo</a
+            >{{ t.home.view_demo }}</a
           >
         </div>
       </div>
@@ -186,31 +103,20 @@ pacs:
 <div class="wrapper gray-wrapper" id="about">
   <div class="container pt-40 pb-40">
     <h2 class="section-title mb-40 text-center">
-      Transforming Clinical Imaging Workflows
+      {{ t.home.about_title }}
     </h2>
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <p>
-          From <strong>zero-footprint viewing</strong> to
-          <strong>AI-driven analysis</strong> and
-          <strong>advanced 3D visualization</strong>, DICOM Vision streamlines
-          <strong>diagnostic workflows</strong> across radiology and clinical
-          departments. Built for <strong>scalability</strong> and
-          <strong>secure integration</strong> within hospital infrastructures,
-          it enables <strong>faster clinical decisions</strong>,
-          <strong>improved collaboration</strong>, and
-          <strong>efficient management</strong> of medical imaging data.
-        </p>
+        <p>{{ t.home.about_text }}</p>
         <div class="certification-strip">
           <div class="certification-text">
-            <strong>ISO 13485</strong> – Quality Management System for Medical
-            Devices (IMQ Certified)
+            <strong>{{ t.home.cert_iso }}</strong> – {{ t.home.cert_text }}
             <a
               class="certification-link"
               href="{{ '/assets/certifications/1118.2025%20(2).pdf' | relative_url }}"
               target="_blank"
               rel="noopener"
-              >View certificate (PDF)</a
+              >{{ t.home.cert_link }}</a
             >
           </div>
           <a
@@ -221,7 +127,7 @@ pacs:
           >
             <img
               src="{{ '/assets/certifications/27001_SG_SSI_sg05-xs.jpg' | relative_url }}"
-              alt="IMQ Certified badge for ISO 13485 – Quality Management System for Medical Devices"
+              alt="{{ t.home.cert_iso }} – {{ t.home.cert_text }}"
               loading="lazy"
             />
           </a>
@@ -237,16 +143,8 @@ pacs:
 <!-- Application Fields -->
 <div class="wrapper dark-wrapper inverse-text">
   <div class="container pt-40 pb-40" data-aos="fade-up" data-aos-delay="200">
-    <h2 class="section-title mb-40 text-center">Application Fields</h2>
-    <p class="mb-60">
-      DICOM Vision's <strong>zero-footprint viewer</strong>,
-      <strong>AI capabilities</strong>, <strong>3D visualization</strong>, and
-      <strong>secure access</strong> to medical images enhance the quality of
-      <strong>patient care</strong>, research, teaching, and
-      <strong>diagnostic accuracy</strong>. Its flexibility and adaptability
-      make it a valuable asset for professionals in various healthcare-related
-      fields.
-    </p>
+    <h2 class="section-title mb-40 text-center">{{ t.home.app_fields_title }}</h2>
+    <p class="mb-60">{{ t.home.app_fields_intro }}</p>
     <div class="row gutter-50">
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
         <div class="d-flex flex-row justify-content-center">
@@ -256,14 +154,8 @@ pacs:
             </div>
           </div>
           <div>
-            <h5>Radiology</h5>
-            <p>
-              DICOM Vision is well-suited for <strong>radiology practices</strong>,
-              allowing radiologists to view and analyze medical images such as
-              <strong>X-rays, CT scans, and MRIs</strong> with ease. Its advanced
-              features, like <strong>3D visualization</strong> and
-              <strong>AI integration</strong>, enhance diagnostic capabilities.
-            </p>
+            <h5>{{ t.home.radiology.title }}</h5>
+            <p>{{ t.home.radiology.text }}</p>
           </div>
         </div>
       </div>
@@ -276,14 +168,8 @@ pacs:
             </div>
           </div>
           <div>
-            <h5>Surgical Planning</h5>
-            <p>
-              Surgeons can use DICOM Vision to <strong>plan surgeries</strong>
-              more effectively by visualizing
-              <strong>patient-specific anatomical structures</strong> and
-              pathology in <strong>2D and 3D</strong>. This aids in
-              <strong>preoperative assessment</strong> and strategizing.
-            </p>
+            <h5>{{ t.home.surgical.title }}</h5>
+            <p>{{ t.home.surgical.text }}</p>
           </div>
         </div>
       </div>
@@ -297,14 +183,8 @@ pacs:
             </div>
           </div>
           <div>
-            <h5>Research</h5>
-            <p>
-              Medical researchers can utilize DICOM Vision to access and analyze
-              large sets of <strong>medical imaging data</strong>. The
-              <strong>AI capabilities</strong> assist in automating certain
-              tasks, while <strong>3D visualization</strong> can help in
-              understanding complex anatomical relationships.
-            </p>
+            <h5>{{ t.home.research.title }}</h5>
+            <p>{{ t.home.research.text }}</p>
           </div>
         </div>
       </div>
@@ -318,13 +198,8 @@ pacs:
             </div>
           </div>
           <div>
-            <h5>Education</h5>
-            <p>
-              In <strong>medical education</strong>, DICOM Vision is a valuable
-              tool for teaching anatomy and <strong>diagnostic skills</strong>.
-              It allows educators to demonstrate <strong>real clinical cases</strong>
-              to students, fostering a better understanding of medical imaging.
-            </p>
+            <h5>{{ t.home.education.title }}</h5>
+            <p>{{ t.home.education.text }}</p>
           </div>
         </div>
       </div>
@@ -337,14 +212,8 @@ pacs:
             </div>
           </div>
           <div>
-            <h5>Telemedicine</h5>
-            <p>
-              DICOM Vision's <strong>remote collaboration</strong> features are
-              particularly beneficial in telemedicine. Healthcare providers can
-              <strong>share and discuss medical images</strong> with colleagues
-              and specialists across distances, making
-              <strong>telemedicine consultations</strong> more effective.
-            </p>
+            <h5>{{ t.home.telemedicine.title }}</h5>
+            <p>{{ t.home.telemedicine.text }}</p>
           </div>
         </div>
       </div>
@@ -358,15 +227,8 @@ pacs:
             </div>
           </div>
           <div>
-            <h5>Veterinary</h5>
-            <p>
-              The application of DICOM Vision extends to
-              <strong>veterinary medicine</strong>. Veterinarians can use the
-              viewer for <strong>diagnosing and planning treatment</strong> for
-              animals, particularly for conditions that require
-              <strong>imaging</strong>, like
-              <strong>fractures and internal diseases</strong>.
-            </p>
+            <h5>{{ t.home.veterinary.title }}</h5>
+            <p>{{ t.home.veterinary.text }}</p>
           </div>
         </div>
       </div>
@@ -389,18 +251,18 @@ pacs:
         <div class="space40 d-lg-none"></div>
         <div class="col-lg-6 ps-60 ps-md-15">
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.zero_footprint.title}}</h4>
-            <p>{{page.zero_footprint.text}}</p>
+            <h4>{{ t.home.zero_footprint.title }}</h4>
+            <p>{{ t.home.zero_footprint.text }}</p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.dicom_storage.title}}</h4>
-            <p>{{page.dicom_storage.text}}</p>
+            <h4>{{ t.home.dicom_storage.title }}</h4>
+            <p>{{ t.home.dicom_storage.text }}</p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.pacs.title}}</h4>
-            <p>{{page.pacs.text}}</p>
+            <h4>{{ t.home.pacs.title }}</h4>
+            <p>{{ t.home.pacs.text }}</p>
           </div>
         </div>
       </div>
@@ -432,14 +294,14 @@ pacs:
         <div class="space40 d-lg-none"></div>
         <div class="col-lg-6 pe-60 pe-md-15">
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.remote_collaboration.title}}</h4>
-            <p>{{page.remote_collaboration.text}}</p>
+            <h4>{{ t.home.remote_collaboration.title }}</h4>
+            <p>{{ t.home.remote_collaboration.text }}</p>
           </div>
           <div class="space30"></div>
 
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.artificial_intelligence.title}}</h4>
-            <p>{{page.artificial_intelligence.text}}</p>
+            <h4>{{ t.home.artificial_intelligence.title }}</h4>
+            <p>{{ t.home.artificial_intelligence.text }}</p>
           </div>
           <div class="space30"></div>
         </div>
@@ -463,13 +325,13 @@ pacs:
         <div class="space40 d-lg-none"></div>
         <div class="col-lg-6 ps-60 ps-md-15">
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.views.title}}</h4>
-            <p>{{page.views.text}}</p>
+            <h4>{{ t.home.views.title }}</h4>
+            <p>{{ t.home.views.text }}</p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="800">
-            <h4>{{page.measurement_tools.title}}</h4>
-            <p>{{page.measurement_tools.text}}</p>
+            <h4>{{ t.home.measurement_tools.title }}</h4>
+            <p>{{ t.home.measurement_tools.text }}</p>
           </div>
         </div>
       </div>
@@ -483,7 +345,7 @@ pacs:
 <!-- Clinical Partners -->
 <div class="wrapper light-wrapper" id="clinical-partners">
   <div class="container inner inner-tight-bottom inner-no-bottom">
-    <h2 class="section-title larger mb-40 text-center">Clinical Partners</h2>
+    <h2 class="section-title larger mb-40 text-center">{{ t.home.clinical_partners }}</h2>
     <div
       class="carousel owl-carousel clients"
       data-margin="30"
@@ -552,7 +414,7 @@ pacs:
 <div class="wrapper light-wrapper">
   <div class="container inner inner-no-top">
     <h2 class="section-title larger mb-40 text-center">
-      Strategic & Institutional Partners
+      {{ t.home.strategic_partners }}
     </h2>
     <div
       class="carousel owl-carousel clients"

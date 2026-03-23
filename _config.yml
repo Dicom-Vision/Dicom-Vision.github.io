@@ -1,5 +1,6 @@
 baseurl: ""
 url: "https://dicom.vision"
+alternate_url: "https://dicomvision.it"
 title: "DICOM Vision"
 tagline: "AI-Powered Medical Imaging Platform"
 lang: "en"

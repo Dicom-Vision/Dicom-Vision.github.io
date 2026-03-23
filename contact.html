@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Contact Us
 custom_css: leaf
 custom_font: font4
 white_menu: true
 
 contact_info:
   enable: true
-  title: "Get Information"
   contact_data:
     - icon: "/assets/images/icons/ui-gps.png"
       info: "Via Pasubio, 5<br> c/o POINT<br>v24044 Dalmine, BG Italia"
@@ -19,32 +17,24 @@ contact_form:
   enable: true
 
   lists:
-    - title: Address
-      info_01: Via Pasubio, 5 c/o POINT<br>24044 Dalmine, BG Italia
+    - info_01: Via Pasubio, 5 c/o POINT<br>24044 Dalmine, BG Italia
       icon: "icofont-location-pin"
 
-    - title: E-mail
-      info_01: "info@dicom.vision"
+    - info_01: "info@dicom.vision"
       icon: "icofont-mail-box"
 
 google_maps:
   enable: true
 ---
 
+{% assign t = site.data.i18n[site.lang] %}
+
 <div
   class="wrapper light-wrapper page-title-wrapper"
   data-image-src="{{page_d.background_image}}"
 >
   <div class="container inner text-center">
-    {% if page_d.title %}
-    <h1 class="page-title">{{page_d.title}}</h1>
-    {% endif %} {% if page_d.sub_title %}
-    <p class="lead mb-30">{{page_d.sub_title}}</p>
-    {% endif %} {% if page_d.button_text != null %}
-    <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover"
-      >{{page_d.button_text}}</a
-    >
-    {% endif %}
+    <h1 class="page-title">{{ t.contact.title }}</h1>
   </div>
   <!-- /.container -->
 </div>

@@ -1,0 +1,59 @@
+name: Build & Deploy to Firebase
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Install Jekyll plugins
+        run: |
+          gem install jekyll-paginate-v2 jekyll-archives jekyll-seo-tag jekyll-sitemap jekyll-feed
+
+      - name: Build English site
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build \
+            --config _config.yml \
+            -d _output_en
+
+      - name: Build Italian site
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build \
+            --config _config.yml,_config_it.yml \
+            -d _output_it
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Deploy Italian site (dicomvision.it)
+        run: |
+          rm -rf _output && mv _output_it _output
+          firebase deploy --only hosting \
+            --project dicom-vision-website-ita
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: Deploy English site (dicom.vision)
+        run: |
+          rm -rf _output && mv _output_en _output
+          firebase deploy --only hosting \
+            --project dicom-vision-website
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

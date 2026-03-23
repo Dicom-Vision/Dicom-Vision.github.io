@@ -15,9 +15,7 @@ address_01: "Via Pasubio 5 - 24044 Dalmine (BG)"
 address_02: "Piazzale della Repubblica 2 - 24122 Bergamo (BG)"
 address_03: "Via Partigiani 25 - 24068 Seriate (BG)"
 phone_number: ""
-copyright_text: "© 2026 DICOM Vision S.r.l. All rights reserved."
-vat: "VAT: 04485020160"
-capsoc: "Share Capital: €14,285.71"
+# copyright_text, vat, capsoc are now in _data/i18n/{lang}.yml
 
 google_map: |
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11156.91484344262!2d9.5973041!3d45.6462286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47814dcac484cf73%3A0xfb6dc99b76a4185f!2sDicom%20Vision%20srl!5e0!3m2!1sen!2sit!4v1697224524231!5m2!1sen!2sit" style="width:100%; height: 100%; border:0" allowfullscreen="" loading="lazy"></iframe>

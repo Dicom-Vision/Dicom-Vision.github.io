@@ -1,0 +1,246 @@
+# Traduzioni italiane
+# Usato quando site.lang == "it"
+
+# --- Site-level ---
+site:
+  tagline: "Piattaforma di Imaging Medicale con IA"
+  description: "La piattaforma cloud intelligente per l'imaging medicale. Visualizzatore DICOM zero-footprint con IA, visualizzazione 3D e collaborazione remota."
+
+# --- Navigazione ---
+nav:
+  home: "HOME"
+  demo: "DEMO"
+  contact: "CONTATTACI"
+  privacy: "PRIVACY POLICY & COOKIE"
+
+# --- Impostazioni generali (sensibili alla lingua) ---
+general:
+  copyright_text: "© 2026 DICOM Vision S.r.l. Tutti i diritti riservati."
+  vat: "P.IVA: 04485020160"
+  capsoc: "Capitale Sociale: €14.285,71"
+  follow: "Seguici"
+  description: >-
+    DICOM Vision e' un innovativo visualizzatore zero-footprint progettato per
+    l'archiviazione e la visualizzazione di immagini medicali in formato DICOM.
+
+# --- Homepage ---
+home:
+  title: "DICOM Vision | Visualizzatore DICOM zero-footprint e piattaforma IA per imaging"
+  description: "DICOM Vision e' un visualizzatore DICOM zero-footprint sicuro e una piattaforma cloud con IA per imaging medicale, visualizzazione 3D e collaborazione clinica remota."
+  launch_app: "Avvia App"
+  view_demo: "Guarda la Demo"
+
+  hero_tagline:
+    static_prefix: "La"
+    static_infix: "per"
+    rotate_a:
+      - "Sicura"
+      - "Conforme"
+      - "Collaborativa"
+      - "Scalabile"
+    rotate_b:
+      - "Piattaforma IA"
+      - "Infrastruttura Cloud"
+      - "Motore di Workflow"
+      - "Piattaforma Enterprise"
+      - "Fabric dei Dati"
+    rotate_c:
+      - "l'Imaging Clinico"
+      - "l'Imaging Medicale"
+      - "l'Imaging Diagnostico"
+      - "i Workflow DICOM"
+      - "le Operazioni Radiologiche"
+  hero_fallback: "La Piattaforma Cloud Intelligente per l'Imaging Medicale"
+
+  about_title: "Trasformiamo i Flussi di Lavoro dell'Imaging Clinico"
+  about_text: >-
+    Dalla <strong>visualizzazione zero-footprint</strong> all'<strong>analisi
+    basata sull'IA</strong> e alla <strong>visualizzazione 3D avanzata</strong>,
+    DICOM Vision ottimizza i <strong>flussi diagnostici</strong> nei reparti
+    di radiologia e clinici. Progettato per la <strong>scalabilita'</strong> e
+    l'<strong>integrazione sicura</strong> nelle infrastrutture ospedaliere,
+    consente <strong>decisioni cliniche piu' rapide</strong>,
+    una <strong>collaborazione migliorata</strong> e una
+    <strong>gestione efficiente</strong> dei dati di imaging medicale.
+  cert_iso: "ISO 13485"
+  cert_text: "Sistema di Gestione della Qualita' per Dispositivi Medici (Certificato IMQ)"
+  cert_link: "Visualizza certificato (PDF)"
+
+  general_title: "La Piattaforma Cloud Intelligente per l'Imaging Medicale"
+  general_text: >-
+    DICOM Vision e' uno strumento completo e all'avanguardia per la gestione
+    delle immagini medicali che combina la facilita' d'uso di un visualizzatore
+    zero-footprint con funzionalita' avanzate come la visualizzazione 3D,
+    l'intelligenza artificiale e la collaborazione remota. E' uno strumento
+    prezioso per i professionisti sanitari che si affidano alle immagini
+    diagnostiche per fornire cure di alta qualita' ai pazienti.
+
+  # Sezioni funzionalita'
+  zero_footprint:
+    title: "VISUALIZZATORE ZERO-FOOTPRINT"
+    text: >-
+      Questo significa che <strong>non e' necessario installare software
+      o plugin aggiuntivi</strong> sul dispositivo dell'utente. Il visualizzatore
+      e' accessibile tramite un <strong>browser web</strong>, rendendo l'accesso
+      alle immagini medicali estremamente comodo e flessibile.
+
+  dicom_storage:
+    title: "ARCHIVIAZIONE E VISUALIZZAZIONE DICOM"
+    text: >-
+      DICOM Vision e' progettato per gestire immagini medicali nel
+      <strong>formato DICOM</strong>, uno standard ampiamente utilizzato
+      nel campo dell'imaging medicale. Puo' archiviare e visualizzare
+      un'ampia gamma di <strong>immagini diagnostiche</strong>, tra cui
+      <strong>radiografie</strong>, <strong>TAC</strong>,
+      <strong>risonanze magnetiche</strong>, <strong>ecografie</strong>
+      e molto altro.
+
+  views:
+    title: "VISTE 2D E 3D"
+    text: >-
+      Il visualizzatore supporta non solo <strong>viste 2D</strong> ma anche
+      <strong>viste 3D avanzate</strong>. Questo e' particolarmente utile per
+      creare <strong>modelli tridimensionali</strong> dai dati di imaging,
+      permettendo una migliore comprensione delle strutture anatomiche.
+
+  remote_collaboration:
+    title: "COLLABORAZIONE REMOTA"
+    text: >-
+      Una delle funzionalita' chiave di DICOM Vision e' la capacita' di
+      supportare la <strong>collaborazione remota</strong>. I professionisti
+      sanitari possono facilmente <strong>condividere le immagini</strong>
+      con colleghi o specialisti in tutto il mondo, consentendo consulti
+      piu' rapidi e <strong>secondi pareri</strong> piu' convenienti.
+
+  artificial_intelligence:
+    title: "INTELLIGENZA ARTIFICIALE"
+    text: >-
+      Il visualizzatore puo' integrare funzionalita' di
+      <strong>intelligenza artificiale (IA)</strong> per l'<strong>analisi
+      automatica delle immagini</strong>. Questo include il
+      <strong>rilevamento di anomalie</strong>, la <strong>segmentazione
+      delle strutture anatomiche</strong> e altre applicazioni avanzate
+      di IA per l'interpretazione delle immagini.
+
+  measurement_tools:
+    title: "STRUMENTI DI MISURAZIONE"
+    text: >-
+      DICOM Vision offre una gamma di <strong>strumenti di misurazione</strong>
+      che consentono agli utenti di effettuare <strong>misurazioni precise</strong>
+      direttamente sulle immagini. Questo e' essenziale per scopi
+      <strong>diagnostici</strong> e di <strong>monitoraggio del paziente</strong>.
+
+  pacs:
+    title: "INTEGRAZIONE PACS"
+    text: >-
+      DICOM Vision supporta l'<strong>archiviazione e la comunicazione PACS</strong>,
+      rendendolo una soluzione integrata per le strutture sanitarie che si affidano
+      ai sistemi PACS per gestire e distribuire le immagini medicali in modo
+      efficiente. Questo garantisce una facile <strong>integrazione</strong>
+      con l'infrastruttura esistente e semplifica la <strong>condivisione e il
+      recupero</strong> dei dati dei pazienti all'interno delle reti sanitarie.
+
+  # Campi di applicazione
+  app_fields_title: "Campi di Applicazione"
+  app_fields_intro: >-
+    Il <strong>visualizzatore zero-footprint</strong> di DICOM Vision,
+    le <strong>funzionalita' IA</strong>, la <strong>visualizzazione 3D</strong>
+    e l'<strong>accesso sicuro</strong> alle immagini medicali migliorano
+    la qualita' della <strong>cura del paziente</strong>, della ricerca,
+    dell'insegnamento e dell'<strong>accuratezza diagnostica</strong>.
+    La sua flessibilita' e adattabilita' lo rendono uno strumento prezioso
+    per i professionisti in vari settori legati alla sanita'.
+
+  radiology:
+    title: "Radiologia"
+    text: >-
+      DICOM Vision e' ideale per gli <strong>studi radiologici</strong>,
+      consentendo ai radiologi di visualizzare e analizzare immagini medicali
+      come <strong>radiografie, TAC e risonanze magnetiche</strong> con facilita'.
+      Le sue funzionalita' avanzate, come la <strong>visualizzazione 3D</strong>
+      e l'<strong>integrazione IA</strong>, potenziano le capacita' diagnostiche.
+
+  surgical:
+    title: "Pianificazione Chirurgica"
+    text: >-
+      I chirurghi possono utilizzare DICOM Vision per <strong>pianificare
+      gli interventi</strong> in modo piu' efficace, visualizzando le
+      <strong>strutture anatomiche specifiche del paziente</strong> e la
+      patologia in <strong>2D e 3D</strong>. Questo aiuta nella
+      <strong>valutazione preoperatoria</strong> e nella strategia.
+
+  research:
+    title: "Ricerca"
+    text: >-
+      I ricercatori possono utilizzare DICOM Vision per accedere e analizzare
+      grandi set di <strong>dati di imaging medicale</strong>. Le
+      <strong>funzionalita' IA</strong> assistono nell'automazione di determinate
+      attivita', mentre la <strong>visualizzazione 3D</strong> puo' aiutare
+      nella comprensione di relazioni anatomiche complesse.
+
+  education:
+    title: "Formazione"
+    text: >-
+      Nella <strong>formazione medica</strong>, DICOM Vision e' uno strumento
+      prezioso per insegnare anatomia e <strong>competenze diagnostiche</strong>.
+      Permette ai docenti di mostrare <strong>casi clinici reali</strong>
+      agli studenti, favorendo una migliore comprensione dell'imaging medicale.
+
+  telemedicine:
+    title: "Telemedicina"
+    text: >-
+      Le funzionalita' di <strong>collaborazione remota</strong> di DICOM Vision
+      sono particolarmente utili nella telemedicina. I professionisti sanitari
+      possono <strong>condividere e discutere immagini medicali</strong> con
+      colleghi e specialisti a distanza, rendendo i
+      <strong>consulti di telemedicina</strong> piu' efficaci.
+
+  veterinary:
+    title: "Veterinaria"
+    text: >-
+      L'applicazione di DICOM Vision si estende alla
+      <strong>medicina veterinaria</strong>. I veterinari possono utilizzare
+      il visualizzatore per la <strong>diagnosi e la pianificazione del
+      trattamento</strong> degli animali, in particolare per condizioni che
+      richiedono <strong>imaging</strong>, come
+      <strong>fratture e malattie interne</strong>.
+
+  # Partner
+  clinical_partners: "Partner Clinici"
+  strategic_partners: "Partner Strategici e Istituzionali"
+
+# --- Footer ---
+footer:
+  cta_title: "Interessati a una collaborazione clinica?"
+  cta_text: "Collabora con il nostro team per validare e implementare flussi di lavoro di imaging clinico."
+  cta_button: "Contatta il nostro team"
+  brand_tagline: "Soluzioni di Imaging Medicale con IA"
+  brand_subtagline: "IA Medicale per Radiologia e Imaging Clinico"
+  company: "Azienda"
+  about: "Chi Siamo"
+  technology: "Tecnologia"
+  clinical_partners: "Partner Clinici"
+  contact: "Contatti"
+  follow: "Seguici"
+  legal: "Legale"
+  privacy_policy: "Privacy Policy"
+  cookie_policy: "Cookie Policy"
+  iso_certified: "Certificato ISO 13485"
+
+# --- Pagina contatti ---
+contact:
+  title: "Contattaci"
+  get_info: "Richiedi Informazioni"
+  address_label: "Indirizzo"
+  email_label: "E-mail"
+
+# --- 404 ---
+not_found:
+  title: "404"
+  text: "Pagina Non Trovata"
+  go_home: "Torna alla Home"
+
+# --- Schema.org ---
+schema:
+  billed_monthly: "Fatturazione mensile"
+  billed_yearly: "Fatturazione annuale"

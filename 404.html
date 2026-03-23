@@ -1,9 +1,20 @@
 ---
-layout: page
-title: "404"
-sub_title: |
-  Page Not Found <a href="/">Go Home</a>
+layout: default
 permalink: /404.html
 ---
 
-<div class="pt-120"></div>
+{% assign t = site.data.i18n[site.lang] %}
+{% include header.html %}
+
+<div class="wrapper gray-wrapper">
+  <div class="container pt-40 pb-40">
+    <div class="pt-120"></div>
+    <h2 class="section-title mb-40 text-center">{{ t.not_found.title }}</h2>
+    <p class="text-center">
+      {{ t.not_found.text }} &mdash; <a href="/">{{ t.not_found.go_home }}</a>
+    </p>
+    <div class="pt-120"></div>
+  </div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,8 @@
+# Italian override — merge with: jekyll build --config _config.yml,_config_it.yml
+url: "https://dicomvision.it"
+lang: "it"
+locale: "it_IT"
+title: "DICOM Vision"
+tagline: "Piattaforma di Imaging Medicale con IA"
+description: "La piattaforma cloud intelligente per l'imaging medicale. Visualizzatore DICOM zero-footprint con IA, visualizzazione 3D e collaborazione remota."
+alternate_url: "https://dicom.vision"
