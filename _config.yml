@@ -53,7 +53,7 @@ social:
     - "https://x.com/DicomVision"
 
 # Analytics
-# google_analytics: "G-XXXXXXXXXX" # TODO: uncomment with real GA4 measurement ID
+google_analytics: "G-ZWD9LWMWWB"
 
 collections:
   authors:
