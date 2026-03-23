@@ -13,12 +13,40 @@
     background-size: cover;
     background-position: center;
   }
-  
+
   // Ensure the content is vertically centered
   .inner {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+}
+
+.hero-video-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-video-wrapper > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-video-wrapper > .divider {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-tagline {
