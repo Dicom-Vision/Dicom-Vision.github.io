@@ -31,6 +31,45 @@ pacs:
 
 {% assign t = site.data.i18n[site.lang] %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in t.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": {{ t.home.title | jsonify }},
+  "description": {{ t.home.description | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "inLanguage": {{ site.lang | default: "en" | jsonify }},
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Clinician"
+  },
+  "specialty": [
+    { "@type": "MedicalSpecialty", "name": "Radiology" },
+    { "@type": "MedicalSpecialty", "name": "Surgery" },
+    { "@type": "MedicalSpecialty", "name": "Telemedicine" }
+  ],
+  "publisher": { "@id": "{{ site.url }}/#organization" }
+}
+</script>
+
 {% include header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase" light_logo="true" %}
 
 <div class="hero-area">
@@ -44,7 +83,7 @@ pacs:
           <div class="space140"></div>
 
           <div class="logo-container logo-with-mark">
-            <img src="/assets/images/logo-dicom-black-trim-text.png" alt="dicom vision logo" class="logo">
+            <img src="/assets/images/logo-dicom-black-trim-text.png" alt="DICOM Vision – zero-footprint DICOM viewer and AI medical imaging platform" class="logo">
           </div>
 
             {% if page.hero_tagline.enabled %}
@@ -246,7 +285,7 @@ pacs:
           <figure>
             <video autoplay loop muted playsinline loading="lazy">
               <source src="/assets/images/home/mpr-fast.mp4" type="video/mp4" />
-              <img src="/assets/images/home/mpr-fast.gif" alt="MPR" loading="lazy" />
+              <img src="/assets/images/home/mpr-fast.gif" alt="DICOM Vision zero-footprint viewer – Multi-Planar Reconstruction MPR of CT scan" loading="lazy" />
             </video>
           </figure>
         </div>
@@ -323,7 +362,7 @@ pacs:
           <figure>
             <picture>
               <source srcset="/assets/images/home/3d.webp" type="image/webp" />
-              <img src="/assets/images/home/3d.png" alt="3D Visualization" loading="lazy" />
+              <img src="/assets/images/home/3d.png" alt="DICOM Vision 3D volume rendering of medical imaging data – CT and MRI visualization" loading="lazy" />
             </picture>
           </figure>
         </div>

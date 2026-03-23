@@ -235,6 +235,23 @@ not_found:
   text: "Page Not Found"
   go_home: "Go Home"
 
+# --- FAQ (homepage schema) ---
+faq:
+  - q: "What is a zero-footprint DICOM viewer?"
+    a: "A zero-footprint DICOM viewer is a medical image viewer that runs entirely in the web browser with no software installation, plugins, or downloads required. DICOM Vision provides instant access to X-rays, CT scans, MRIs, and ultrasounds from any device."
+  - q: "Does DICOM Vision support 3D visualization of medical images?"
+    a: "Yes. DICOM Vision offers advanced 3D rendering including Multi-Planar Reconstruction (MPR), Volume Rendering, and Maximum Intensity Projection (MIP), enabling clinicians and surgeons to explore anatomical structures in three dimensions."
+  - q: "How does AI work in DICOM Vision?"
+    a: "DICOM Vision integrates artificial intelligence modules for automatic image analysis, including anomaly detection, anatomical segmentation, and computer-aided diagnosis (CAD). AI results are overlaid directly on the DICOM images for immediate clinical review."
+  - q: "Is DICOM Vision PACS compatible?"
+    a: "Yes. DICOM Vision is fully PACS-compatible and supports DICOM networking protocols (C-STORE, C-FIND, C-MOVE, WADO-RS, DICOMweb). It integrates seamlessly with existing hospital PACS, RIS, and HIS infrastructure."
+  - q: "Can I use DICOM Vision for telemedicine and remote collaboration?"
+    a: "Absolutely. DICOM Vision enables real-time remote collaboration, allowing radiologists, clinicians, and specialists to share, annotate, and discuss medical images securely from anywhere in the world."
+  - q: "Is DICOM Vision certified for medical use?"
+    a: "DICOM Vision S.r.l. is ISO 13485 certified (IMQ) for Quality Management Systems for Medical Devices, ensuring compliance with regulatory standards for medical software."
+  - q: "What image formats does DICOM Vision support?"
+    a: "DICOM Vision natively supports all DICOM modalities including CR, CT, MR, US, MG, NM, PT, XA, and more. It handles both 2D and multi-frame (cine) images as well as structured reports (SR)."
+
 # --- Schema.org ---
 schema:
   billed_monthly: "Billed monthly"

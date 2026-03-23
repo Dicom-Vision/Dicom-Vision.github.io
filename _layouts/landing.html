@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+
+{% include header.html extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
+
+<div class="wrapper light-wrapper page-title-wrapper">
+  <div class="container inner text-center">
+    <h1 class="page-title">{{ page.headline }}</h1>
+    {% if page.subheadline %}
+    <p class="lead">{{ page.subheadline }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="wrapper gray-wrapper">
+  <div class="container pt-40 pb-40">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 landing-content">
+        {{ content }}
+      </div>
+    </div>
+    <div class="text-center mt-40">
+      <a href="https://app.dicom.vision" target="_blank" class="btn btn-l btn-green">{{ t.home.launch_app }}</a>
+      <a href="/contact" class="btn btn-l btn-white">{{ t.footer.cta_button }}</a>
+    </div>
+  </div>
+</div>
+
+{% if page.faq %}
+<div class="wrapper bg-default">
+  <div class="container pt-40 pb-40">
+    <h2 class="section-title mb-40 text-center">FAQ</h2>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        {% for item in page.faq %}
+        <div class="mb-30">
+          <h4>{{ item.q }}</h4>
+          <p>{{ item.a }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% include footer.html %}

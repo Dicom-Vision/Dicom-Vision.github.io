@@ -240,6 +240,23 @@ not_found:
   text: "Pagina Non Trovata"
   go_home: "Torna alla Home"
 
+# --- FAQ (homepage schema) ---
+faq:
+  - q: "Cos'è un visualizzatore DICOM zero-footprint?"
+    a: "Un visualizzatore DICOM zero-footprint è un software per immagini medicali che funziona interamente nel browser web, senza installazione di software, plugin o download. DICOM Vision consente l'accesso immediato a radiografie, TAC, risonanze magnetiche ed ecografie da qualsiasi dispositivo."
+  - q: "DICOM Vision supporta la visualizzazione 3D delle immagini medicali?"
+    a: "Sì. DICOM Vision offre rendering 3D avanzato tra cui Ricostruzione Multi-Planare (MPR), Volume Rendering e Proiezione di Massima Intensità (MIP), permettendo a clinici e chirurghi di esplorare le strutture anatomiche in tre dimensioni."
+  - q: "Come funziona l'intelligenza artificiale in DICOM Vision?"
+    a: "DICOM Vision integra moduli di intelligenza artificiale per l'analisi automatica delle immagini, inclusi rilevamento di anomalie, segmentazione anatomica e diagnosi assistita dal computer (CAD). I risultati dell'IA vengono sovrapposti direttamente sulle immagini DICOM per una revisione clinica immediata."
+  - q: "DICOM Vision è compatibile con i sistemi PACS?"
+    a: "Sì. DICOM Vision è completamente compatibile con i PACS e supporta i protocolli di rete DICOM (C-STORE, C-FIND, C-MOVE, WADO-RS, DICOMweb). Si integra perfettamente con l'infrastruttura ospedaliera esistente PACS, RIS e HIS."
+  - q: "Posso usare DICOM Vision per telemedicina e collaborazione remota?"
+    a: "Assolutamente sì. DICOM Vision consente la collaborazione remota in tempo reale, permettendo a radiologi, clinici e specialisti di condividere, annotare e discutere immagini medicali in modo sicuro da qualsiasi parte del mondo."
+  - q: "DICOM Vision è certificato per uso medico?"
+    a: "DICOM Vision S.r.l. è certificata ISO 13485 (IMQ) per il Sistema di Gestione della Qualità per Dispositivi Medici, garantendo la conformità agli standard normativi per il software medicale."
+  - q: "Quali formati di immagine supporta DICOM Vision?"
+    a: "DICOM Vision supporta nativamente tutte le modalità DICOM tra cui CR, CT, MR, US, MG, NM, PT, XA e altre. Gestisce sia immagini 2D che multi-frame (cine) nonché referti strutturati (SR)."
+
 # --- Schema.org ---
 schema:
   billed_monthly: "Fatturazione mensile"
