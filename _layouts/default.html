@@ -7,6 +7,7 @@
     {% assign alt_lang = "it" %}{% if site.lang == "it" %}{% assign alt_lang = "en" %}{% endif %}
     <link rel="alternate" hreflang="{{ site.lang | default: 'en' }}" href="{{ site.url }}{{ page.url }}" />
     <link rel="alternate" hreflang="{{ alt_lang }}" href="{{ site.alternate_url }}{{ page.url }}" />
+    <link rel="alternate" hreflang="x-default" href="https://dicom.vision{{ page.url }}" />
     {% assign seo_name = page.seo_title | default: page.title | default: site.title %}
     {% assign seo_desc = page.description | default: site.description %}
     {% assign seo_image = page.image | default: site.logo %}

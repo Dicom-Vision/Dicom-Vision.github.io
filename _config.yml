@@ -53,7 +53,7 @@ social:
     - "https://x.com/DicomVision"
 
 # Analytics
-google_analytics: "G-XXXXXXXXXX" # TODO: Replace with real ID
+# google_analytics: "G-XXXXXXXXXX" # TODO: uncomment with real GA4 measurement ID
 
 collections:
   authors:
@@ -139,6 +139,19 @@ jekyll-archives:
   layout: category
   permalinks:
     category: "/category/:name/"
+
+exclude:
+  - DOCKER_DEV.md
+  - MODERNIZATION_PLAN.md
+  - sitemap_check.txt
+  - atlassian-domain-verification-b2ac97jk-0bb4-1d1a-65k2-jd51080dj511.html
+  - build.sh
+  - deploy/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
 
 feed:
   collections:
