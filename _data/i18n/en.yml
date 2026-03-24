@@ -256,7 +256,7 @@ faq:
 # --- User Guide / Docs ---
 docs:
   hero_title: "User Guide & Features"
-  hero_subtitle_1: "Explore every tool in the DICOM Vision® platform."
+  hero_subtitle_1: "Explore every tool in the DICOM&nbsp;Vision® platform."
   hero_subtitle_2: "Regularly updated with new features and improvements."
   hero_badge: "features"
   badge_updated: "Updated regularly"
