@@ -278,6 +278,9 @@ acronym[title] {
 .banner--clone:not(.banner--stick) .dropdown-menu.search-dropdown-menu {
   display: none !important;
 }
+.banner--clone .offcanvas-nav {
+  display: none !important;
+}
 .banner--stick {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);

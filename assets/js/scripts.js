@@ -80,12 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (trigger) trigger.classList.toggle('active', isOpen);
     };
 
+    const getPrimaryNavbar = () => document.querySelector('.navbar:not(.banner--clone)') || document.querySelector('.navbar');
+
     document.addEventListener('click', function(e) {
         const navToggle = e.target.closest('[data-bs-toggle="offcanvas-nav"]');
         if (navToggle) {
             e.preventDefault();
-            const navRoot = navToggle.closest('.navbar') || document;
-            const navTarget = navRoot.querySelector('.offcanvas-nav') || document.querySelector('.offcanvas-nav');
+            const isClone = !!navToggle.closest('.banner--clone');
+            const navRoot = isClone ? getPrimaryNavbar() : (navToggle.closest('.navbar') || document);
+            const navTarget = navRoot ? navRoot.querySelector('.offcanvas-nav') : document.querySelector('.offcanvas-nav');
             toggleOffcanvas(navTarget, navToggle);
             if (header_search && typeof bootstrap !== 'undefined') {
                 const bsCollapse = bootstrap.Collapse.getInstance(header_search);
@@ -96,11 +99,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const navClose = e.target.closest('.offcanvas-nav-close');
         if (navClose) {
-            const navRoot = navClose.closest('.navbar') || document;
+            const navRoot = navClose.closest('.navbar') || getPrimaryNavbar() || document;
             const navTarget = navRoot.querySelector('.offcanvas-nav') || document.querySelector('.offcanvas-nav');
             if (navTarget) navTarget.classList.remove('open');
-            const navBtn = navRoot.querySelector('.hamburger.animate');
-            if (navBtn) navBtn.classList.remove('active');
+            document.querySelectorAll('.hamburger.animate.active').forEach((el) => el.classList.remove('active'));
             return;
         }
 
