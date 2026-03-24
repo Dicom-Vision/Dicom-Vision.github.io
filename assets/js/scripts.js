@@ -116,6 +116,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    if (navbar_offcanvas) {
+        navbar_offcanvas.addEventListener("click", function(e) { e.stopPropagation(); });
+    }
+
     if (info_offcanvas) {
         info_offcanvas.addEventListener("click", function(e) { e.stopPropagation(); });
     }

@@ -5322,6 +5322,7 @@ footer.inverse-text address {
     padding-bottom: 0.5rem;
     overflow-y: auto;
     visibility: hidden;
+    z-index: 1041;
     background: #1e2228;
     -webkit-transition-timing-function: ease-in-out;
     -o-transition-timing-function: ease-in-out;
