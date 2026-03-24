@@ -1,0 +1,3 @@
+#!/bin/sh
+# Skip expensive chown in containerized dev; avoid hanging on /usr/gem.
+exit 0

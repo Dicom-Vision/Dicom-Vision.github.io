@@ -68,77 +68,74 @@ document.addEventListener('DOMContentLoaded', function() {
 	/*-----------------------------------------------------------------------------------*/
 	/*	HEADER BUTTONS
 	/*-----------------------------------------------------------------------------------*/
-	const header_hamburger = document.querySelector('.hamburger.animate');
 	const header_search = document.querySelector('.search-dropdown .dropdown-menu');
 	const header_cart = document.querySelector('.cart-dropdown .dropdown-menu');
-	const navbar_offcanvas = document.querySelector('.offcanvas-nav');
-	const navbar_offcanvas_toggle = document.querySelectorAll('[data-bs-toggle="offcanvas-nav"]');
-	const navbar_offcanvas_close = document.querySelector('.offcanvas-nav-close');
 	const navbar_search_toggle = document.querySelector('.search-dropdown .collapse-toggle');
 	const navbar_search_close = document.querySelector(".search-dropdown .dropdown-menu .dropdown-close");
-	const info_offcanvas = document.querySelector('.offcanvas-info');
-	const info_offcanvas_close = document.querySelector('.offcanvas-info-close');
-	const info_offcanvas_toggle = document.querySelectorAll('[data-bs-toggle="offcanvas-info"]');
 
-    // Consolidated Navigation Toggles
+    // Consolidated Navigation Toggles (works with sticky clones)
     const toggleOffcanvas = (target, trigger) => {
         if (!target) return;
         const isOpen = target.classList.toggle('open');
         if (trigger) trigger.classList.toggle('active', isOpen);
     };
 
-    navbar_offcanvas_toggle.forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            e.stopPropagation();
-            toggleOffcanvas(navbar_offcanvas, header_hamburger);
+    document.addEventListener('click', function(e) {
+        const navToggle = e.target.closest('[data-bs-toggle="offcanvas-nav"]');
+        if (navToggle) {
+            e.preventDefault();
+            const navRoot = navToggle.closest('.navbar') || document;
+            const navTarget = navRoot.querySelector('.offcanvas-nav') || document.querySelector('.offcanvas-nav');
+            toggleOffcanvas(navTarget, navToggle);
             if (header_search && typeof bootstrap !== 'undefined') {
                 const bsCollapse = bootstrap.Collapse.getInstance(header_search);
                 if (bsCollapse) bsCollapse.hide();
             }
-        });
-    });
+            return;
+        }
 
-    if (navbar_offcanvas_close) {
-        navbar_offcanvas_close.addEventListener("click", function() {
-            if (navbar_offcanvas) navbar_offcanvas.classList.remove('open');
-            if (header_hamburger) header_hamburger.classList.remove('active');
-        });
-    }
+        const navClose = e.target.closest('.offcanvas-nav-close');
+        if (navClose) {
+            const navRoot = navClose.closest('.navbar') || document;
+            const navTarget = navRoot.querySelector('.offcanvas-nav') || document.querySelector('.offcanvas-nav');
+            if (navTarget) navTarget.classList.remove('open');
+            const navBtn = navRoot.querySelector('.hamburger.animate');
+            if (navBtn) navBtn.classList.remove('active');
+            return;
+        }
 
-    info_offcanvas_toggle.forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            e.stopPropagation();
-            if (info_offcanvas) info_offcanvas.classList.toggle('open');
+        const infoToggle = e.target.closest('[data-bs-toggle="offcanvas-info"]');
+        if (infoToggle) {
+            e.preventDefault();
+            const infoTarget = document.querySelector('.offcanvas-info');
+            if (infoTarget) infoTarget.classList.toggle('open');
             if (header_search && typeof bootstrap !== 'undefined') {
                 const bsCollapse = bootstrap.Collapse.getInstance(header_search);
                 if (bsCollapse) bsCollapse.hide();
             }
-        });
-    });
+            return;
+        }
 
-    if (navbar_offcanvas) {
-        navbar_offcanvas.addEventListener("click", function(e) { e.stopPropagation(); });
-    }
+        const infoClose = e.target.closest('.offcanvas-info-close');
+        if (infoClose) {
+            const infoTarget = document.querySelector('.offcanvas-info');
+            if (infoTarget) infoTarget.classList.remove('open');
+            return;
+        }
 
-    if (info_offcanvas) {
-        info_offcanvas.addEventListener("click", function(e) { e.stopPropagation(); });
-    }
+        if (e.target.closest('.offcanvas-nav') || e.target.closest('.offcanvas-info')) {
+            return;
+        }
 
-	document.addEventListener('click', function() {
 		if (header_search && typeof bootstrap !== 'undefined') {
             const bsCollapse = bootstrap.Collapse.getInstance(header_search);
             if (bsCollapse) bsCollapse.hide();
         }
-		if (navbar_offcanvas) navbar_offcanvas.classList.remove('open');
-		if (info_offcanvas) info_offcanvas.classList.remove('open');
-		if (header_hamburger) header_hamburger.classList.remove('active');
+		document.querySelectorAll('.offcanvas-nav.open').forEach((el) => el.classList.remove('open'));
+		const infoTarget = document.querySelector('.offcanvas-info.open');
+        if (infoTarget) infoTarget.classList.remove('open');
+		document.querySelectorAll('.hamburger.animate.active').forEach((el) => el.classList.remove('active'));
 	});
-
-    if (info_offcanvas_close) {
-        info_offcanvas_close.addEventListener("click", function() {
-            if (info_offcanvas) info_offcanvas.classList.remove('open');
-        });
-    }
     
     document.querySelectorAll('.onepage .navbar li a').forEach(link => {
         link.addEventListener('click', function() {

@@ -5,5 +5,9 @@ services:
     command: jekyll serve --host 0.0.0.0 --watch --force_polling
     ports:
       - "4000:4000"
+    environment:
+      - BUNDLE_PATH=/srv/jekyll/vendor/bundle
+      - BUNDLE_BIN=/srv/jekyll/vendor/bundle/bin
     volumes:
       - .:/srv/jekyll
+      - ./docker/default-gem-permissions:/usr/jekyll/bin/default-gem-permissions:ro
