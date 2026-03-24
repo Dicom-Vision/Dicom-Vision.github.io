@@ -61,8 +61,13 @@
       <ul
         class="navbar-nav {% if include.alignment_class %} {{include.alignment_class}} {% else %} mx-auto {% endif %}"
       >
-        {% for menu in site.data.navigation.main_menu %} {% assign check_menu =
-        menu.menu_type %} {% case check_menu %} {% when "megamenu" %}
+        {% for menu in site.data.navigation.main_menu %}
+        {% if site.lang == "it" and menu.url_it %}
+          {% assign menu_url = menu.url_it %}
+        {% else %}
+          {% assign menu_url = menu.url %}
+        {% endif %}
+        {% assign check_menu = menu.menu_type %} {% case check_menu %} {% when "megamenu" %}
         <li class="nav-item">
           <a class="nav-link" href="{{menu.url}}">{{ t.nav[menu.key] | default: menu.key }}</a>
           <ul class="dropdown-menu mega-menu boxed list-view text-left">
@@ -119,11 +124,11 @@
         {% else %}
         <li class="nav-item">
           {% if menu.external %}
-          <a class="nav-link" href="{{menu.url}}" target="_blank"
+          <a class="nav-link" href="{{menu_url}}" target="_blank"
             >{{ t.nav[menu.key] | default: menu.key }}</a
           >
           {% else %}
-          <a class="nav-link" href="{{menu.url}}">{{ t.nav[menu.key] | default: menu.key }}</a>
+          <a class="nav-link" href="{{menu_url}}">{{ t.nav[menu.key] | default: menu.key }}</a>
           {% endif %}
         </li>
         {% endcase %} {% endfor %}

@@ -1,0 +1,11 @@
+{% assign t = site.data.i18n[site.lang] %}
+<div class="wrapper docs-breadcrumbs-wrapper">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb docs-breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">{{ t.docs.breadcrumb_home }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ t.docs.breadcrumb_guide }}</li>
+      </ol>
+    </nav>
+  </div>
+</div>

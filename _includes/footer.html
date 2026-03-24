@@ -71,6 +71,7 @@
                     >{{ t.footer.clinical_partners }}</a
                   >
                 </li>
+                <li><a href="{% if site.lang == 'it' %}{{ '/guida-utente' | relative_url }}{% else %}{{ '/user-guide' | relative_url }}{% endif %}">{{ t.nav.guide }}</a></li>
                 <li><a href="{{ '/contact' | relative_url }}">{{ t.footer.contact }}</a></li>
               </ul>
               <div class="footer-social footer-follow">
@@ -141,6 +142,8 @@
     <div class="space30"></div>
     <p class="text-center">{{ t.general.copyright_text }}</p>
     <nav class="seo-nav" aria-hidden="true">
+      <a href="{{ '/user-guide' | relative_url }}">DICOM Viewer User Guide</a>
+      <a href="{{ '/guida-utente' | relative_url }}">Guida Utente Visualizzatore DICOM</a>
       <a href="{{ '/dicom-viewer' | relative_url }}">DICOM Viewer</a>
       <a href="{{ '/pacs-cloud' | relative_url }}">Cloud PACS</a>
       <a href="{{ '/ai-radiology' | relative_url }}">AI Radiology</a>

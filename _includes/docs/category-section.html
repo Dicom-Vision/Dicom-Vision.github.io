@@ -1,0 +1,20 @@
+{% assign lang = site.lang | default: "en" %}
+{% assign cat = include.category %}
+{% assign s = cat[lang] %}
+
+<section class="docs-category" id="{{ cat.category_id }}" data-category="{{ cat.category_id }}">
+  <div class="docs-category-header">
+    <div class="docs-category-icon">
+      <i class="{{ cat.icon }}"></i>
+    </div>
+    <div>
+      <h2 class="docs-category-title">{{ s.name }}</h2>
+      <p class="docs-category-desc">{{ s.description }}</p>
+    </div>
+  </div>
+  <div class="row docs-feature-grid">
+    {% for feat in cat.features %}
+      {% include docs/feature-card.html feature=feat %}
+    {% endfor %}
+  </div>
+</section>

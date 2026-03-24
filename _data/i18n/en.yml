@@ -10,6 +10,7 @@ site:
 nav:
   home: "HOME"
   demo: "DEMO"
+  guide: "USER GUIDE"
   contact: "CONTACT US"
   privacy: "WEB PRIVACY POLICY & COOKIES"
 
@@ -251,6 +252,26 @@ faq:
     a: "DICOM Vision S.r.l. is ISO 13485 certified (IMQ) for Quality Management Systems for Medical Devices, ensuring compliance with regulatory standards for medical software."
   - q: "What image formats does DICOM Vision support?"
     a: "DICOM Vision natively supports all DICOM modalities including CR, CT, MR, US, MG, NM, PT, XA, and more. It handles both 2D and multi-frame (cine) images as well as structured reports (SR)."
+
+# --- User Guide / Docs ---
+docs:
+  hero_title: "User Guide & Features"
+  hero_subtitle_1: "Explore every tool in the DICOM Vision® platform."
+  hero_subtitle_2: "Regularly updated with new features and improvements."
+  hero_badge: "features"
+  badge_updated: "Updated regularly"
+  sidebar_title: "Features"
+  search_placeholder: "Search features..."
+  learn_more: "Learn more"
+  show_details: "Show details"
+  hide_details: "Hide details"
+  back_to_top: "Back to top"
+  breadcrumb_home: "Home"
+  breadcrumb_guide: "User Guide"
+  meta_title: "User Guide & Features — DICOM Vision"
+  meta_description: "Complete guide to DICOM Vision features: 2D/3D DICOM viewer, AI segmentation, cloud PACS, measurements, collaboration, and more. Explore all capabilities."
+  evolving_note: "This guide, like the DICOM Vision® platform itself, is continuously evolving. New features, improvements, and capabilities are added regularly. If you have specific needs or would like to learn more about a particular feature, we'd love to hear from you."
+  evolving_cta: "Contact our team"
 
 # --- Schema.org ---
 schema:

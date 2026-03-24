@@ -1,0 +1,23 @@
+{% assign t = site.data.i18n[site.lang] %}
+{% assign lang = site.lang | default: "en" %}
+{% assign feat = include.feature %}
+{% assign f = feat[lang] %}
+
+<div class="col-md-6 col-lg-4 docs-feature-col">
+  <div class="docs-feature-card" data-feature-id="{{ feat.id }}">
+    <div class="docs-feature-card-icon">
+      <i class="{{ feat.icon }}"></i>
+    </div>
+    <h3 class="docs-feature-card-title">{{ f.title }}</h3>
+    <p class="docs-feature-card-summary">{{ f.summary }}</p>
+    {% if f.details %}
+    <button class="docs-feature-toggle" data-bs-toggle="collapse" data-bs-target="#detail-{{ feat.id }}" aria-expanded="false">
+      <span class="docs-toggle-show">{{ t.docs.show_details }} <i class="icofont-simple-down"></i></span>
+      <span class="docs-toggle-hide">{{ t.docs.hide_details }} <i class="icofont-simple-up"></i></span>
+    </button>
+    <div class="collapse docs-feature-details" id="detail-{{ feat.id }}">
+      <p>{{ f.details }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>

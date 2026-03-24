@@ -6,6 +6,10 @@ main_menu:
     url: "https://rapid-credit-55b6.daniele-ciriello.workers.dev"
     external: true
 
+  - key: "guide"
+    url: "/user-guide"
+    url_it: "/guida-utente"
+
   - key: "contact"
     url: "/contact"
 

@@ -1,0 +1,587 @@
+# Features extracted from DICOM Vision app codebase (2026-03-24)
+# Source: /home/daniele/projects/dicom-vision-app/frontend/
+
+- category_id: viewer-2d
+  icon: icofont-monitor
+  en:
+    name: "2D DICOM Viewer"
+    description: "Professional-grade tools for viewing, navigating, and analyzing 2D medical images directly in your browser."
+  it:
+    name: "Visualizzatore DICOM 2D"
+    description: "Strumenti professionali per visualizzare, navigare e analizzare immagini medicali 2D direttamente nel browser."
+  features:
+    - id: window-level
+      icon: icofont-contrast
+      en:
+        title: "Window/Level (WW/WL) Adjustment"
+        summary: "Fine-tune brightness and contrast with preset and custom window/level settings for optimal tissue visualization."
+        details: "Enables dynamic adjustment of DICOM image brightness and contrast using mouse drag. Quickly switch between predefined presets (CT Abdomen, Lung, Bone, Brain, COVID-19) or create custom W/L values. Includes WW/WL from Region — select an area and automatically compute optimal values based on pixel intensities."
+      it:
+        title: "Regolazione Finestra/Livello (WW/WL)"
+        summary: "Regola luminosita' e contrasto con preset e impostazioni personalizzate finestra/livello per una visualizzazione ottimale dei tessuti."
+        details: "Regolazione dinamica di luminosita' e contrasto dell'immagine DICOM tramite trascinamento del mouse. Passa rapidamente tra preset predefiniti (CT Addome, Polmone, Osso, Cervello, COVID-19) o crea valori W/L personalizzati. Include WW/WL da Regione — seleziona un'area e calcola automaticamente i valori ottimali in base all'intensita' dei pixel."
+
+    - id: zoom-pan-rotate
+      icon: icofont-search-1
+      en:
+        title: "Zoom, Pan & Rotate"
+        summary: "Navigate large images with smooth zoom, pan, and rotation controls — on desktop and touch devices."
+        details: "Interactive zoom with scroll wheel or pinch-to-zoom on touch screens. Pan with click-and-drag or Ctrl+right-click. Real-time rotation of images for viewing from different orientations. Fit-to-window and 1:1 pixel mapping with a single click."
+      it:
+        title: "Zoom, Panoramica e Rotazione"
+        summary: "Naviga immagini di grandi dimensioni con controlli fluidi di zoom, panoramica e rotazione — su desktop e dispositivi touch."
+        details: "Zoom interattivo con rotella del mouse o pinch-to-zoom su touch screen. Panoramica con click-and-drag o Ctrl+clic destro. Rotazione in tempo reale delle immagini per la visualizzazione da diversi orientamenti. Adattamento alla finestra e mappatura pixel 1:1 con un solo clic."
+
+    - id: stack-scroll-cine
+      icon: icofont-play-alt-2
+      en:
+        title: "Stack Scroll & Cine Playback"
+        summary: "Navigate through multi-frame series with configurable looping, frame skipping, and auto-play cine mode."
+        details: "Rapid navigation through entire 3D volumes with configurable looping and frame skip. Cine mode auto-plays multiframe series (cardiac US, dynamic MRI) at adjustable FPS with play/pause and step controls. Manual frame-by-frame navigation also available."
+      it:
+        title: "Scorrimento Stack e Riproduzione Cine"
+        summary: "Naviga tra serie multi-frame con loop configurabile, salto frame e modalita' cine auto-play."
+        details: "Navigazione rapida attraverso interi volumi 3D con loop e salto frame configurabili. La modalita' cine riproduce automaticamente serie multiframe (ecografia cardiaca, MRI dinamica) con FPS regolabile, play/pausa e controlli step. Disponibile anche navigazione manuale frame-by-frame."
+
+    - id: hanging-protocols
+      icon: icofont-layout
+      en:
+        title: "Layouts & Hanging Protocols"
+        summary: "Multi-viewport grid layouts (1x1, 1x2, 2x1, 2x2, 3x1, and more) with automatic series arrangement."
+        details: "Seven configurable grid layouts including single view, side-by-side, stacked, and asymmetric configurations. Hanging protocols automatically populate viewports with related series based on study type and modality. Prior/current study comparison with synchronized scrolling."
+      it:
+        title: "Layout e Protocolli di Visualizzazione"
+        summary: "Layout griglia multi-viewport (1x1, 1x2, 2x1, 2x2, 3x1 e altri) con disposizione automatica delle serie."
+        details: "Sette layout a griglia configurabili inclusa vista singola, affiancata, impilata e configurazioni asimmetriche. I protocolli di visualizzazione popolano automaticamente i viewport con serie correlate in base al tipo di studio e modalita'. Confronto studi precedenti/attuali con scorrimento sincronizzato."
+
+    - id: colormaps
+      icon: icofont-color-bucket
+      en:
+        title: "Colormaps & LUT Palettes"
+        summary: "17+ color lookup tables including Grayscale, Hot, Bone, Jet, HSV, PET, and specialized COVID-19 and Muscle-Bone palettes."
+        details: "Apply predefined or custom color palettes optimized for different modalities and anatomies. Quick-select presets like CT Abdomen, CT Lung, CT Bone automatically set appropriate W/L values. Interactive range slider for limiting color mapping to specific intensity ranges."
+      it:
+        title: "Colormap e Palette LUT"
+        summary: "17+ tabelle colore tra cui Scala di grigi, Hot, Bone, Jet, HSV, PET e palette specializzate COVID-19 e Muscle-Bone."
+        details: "Applica palette di colori predefinite o personalizzate ottimizzate per diverse modalita' e anatomie. Preset a selezione rapida come CT Addome, CT Polmone, CT Osso impostano automaticamente i valori W/L appropriati. Slider interattivo per limitare il mapping colore a intervalli di intensita' specifici."
+
+    - id: viewport-overlays
+      icon: icofont-layers
+      en:
+        title: "Viewport Overlays & Display Settings"
+        summary: "Toggle metadata overlays, orientation markers, scale bar, crosshairs, and mask markers — plus dark/light theme."
+        details: "Displays DICOM metadata (patient name, study date, image position) directly on the viewport. Orientation markers (L/R, A/P, S/I), scale bar with real measurements, and segmentation mask markers. Configurable dark/light theme, compact navbar, and per-study display preferences."
+      it:
+        title: "Overlay Viewport e Impostazioni Display"
+        summary: "Attiva/disattiva overlay metadati, marcatori orientamento, barra di scala, mirini e marcatori maschera — piu' tema chiaro/scuro."
+        details: "Visualizza metadati DICOM (nome paziente, data studio, posizione immagine) direttamente sul viewport. Marcatori di orientamento (L/R, A/P, S/I), barra di scala con misurazioni reali e marcatori maschera di segmentazione. Tema chiaro/scuro configurabile, navbar compatta e preferenze display per studio."
+
+- category_id: measurements
+  icon: icofont-ruler-alt-2
+  en:
+    name: "Measurements & Annotations"
+    description: "Precision measurement tools and clinical annotations for quantitative image analysis and structured reporting."
+  it:
+    name: "Misurazioni e Annotazioni"
+    description: "Strumenti di misurazione di precisione e annotazioni cliniche per analisi quantitativa delle immagini e refertazione strutturata."
+  features:
+    - id: linear-angle
+      icon: icofont-ruler
+      en:
+        title: "Length & Angle Measurements"
+        summary: "Measure distances, angles, and bidirectional diameters with sub-pixel accuracy on calibrated DICOM images."
+        details: "Line, angle, Cobb angle, and bidirectional tools with automatic pixel spacing calibration from DICOM metadata. Results displayed in millimeters. Bidirectional measurement for RECIST-compliant lesion sizing in oncology follow-up."
+      it:
+        title: "Misurazioni Lunghezza e Angolo"
+        summary: "Misura distanze, angoli e diametri bidirezionali con precisione sub-pixel su immagini DICOM calibrate."
+        details: "Strumenti linea, angolo, angolo di Cobb e bidirezionale con calibrazione automatica della spaziatura pixel dai metadati DICOM. Risultati in millimetri. Misurazione bidirezionale per dimensionamento lesioni conforme RECIST nel follow-up oncologico."
+
+    - id: roi-tools
+      icon: icofont-crop
+      en:
+        title: "ROI Tools (Rectangle, Ellipse, Freehand)"
+        summary: "Draw regions of interest with automatic calculation of area, mean, min/max pixel values, and standard deviation."
+        details: "Rectangle, elliptical, and freehand polygon ROI tools. Each computes area (cm²), mean/min/max pixel values, and standard deviation. Freehand drawing for irregular anatomical boundaries. ROIs can be converted to overlays or exported for research."
+      it:
+        title: "Strumenti ROI (Rettangolo, Ellisse, Mano Libera)"
+        summary: "Disegna regioni di interesse con calcolo automatico di area, media, valori pixel min/max e deviazione standard."
+        details: "Strumenti ROI rettangolari, ellittici e poligonali a mano libera. Ciascuno calcola area (cm²), valori pixel medio/min/max e deviazione standard. Disegno a mano libera per confini anatomici irregolari. I ROI possono essere convertiti in overlay o esportati per la ricerca."
+
+    - id: probe-magnify
+      icon: icofont-location-pin
+      en:
+        title: "Probe, Drag Probe & Border Magnify"
+        summary: "Sample pixel intensity values at specific points, track values dynamically, or magnify a region with an inset view."
+        details: "Click to display exact pixel intensity (HU in CT). Drag Probe continuously samples along a path to identify intensity gradients and tissue transitions. Border Magnify creates a zoomed inset view with location indicator for simultaneous detail and context."
+      it:
+        title: "Sonda, Sonda Trascinabile e Ingrandimento Bordo"
+        summary: "Campiona i valori di intensita' dei pixel in punti specifici, traccia i valori dinamicamente o ingrandisci una regione con una vista in riquadro."
+        details: "Clic per visualizzare l'intensita' esatta del pixel (HU in CT). La Sonda Trascinabile campiona continuamente lungo un percorso per identificare gradienti di intensita' e transizioni tissutali. L'Ingrandimento Bordo crea una vista ingrandita in riquadro con indicatore di posizione."
+
+    - id: annotations
+      icon: icofont-pencil-alt-2
+      en:
+        title: "Arrows, Text Markers & Eraser"
+        summary: "Add arrows, numbered labels, and text annotations to highlight findings — with eraser for selective cleanup."
+        details: "Customizable arrow and pointer tools for indicating specific anatomical findings. Numbered labels (1, 2, 3...) and custom text annotations for documenting multiple findings in sequence. Eraser tool for selective removal of individual markups without affecting image data."
+      it:
+        title: "Frecce, Marcatori Testo e Gomma"
+        summary: "Aggiungi frecce, etichette numerate e annotazioni di testo per evidenziare reperti — con gomma per pulizia selettiva."
+        details: "Strumenti freccia e puntatore personalizzabili per indicare reperti anatomici specifici. Etichette numerate (1, 2, 3...) e annotazioni di testo personalizzate per documentare piu' reperti in sequenza. Strumento gomma per rimozione selettiva di singoli markup senza influire sui dati immagine."
+
+    - id: ground-truth
+      icon: icofont-stethoscope
+      en:
+        title: "Ground Truth & Clinical Annotations"
+        summary: "Structured annotation system with standardized labels for Mass, Calcification, Architectural Distortion, and BI-RADS density."
+        details: "Create structured annotations for ground truth labeling including Mass, Calcification, Architectural Distortion, Global/Focal Asymmetry, and Surgical Scar. Each annotation captures laterality, view position, coordinates, and clinical comments. BI-RADS breast density classification (A-D) with per-laterality assessment."
+      it:
+        title: "Verita' Clinica e Annotazioni Strutturate"
+        summary: "Sistema di annotazione strutturata con etichette standardizzate per Massa, Calcificazione, Distorsione Architettonica e densita' BI-RADS."
+        details: "Crea annotazioni strutturate per l'etichettatura di riferimento incluse Massa, Calcificazione, Distorsione Architettonica, Asimmetria Globale/Focale e Cicatrice Chirurgica. Ogni annotazione cattura lateralita', posizione della vista, coordinate e commenti clinici. Classificazione densita' mammaria BI-RADS (A-D) con valutazione per lateralita'."
+
+- category_id: 3d-mpr
+  icon: icofont-cube
+  en:
+    name: "3D Visualization & MPR"
+    description: "Advanced volumetric rendering and multi-planar reconstruction for comprehensive anatomical exploration."
+  it:
+    name: "Visualizzazione 3D e MPR"
+    description: "Rendering volumetrico avanzato e ricostruzione multi-planare per un'esplorazione anatomica completa."
+  features:
+    - id: mpr
+      icon: icofont-layers
+      en:
+        title: "Multi-Planar Reconstruction (MPR)"
+        summary: "Reconstruct axial, sagittal, and coronal views simultaneously with interactive crosshair-linked navigation."
+        details: "Automatically generates three orthogonal slices (Top/Axial, Left/Sagittal, Front/Coronal) from volumetric DICOM data. Interactive crosshair-linked panes with synchronized scrolling. Oblique plane reconstruction for off-axis visualization. Thick-slab MPR with configurable slab thickness."
+      it:
+        title: "Ricostruzione Multi-Planare (MPR)"
+        summary: "Ricostruisci viste assiali, sagittali e coronali contemporaneamente con navigazione interattiva collegata al crocicchio."
+        details: "Genera automaticamente tre slice ortogonali (Top/Assiale, Sinistra/Sagittale, Davanti/Coronale) dai dati DICOM volumetrici. Riquadri collegati con crocicchio interattivo e scorrimento sincronizzato. Ricostruzione su piani obliqui per visualizzazione fuori asse. MPR thick-slab con spessore configurabile."
+
+    - id: volume-rendering
+      icon: icofont-diamond
+      en:
+        title: "3D Volume Rendering (VR)"
+        summary: "Generate interactive 3D surface renderings from CT and MR volumetric data with cinematic rendering options."
+        details: "GPU-accelerated volume rendering creates interactive 3D surface models directly from DICOM data. Supports rotation, zoom, and pan of the 3D model. Cinematic rendering options for photorealistic visualization. Can render from single series or composite renderings."
+      it:
+        title: "Rendering Volumetrico 3D (VR)"
+        summary: "Genera rendering 3D interattivi da dati volumetrici CT e MR con opzioni di rendering cinematico."
+        details: "Rendering volumetrico accelerato GPU che crea modelli 3D interattivi direttamente dai dati DICOM. Supporta rotazione, zoom e panoramica del modello 3D. Opzioni di rendering cinematico per visualizzazione fotorealistica. Rendering da serie singole o compositi."
+
+    - id: 3d-measurements
+      icon: icofont-ruler-alt-1
+      en:
+        title: "3D Measurements & Landmarks"
+        summary: "Place anatomical landmarks and perform distance measurements directly on 3D reconstructed volumes."
+        details: "Add measurement points and anatomical landmarks to MPR and VR renderings. Distance measurements between landmarks with metric extraction. Useful for quantitative 3D anatomy assessment, preoperative planning, and longitudinal monitoring."
+      it:
+        title: "Misurazioni 3D e Landmark"
+        summary: "Posiziona landmark anatomici ed esegui misurazioni di distanza direttamente su volumi ricostruiti in 3D."
+        details: "Aggiungi punti di misurazione e landmark anatomici a rendering MPR e VR. Misurazioni di distanza tra landmark con estrazione metriche. Utile per valutazione anatomica 3D quantitativa, pianificazione preoperatoria e monitoraggio longitudinale."
+
+    - id: surface-export
+      icon: icofont-download
+      en:
+        title: "Surface Export & 3D Printing"
+        summary: "Export 3D mesh models in STL, OBJ, and other formats for external processing or 3D printing."
+        details: "Download 3D mesh files generated from segmentation or VR rendering in common 3D formats. Export all surfaces at once or individual labeled structures. Enables integration with surgical planning tools, 3D printing workflows, and external CAD applications."
+      it:
+        title: "Esportazione Superfici e Stampa 3D"
+        summary: "Esporta modelli mesh 3D in formato STL, OBJ e altri per elaborazione esterna o stampa 3D."
+        details: "Scarica file mesh 3D generati dalla segmentazione o dal rendering VR in formati 3D comuni. Esporta tutte le superfici contemporaneamente o singole strutture etichettate. Integrazione con strumenti di pianificazione chirurgica, flussi di lavoro di stampa 3D e applicazioni CAD esterne."
+
+- category_id: ai-tools
+  icon: icofont-brain
+  en:
+    name: "AI & Intelligent Analysis"
+    description: "Artificial intelligence modules for automated segmentation, landmark detection, and clinical decision support."
+  it:
+    name: "IA e Analisi Intelligente"
+    description: "Moduli di intelligenza artificiale per segmentazione automatica, rilevamento landmark e supporto alle decisioni cliniche."
+  features:
+    - id: ai-segmentation
+      icon: icofont-magic
+      en:
+        title: "AI Segmentation (SAM2 & Domain Predictors)"
+        summary: "Interactive and automatic organ/lesion segmentation powered by SAM2 and specialized deep learning models."
+        details: "Access SAM2 (Segment Anything Model 2) for interactive point-based segmentation — click to add positive/negative prompts. Domain-specific predictors for Lungs, Abdomen, Pancreas, and Total Body Segmentator run full-series automatic segmentation. Results displayed as color overlays with adjustable opacity and editable contours."
+      it:
+        title: "Segmentazione IA (SAM2 e Predictor di Dominio)"
+        summary: "Segmentazione interattiva e automatica di organi/lesioni basata su SAM2 e modelli deep learning specializzati."
+        details: "Accedi a SAM2 (Segment Anything Model 2) per segmentazione interattiva basata su punti — clicca per aggiungere prompt positivi/negativi. Predictor specifici per Polmoni, Addome, Pancreas e Total Body Segmentator eseguono segmentazione automatica dell'intera serie. Risultati come overlay colorati con opacita' regolabile e contorni modificabili."
+
+    - id: mask-editing
+      icon: icofont-pencil-alt-2
+      en:
+        title: "Mask Editing & Brush Tool"
+        summary: "Refine AI-generated segmentation masks with an interactive brush tool in a combined 2D+3D editing workspace."
+        details: "Interactive brush tool (1-100px) for painting and erasing segmentation masks with undo/redo and layer-aware editing. Specialized editing layout combines 2D stack view with real-time 3D VR surface rendering, so corrections are immediately visualized in 3D."
+      it:
+        title: "Editing Maschera e Strumento Pennello"
+        summary: "Perfeziona le maschere di segmentazione IA con un pennello interattivo in un workspace di editing 2D+3D combinato."
+        details: "Strumento pennello interattivo (1-100px) per dipingere e cancellare maschere di segmentazione con annulla/ripeti ed editing consapevole dei livelli. Il layout di editing specializzato combina vista stack 2D con rendering superficie VR 3D in tempo reale, cosi' le correzioni sono visualizzate immediatamente in 3D."
+
+    - id: mask-export
+      icon: icofont-download
+      en:
+        title: "Mask Storage & Export"
+        summary: "Save segmentation masks to the server and export as DICOM RTSTRUCT, NIfTI, or image formats."
+        details: "Store edited masks with metadata (timestamp, creator, properties) for persistence and later retrieval. Download masks as DICOM RTSTRUCT files for radiotherapy planning, NIfTI for research pipelines, or standard image formats. Masks can be reloaded and refined in future sessions."
+      it:
+        title: "Archiviazione ed Esportazione Maschere"
+        summary: "Salva maschere di segmentazione sul server ed esporta come DICOM RTSTRUCT, NIfTI o formati immagine."
+        details: "Archivia maschere modificate con metadati (timestamp, creatore, proprieta') per persistenza e recupero successivo. Scarica maschere come file DICOM RTSTRUCT per pianificazione radioterapica, NIfTI per pipeline di ricerca o formati immagine standard. Le maschere possono essere ricaricate e perfezionate in sessioni future."
+
+    - id: landmarks-metrics
+      icon: icofont-chart-bar-graph
+      en:
+        title: "Landmark Detection & Automated Metrics"
+        summary: "AI-powered detection of anatomical landmarks with automated extraction of clinical measurements and indices."
+        details: "Automatic detection of anatomical landmarks (joint centers, vertebra centroids) from volumetric data. Extracted landmarks are used to compute clinical metrics, indices, and parameters displayed in structured tables with temporal tracking for longitudinal studies."
+      it:
+        title: "Rilevamento Landmark e Metriche Automatizzate"
+        summary: "Rilevamento automatico di landmark anatomici con estrazione automatizzata di misurazioni e indici clinici."
+        details: "Rilevamento automatico di landmark anatomici (centri articolari, centroidi vertebrali) da dati volumetrici. I landmark estratti sono utilizzati per calcolare metriche cliniche, indici e parametri visualizzati in tabelle strutturate con tracciamento temporale per studi longitudinali."
+
+- category_id: pacs-storage
+  icon: icofont-database
+  en:
+    name: "Cloud PACS & Study Management"
+    description: "Enterprise-grade cloud storage, PACS connectivity, and comprehensive study management with advanced search."
+  it:
+    name: "Cloud PACS e Gestione Studi"
+    description: "Archiviazione cloud enterprise, connettivita' PACS e gestione studi completa con ricerca avanzata."
+  features:
+    - id: study-dashboard
+      icon: icofont-listine-dots
+      en:
+        title: "Study/Patient Dashboard"
+        summary: "Browse, search, and manage all studies grouped by patient with advanced filtering and customizable columns."
+        details: "Comprehensive dashboard showing all studies organized by patient. Advanced search with filtering by patient name, ID, accession number, modality, date range, body part, and study size. Expandable rows show series details. Supports selection and bulk operations with configurable column layouts."
+      it:
+        title: "Dashboard Studi/Pazienti"
+        summary: "Sfoglia, cerca e gestisci tutti gli studi raggruppati per paziente con filtri avanzati e colonne personalizzabili."
+        details: "Dashboard completa che mostra tutti gli studi organizzati per paziente. Ricerca avanzata con filtri per nome paziente, ID, numero accesso, modalita', intervallo date, parte del corpo e dimensione studio. Righe espandibili mostrano dettagli serie. Supporta selezione e operazioni batch con layout colonne configurabile."
+
+    - id: dicom-import
+      icon: icofont-cloud-upload
+      en:
+        title: "DICOM File Import"
+        summary: "Upload DICOM files via drag-and-drop with batch support, progress tracking, and optional anonymization."
+        details: "Browser-based file upload with drag-and-drop support. Accepts DICOM files (.dcm) or archives (.zip). Batch upload with progress tracking. Optional DICOM anonymization strips personal identifiers (names, IDs, birthdates) while preserving clinical data."
+      it:
+        title: "Importazione File DICOM"
+        summary: "Carica file DICOM tramite drag-and-drop con supporto batch, tracciamento progresso e anonimizzazione opzionale."
+        details: "Caricamento file basato su browser con supporto drag-and-drop. Accetta file DICOM (.dcm) o archivi (.zip). Caricamento batch con tracciamento avanzamento. Anonimizzazione DICOM opzionale che rimuove identificatori personali (nomi, ID, date di nascita) preservando i dati clinici."
+
+    - id: pacs-query-retrieve
+      icon: icofont-exchange
+      en:
+        title: "PACS Query & Retrieve"
+        summary: "Search and download studies from connected PACS systems using standard DICOM networking protocols."
+        details: "Query connected PACS servers for studies matching patient/study criteria. Filter by patient ID, name, study date, modality, accession number. Retrieve full studies or individual series. Supports C-STORE, C-FIND, C-MOVE, WADO-RS, and STOW-RS protocols."
+      it:
+        title: "Query e Retrieve PACS"
+        summary: "Cerca e scarica studi da sistemi PACS connessi utilizzando protocolli di rete DICOM standard."
+        details: "Interroga server PACS connessi per studi corrispondenti a criteri paziente/studio. Filtra per ID paziente, nome, data studio, modalita', numero accesso. Recupera studi completi o serie individuali. Supporta protocolli C-STORE, C-FIND, C-MOVE, WADO-RS e STOW-RS."
+
+    - id: smart-download
+      icon: icofont-download
+      en:
+        title: "Smart Series Download"
+        summary: "Priority-based download system with progress tracking — actively viewed images are downloaded first."
+        details: "Intelligent download scheduler prioritizes actively displayed images while maintaining background series progress. Resumable downloads with automatic retry. Per-series and per-image progress percentage. Streaming HTTP protocol optimizes bandwidth for large studies."
+      it:
+        title: "Download Intelligente Serie"
+        summary: "Sistema di download basato su priorita' con tracciamento progresso — le immagini visualizzate attivamente vengono scaricate per prime."
+        details: "Scheduler di download intelligente che assegna priorita' alle immagini attivamente visualizzate mantenendo il progresso delle serie in background. Download ripristinabili con retry automatico. Percentuale progresso per serie e per immagine. Protocollo HTTP streaming ottimizza la banda per studi di grandi dimensioni."
+
+    - id: dicom-tag-browser
+      icon: icofont-table
+      en:
+        title: "DICOM Metadata/Tag Browser"
+        summary: "View, search, and navigate the complete DICOM tag table for any image in the study."
+        details: "Comprehensive table view of all DICOM tags and values for the selected image. Search and filter tags by name or value. Navigate between instances to view instance-specific tags. Essential for technical review, troubleshooting, and quality assurance."
+      it:
+        title: "Browser Tag/Metadati DICOM"
+        summary: "Visualizza, cerca e naviga la tabella completa dei tag DICOM per qualsiasi immagine nello studio."
+        details: "Vista tabella completa di tutti i tag DICOM e relativi valori per l'immagine selezionata. Cerca e filtra tag per nome o valore. Naviga tra le istanze per visualizzare tag specifici. Essenziale per revisione tecnica, troubleshooting e garanzia qualita'."
+
+- category_id: dashboard
+  icon: icofont-table
+  en:
+    name: "Dashboard & Worklist"
+    description: "Powerful study management dashboard with customizable views, advanced search, bulk operations, and share link management."
+  it:
+    name: "Dashboard e Worklist"
+    description: "Dashboard di gestione studi avanzata con viste personalizzabili, ricerca avanzata, operazioni batch e gestione link di condivisione."
+  features:
+    - id: column-customization
+      icon: icofont-settings-alt
+      en:
+        title: "Customizable Columns & Sorting"
+        summary: "Select, reorder, resize, and sort columns with persistent preferences — tailor the dashboard to your workflow."
+        details: "Column Visibility Picker lets you choose which columns to display (Patient Name, ID, Modality, Study Date, Body Part, Description, etc.). Drag column edges to resize widths. Click any column header for ascending/descending sort with context-aware direction (dates newest-first, names A-Z). Column preferences persist across sessions."
+      it:
+        title: "Colonne Personalizzabili e Ordinamento"
+        summary: "Seleziona, riordina, ridimensiona e ordina le colonne con preferenze persistenti — adatta la dashboard al tuo workflow."
+        details: "Il selettore visibilita' colonne ti permette di scegliere quali colonne visualizzare (Nome Paziente, ID, Modalita', Data Studio, Parte del Corpo, Descrizione, ecc.). Trascina i bordi delle colonne per ridimensionare. Clicca l'intestazione di qualsiasi colonna per ordinamento ascendente/discendente con direzione context-aware (date dal piu' recente, nomi A-Z). Le preferenze colonne persistono tra le sessioni."
+
+    - id: search-query-builder
+      icon: icofont-search-2
+      en:
+        title: "Super Search & Query Builder"
+        summary: "Universal search field with key:value syntax, smart chips, AND/OR logic, and date range keywords for precise study filtering."
+        details: "Unified search bar accepting free text or structured key:value queries (e.g., modality:CT, patient:Smith). Smart chips visualize active filters. Combine with AND/OR logic for complex queries. Date range search supports relative keywords ('today', 'last week', 'last 3 months'). Search results update in real time."
+      it:
+        title: "Super Ricerca e Query Builder"
+        summary: "Campo di ricerca universale con sintassi chiave:valore, chip intelligenti, logica AND/OR e parole chiave per intervalli date."
+        details: "Barra di ricerca unificata che accetta testo libero o query strutturate chiave:valore (es. modalita':CT, paziente:Rossi). Chip intelligenti visualizzano i filtri attivi. Combina con logica AND/OR per query complesse. Ricerca per intervallo date con parole chiave relative ('oggi', 'ultima settimana', 'ultimi 3 mesi'). Risultati aggiornati in tempo reale."
+
+    - id: thumbnails-expandable
+      icon: icofont-image
+      en:
+        title: "Series Thumbnails & Expandable Rows"
+        summary: "Expand any study row to reveal series thumbnails, instance counts, and modality details at a glance."
+        details: "Click to expand a study row and view thumbnail previews for every series. Each thumbnail shows the series description, modality, and instance count. Click a thumbnail to open that series directly in the viewer. Expandable rows provide series-level detail without leaving the dashboard."
+      it:
+        title: "Miniature Serie e Righe Espandibili"
+        summary: "Espandi qualsiasi riga studio per visualizzare miniature serie, conteggi istanze e dettagli modalita' a colpo d'occhio."
+        details: "Clicca per espandere una riga studio e visualizzare anteprime miniatura per ogni serie. Ogni miniatura mostra la descrizione serie, modalita' e conteggio istanze. Clicca una miniatura per aprire la serie direttamente nel visualizzatore. Le righe espandibili forniscono dettaglio a livello di serie senza uscire dalla dashboard."
+
+    - id: grouping-hiding
+      icon: icofont-listine-dots
+      en:
+        title: "Series Grouping & Hide Processing"
+        summary: "Automatically group derived series (DBT, Synth, Raw) and hide processing/intermediate series for a cleaner view."
+        details: "Intelligent series grouping collapses related series — Digital Breast Tomosynthesis (DBT) Tomo, Synthetic 2D, and Raw Projections are grouped under the parent study. Toggle visibility of processing and raw series to declutter the dashboard. Grouped series can be expanded individually when needed."
+      it:
+        title: "Raggruppamento Serie e Nascondi Elaborazione"
+        summary: "Raggruppa automaticamente serie derivate (DBT, Sintetiche, Raw) e nascondi serie di elaborazione/intermedie per una vista piu' pulita."
+        details: "Il raggruppamento intelligente delle serie comprime le serie correlate — Digital Breast Tomosynthesis (DBT) Tomo, 2D Sintetiche e Proiezioni Raw sono raggruppate sotto lo studio genitore. Attiva/disattiva la visibilita' delle serie di elaborazione e raw per semplificare la dashboard. Le serie raggruppate possono essere espanse individualmente quando necessario."
+
+    - id: share-link-management
+      icon: icofont-share-alt
+      en:
+        title: "Share Link Management & QR Codes"
+        summary: "Create, manage, and delete share links with QR code generation for quick mobile access to shared studies."
+        details: "Generate shareable links with configurable expiration and optional password protection. Each link displays a QR code for instant mobile scanning. Manage all active share links from a dedicated panel — view creation date, expiration, access count, and delete links when no longer needed. Complete audit trail for compliance."
+      it:
+        title: "Gestione Link Condivisione e Codici QR"
+        summary: "Crea, gestisci e elimina link di condivisione con generazione codice QR per accesso mobile rapido agli studi condivisi."
+        details: "Genera link condivisibili con scadenza configurabile e protezione password opzionale. Ogni link visualizza un codice QR per scansione mobile istantanea. Gestisci tutti i link attivi da un pannello dedicato — visualizza data creazione, scadenza, conteggio accessi ed elimina i link quando non piu' necessari. Audit trail completo per la conformita'."
+
+    - id: bulk-operations
+      icon: icofont-check-circled
+      en:
+        title: "Bulk Selection & Operations"
+        summary: "Select multiple studies with checkboxes for batch download, deletion, sharing, or export operations."
+        details: "Multi-item selection with individual checkboxes or select-all. Perform batch operations including download with optional anonymization, study/patient deletion with confirmation, bulk sharing, and export. Pagination with configurable items per page (10, 25, 50, 100) for efficient navigation of large archives."
+      it:
+        title: "Selezione Multipla e Operazioni Batch"
+        summary: "Seleziona piu' studi con checkbox per download, eliminazione, condivisione o esportazione batch."
+        details: "Selezione multipla con checkbox individuali o seleziona tutto. Esegui operazioni batch tra cui download con anonimizzazione opzionale, eliminazione studio/paziente con conferma, condivisione massiva ed esportazione. Paginazione con elementi per pagina configurabili (10, 25, 50, 100) per navigazione efficiente di archivi di grandi dimensioni."
+
+- category_id: collaboration
+  icon: icofont-people
+  en:
+    name: "Collaboration & Reporting"
+    description: "Real-time remote collaboration, secure study sharing, and integrated clinical reporting."
+  it:
+    name: "Collaborazione e Refertazione"
+    description: "Collaborazione remota in tempo reale, condivisione sicura studi e refertazione clinica integrata."
+  features:
+    - id: share-links
+      icon: icofont-share
+      en:
+        title: "Secure Study Sharing"
+        summary: "Generate time-limited, password-protected links to share studies with external viewers and collaborators."
+        details: "Create shareable links for clinicians, consultants, or researchers without system accounts. Links can have expiration dates and optional password protection. Shared viewers get read-only access to specified studies. Complete audit trail of all sharing activity."
+      it:
+        title: "Condivisione Sicura Studi"
+        summary: "Genera link a tempo limitato e protetti da password per condividere studi con visualizzatori esterni e collaboratori."
+        details: "Crea link condivisibili per clinici, consulenti o ricercatori senza account di sistema. I link possono avere date di scadenza e protezione password opzionale. I visualizzatori condivisi hanno accesso in sola lettura agli studi specificati. Audit trail completo di tutta l'attivita' di condivisione."
+
+    - id: concurrent-viewing
+      icon: icofont-users-alt-3
+      en:
+        title: "Real-Time Concurrent Viewing"
+        summary: "Multiple users view and annotate the same study simultaneously with live cursor tracking and presence indicators."
+        details: "WebSocket-based real-time synchronization of viewer state, annotations, and tool selections across users. Cursor tracking and presence indicators show who is viewing what. Built-in pointer tools for live case discussion. Ideal for tumor boards and MDT meetings."
+      it:
+        title: "Visualizzazione Concorrente in Tempo Reale"
+        summary: "Piu' utenti visualizzano e annotano lo stesso studio contemporaneamente con tracciamento cursore e indicatori di presenza."
+        details: "Sincronizzazione in tempo reale basata su WebSocket dello stato del visualizzatore, annotazioni e selezioni strumenti tra utenti. Tracciamento cursore e indicatori di presenza mostrano chi sta visualizzando cosa. Strumenti puntatore integrati per discussione casi dal vivo. Ideale per tumor board e riunioni MDT."
+
+    - id: report-generation
+      icon: icofont-file-text
+      en:
+        title: "Clinical Report Generation"
+        summary: "Compose structured medical reports with auto-populated measurements, AI findings, and embedded screenshots."
+        details: "Rich text editor for medical reports. Auto-populate with extracted measurements, landmark values, and AI analysis results. Include viewport screenshots. Export as PDF or DOCX. Template support for standardized reporting workflows."
+      it:
+        title: "Generazione Referti Clinici"
+        summary: "Componi referti medici strutturati con misurazioni auto-popolate, risultati IA e screenshot integrati."
+        details: "Editor di testo ricco per referti medici. Auto-popola con misurazioni estratte, valori landmark e risultati analisi IA. Includi screenshot dei viewport. Esporta come PDF o DOCX. Supporto template per workflow di refertazione standardizzati."
+
+    - id: screenshot-export
+      icon: icofont-camera
+      en:
+        title: "Screenshot & Print Export"
+        summary: "Export current viewport as image file or generate printable multi-image film layouts."
+        details: "Capture and download the current viewport view including overlays, annotations, and measurements as PNG or JPEG. Print layout mode arranges multiple images in DICOM Print-compatible format with patient demographics and study information."
+      it:
+        title: "Esportazione Screenshot e Stampa"
+        summary: "Esporta il viewport corrente come file immagine o genera layout film stampabili multi-immagine."
+        details: "Cattura e scarica la vista viewport corrente con overlay, annotazioni e misurazioni come PNG o JPEG. La modalita' layout stampa dispone piu' immagini in formato compatibile DICOM Print con dati demografici paziente e informazioni studio."
+
+- category_id: security
+  icon: icofont-shield
+  en:
+    name: "Security, Compliance & Administration"
+    description: "Enterprise-grade security, regulatory compliance, user management, and complete audit trail."
+  it:
+    name: "Sicurezza, Conformita' e Amministrazione"
+    description: "Sicurezza enterprise, conformita' normativa, gestione utenti e audit trail completo."
+  features:
+    - id: iso-certification
+      icon: icofont-certificate
+      en:
+        title: "ISO 13485 Certified"
+        summary: "Quality Management System certified by IMQ for medical device software, ensuring full regulatory compliance."
+        details: "Full ISO 13485:2016 certification covering design, development, and delivery of medical imaging software. Regular audits and continuous improvement processes. Compliant with EU MDR and international medical device regulations."
+      it:
+        title: "Certificazione ISO 13485"
+        summary: "Sistema di Gestione Qualita' certificato IMQ per software dispositivi medici, garantendo piena conformita' normativa."
+        details: "Certificazione completa ISO 13485:2016 che copre progettazione, sviluppo e fornitura di software di imaging medicale. Audit regolari e processi di miglioramento continuo. Conforme a EU MDR e regolamenti internazionali dispositivi medici."
+
+    - id: auth-rbac
+      icon: icofont-lock
+      en:
+        title: "Authentication & Role-Based Access"
+        summary: "Secure login with SSO integration and role-based access control to studies and features."
+        details: "User authentication with email/password or SSO integration. Role-based access control (RBAC) determines which users can access specific studies, perform administrative functions, or use advanced features. Support for multiple authentication backends."
+      it:
+        title: "Autenticazione e Accesso Basato su Ruoli"
+        summary: "Accesso sicuro con integrazione SSO e controllo accesso basato su ruoli agli studi e alle funzionalita'."
+        details: "Autenticazione utente con email/password o integrazione SSO. Il controllo accesso basato su ruoli (RBAC) determina quali utenti possono accedere a studi specifici, eseguire funzioni amministrative o utilizzare funzionalita' avanzate. Supporto per piu' backend di autenticazione."
+
+    - id: encryption-audit
+      icon: icofont-history
+      en:
+        title: "Encryption & Audit Trail"
+        summary: "End-to-end encryption (AES-256 at rest, TLS 1.3 in transit) with immutable audit logging of all actions."
+        details: "All data encrypted at rest and in transit. Comprehensive audit logs track every study access, annotation, download, and administrative action with timestamps and user identification. GDPR Article 30 compliant records. Exportable for compliance reporting."
+      it:
+        title: "Crittografia e Audit Trail"
+        summary: "Crittografia end-to-end (AES-256 a riposo, TLS 1.3 in transito) con log audit immutabili di tutte le azioni."
+        details: "Tutti i dati crittografati a riposo e in transito. Log audit completi tracciano ogni accesso studio, annotazione, download e azione amministrativa con timestamp e identificazione utente. Registri conformi Articolo 30 GDPR. Esportabile per report di conformita'."
+
+    - id: user-management
+      icon: icofont-people
+      en:
+        title: "User & Study Management"
+        summary: "Administrative tools for managing user accounts, roles, study organization, and retention policies."
+        details: "Manage user accounts, assign roles, and configure permissions. Organize studies into collections with retention policies and archiving. Batch operations for multi-study management. System notifications and alerts for important events, upload completions, and analysis job status."
+      it:
+        title: "Gestione Utenti e Studi"
+        summary: "Strumenti amministrativi per gestire account utente, ruoli, organizzazione studi e politiche di conservazione."
+        details: "Gestisci account utente, assegna ruoli e configura autorizzazioni. Organizza studi in raccolte con politiche di conservazione e archiviazione. Operazioni batch per gestione multi-studio. Notifiche di sistema e avvisi per eventi importanti, completamenti caricamento e stato processi di analisi."
+
+- category_id: integration
+  icon: icofont-connection
+  en:
+    name: "Integration & Interoperability"
+    description: "Seamless connectivity with hospital IT infrastructure, PACS vendors, and clinical systems."
+  it:
+    name: "Integrazione e Interoperabilita'"
+    description: "Connettivita' trasparente con infrastruttura IT ospedaliera, vendor PACS e sistemi clinici."
+  features:
+    - id: pacs-integration
+      icon: icofont-database-add
+      en:
+        title: "Multi-Vendor PACS Integration"
+        summary: "Plug-and-play integration with major PACS vendors using DIMSE and DICOMweb services."
+        details: "Connect to existing on-premise or cloud PACS from Philips, GE, Siemens, Fujifilm, and Agfa. Full support for DICOM networking (C-STORE, C-FIND, C-MOVE) and DICOMweb (WADO-RS, STOW-RS). Gateway mode for hybrid cloud deployments. Automatic routing rules for multi-site configurations."
+      it:
+        title: "Integrazione PACS Multi-Vendor"
+        summary: "Integrazione plug-and-play con i principali vendor PACS tramite servizi DIMSE e DICOMweb."
+        details: "Connettiti a PACS on-premise o cloud esistenti di Philips, GE, Siemens, Fujifilm e Agfa. Supporto completo per rete DICOM (C-STORE, C-FIND, C-MOVE) e DICOMweb (WADO-RS, STOW-RS). Modalita' gateway per deployment cloud ibrido. Regole routing automatico per configurazioni multi-sede."
+
+    - id: hl7-fhir
+      icon: icofont-code
+      en:
+        title: "HL7 & FHIR"
+        summary: "Exchange patient and study data with EHR and RIS systems using HL7v2 and FHIR R4 standards."
+        details: "HL7v2 ADT and ORM message processing for patient and order synchronization. FHIR R4 ImagingStudy and DiagnosticReport resources. Bidirectional exchange of patient demographics, study metadata, and results. Automatic clinical context synchronization."
+      it:
+        title: "HL7 e FHIR"
+        summary: "Scambia dati paziente e studio con sistemi EHR e RIS utilizzando gli standard HL7v2 e FHIR R4."
+        details: "Elaborazione messaggi HL7v2 ADT e ORM per sincronizzazione pazienti e ordini. Risorse FHIR R4 ImagingStudy e DiagnosticReport. Scambio bidirezionale di dati demografici paziente, metadati studio e risultati. Sincronizzazione automatica del contesto clinico."
+
+    - id: rest-api
+      icon: icofont-ui-settings
+      en:
+        title: "REST API & Webhooks"
+        summary: "Comprehensive REST API with OAuth 2.0 for programmatic access to studies, users, and platform configuration."
+        details: "Well-documented API for study upload, retrieval, sharing, and management. API tokens with OAuth 2.0 authentication. Webhooks for event-driven integration — trigger external workflows on study upload, analysis completion, or annotation events. Supports custom integration with third-party viewers and applications."
+      it:
+        title: "API REST e Webhook"
+        summary: "API REST completa con OAuth 2.0 per accesso programmatico a studi, utenti e configurazione piattaforma."
+        details: "API ben documentata per upload, recupero, condivisione e gestione studi. Token API con autenticazione OAuth 2.0. Webhook per integrazione event-driven — attiva workflow esterni su upload studio, completamento analisi o eventi annotazione. Supporta integrazione personalizzata con visualizzatori e applicazioni di terze parti."
+
+- category_id: mobile
+  icon: icofont-ui-touch-phone
+  en:
+    name: "Mobile & Zero-Footprint Access"
+    description: "Access every feature from any device — no installation, no plugins, no downloads required."
+  it:
+    name: "Mobile e Accesso Zero-Footprint"
+    description: "Accedi a tutte le funzionalita' da qualsiasi dispositivo — nessuna installazione, nessun plugin, nessun download richiesto."
+  features:
+    - id: zero-footprint
+      icon: icofont-globe
+      en:
+        title: "Zero-Footprint Web Access"
+        summary: "No installation, no plugins, no downloads — full viewer runs entirely in any modern web browser."
+        details: "HTML5-based viewer runs 100% in the browser. Compatible with Chrome, Firefox, Safari, and Edge. No Java, Flash, or ActiveX required. Works behind firewalls and on locked-down workstations. Instant access from any device with a browser."
+      it:
+        title: "Accesso Web Zero-Footprint"
+        summary: "Nessuna installazione, nessun plugin, nessun download — il visualizzatore completo funziona interamente in qualsiasi browser moderno."
+        details: "Visualizzatore basato su HTML5 che funziona al 100% nel browser. Compatibile con Chrome, Firefox, Safari e Edge. Nessun Java, Flash o ActiveX richiesto. Funziona dietro firewall e su workstation bloccate. Accesso istantaneo da qualsiasi dispositivo con un browser."
+
+    - id: responsive
+      icon: icofont-responsive
+      en:
+        title: "Responsive Design"
+        summary: "Fully responsive interface optimized for desktop, tablet, and smartphone with adaptive layouts."
+        details: "Adaptive layouts reorganize tools and viewports based on screen size. Tablet view uses compact menus. Mobile view uses drawer menus and full-screen panels. All tools and features accessible on every device size."
+      it:
+        title: "Design Responsivo"
+        summary: "Interfaccia completamente responsiva ottimizzata per desktop, tablet e smartphone con layout adattivi."
+        details: "Layout adattivi che riorganizzano strumenti e viewport in base alle dimensioni dello schermo. Vista tablet con menu compatti. Vista mobile con menu a cassetto e pannelli a schermo intero. Tutti gli strumenti e le funzionalita' accessibili su ogni dimensione di dispositivo."
+
+    - id: touch-gestures
+      icon: icofont-hand-drag
+      en:
+        title: "Touch Gestures & Keyboard Shortcuts"
+        summary: "Pinch-to-zoom, swipe-to-scroll, and two-finger pan on touch devices — plus full keyboard shortcuts for power users."
+        details: "Native multi-touch support without plugins: pinch zoom, two-finger pan, swipe between series, long-press for context menus. Complete keyboard shortcuts for tool activation, layout switching, image navigation (arrow keys, page up/down), and measurement tools."
+      it:
+        title: "Gesture Touch e Scorciatoie Tastiera"
+        summary: "Pinch-to-zoom, swipe per scorrere e panoramica a due dita su touch — piu' scorciatoie tastiera complete per utenti avanzati."
+        details: "Supporto multi-touch nativo senza plugin: zoom con pinch, panoramica a due dita, swipe tra serie, long-press per menu contestuali. Scorciatoie tastiera complete per attivazione strumenti, cambio layout, navigazione immagini (tasti freccia, page up/down) e strumenti di misurazione."
+
+    - id: offline-caching
+      icon: icofont-wifi-alt
+      en:
+        title: "Offline Mode & Caching"
+        summary: "Cache downloaded studies for offline viewing when network is unavailable — automatic sync when reconnected."
+        details: "Automatically caches downloaded DICOM series to local browser storage. Continue viewing and basic annotation on cached data without network connection. Automatic synchronization of changes when connection is restored."
+      it:
+        title: "Modalita' Offline e Caching"
+        summary: "Memorizza nella cache gli studi scaricati per visualizzazione offline quando la rete non e' disponibile — sincronizzazione automatica al ricollegamento."
+        details: "Memorizza automaticamente nella cache le serie DICOM scaricate nell'archiviazione locale del browser. Continua visualizzazione e annotazione base sui dati in cache senza connessione di rete. Sincronizzazione automatica delle modifiche al ripristino della connessione."

@@ -1,0 +1,26 @@
+{% assign t = site.data.i18n[site.lang] %}
+{% assign lang = site.lang | default: "en" %}
+
+<div class="docs-sidebar">
+  <div class="docs-sidebar-header">
+    <h4 class="docs-sidebar-title">{{ t.docs.sidebar_title }}</h4>
+  </div>
+  <div class="docs-sidebar-search">
+    <input type="text" class="form-control docs-search-input" placeholder="{{ t.docs.search_placeholder }}" id="docsSearch" />
+  </div>
+  <nav class="docs-sidebar-nav">
+    <ul class="docs-sidebar-list">
+      {% for cat in site.data.features %}
+      <li class="docs-sidebar-item">
+        <a href="#{{ cat.category_id }}" class="docs-sidebar-link" data-target="{{ cat.category_id }}">
+          <i class="{{ cat.icon }}"></i>
+          <span>{{ cat[lang].name }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <a href="#top" class="docs-back-to-top">
+    <i class="icofont-arrow-up"></i> {{ t.docs.back_to_top }}
+  </a>
+</div>

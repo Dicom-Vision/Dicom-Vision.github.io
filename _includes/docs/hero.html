@@ -1,0 +1,16 @@
+{% assign t = site.data.i18n[site.lang] %}
+{% assign feature_count = 0 %}
+{% for cat in site.data.features %}
+  {% assign feature_count = feature_count | plus: cat.features.size %}
+{% endfor %}
+
+<div class="wrapper docs-hero" style="background-image: url('{{ '/assets/images/features-hero.webp' | relative_url }}');">
+  <div class="container inner text-center">
+    <div class="docs-hero-badge">
+      <span class="docs-hero-badge-count">{{ feature_count }}+</span>
+      <span class="docs-hero-badge-label">{{ t.docs.hero_badge }}</span>
+    </div>
+    <h1 class="docs-hero-title">{{ t.docs.hero_title }}</h1>
+    <p class="docs-hero-subtitle">{{ t.docs.hero_subtitle_1 }}<br>{{ t.docs.hero_subtitle_2 }}</p>
+  </div>
+</div>
