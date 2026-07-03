@@ -28,7 +28,7 @@ layout: default
 {% if c.stats %}
 <div class="wrapper light-wrapper case-stats-wrapper">
   <div class="container">
-    <div class="row case-stats">
+    <div class="row case-stats {% if c.stats_variant %}case-stats-{{ c.stats_variant }}{% endif %}">
       {% for stat in c.stats %}
       <div class="col-6 col-lg-3">
         <div class="case-stat">
@@ -61,7 +61,7 @@ layout: default
         {% if section.bullets %}
         <ul>
           {% for item in section.bullets %}
-          <li>{{ item }}</li>
+          <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
           {% endfor %}
         </ul>
         {% endif %}
@@ -70,15 +70,66 @@ layout: default
           {% for card in section.cards %}
           <div class="case-feature-card">
             <h3>{{ card.title }}</h3>
-            <p>{{ card.text }}</p>
+            {{ card.text | markdownify }}
           </div>
           {% endfor %}
         </div>
+        {% endif %}
+        {% if section.visual %}
+        {% case section.visual.type %}
+        {% when "triage-panel" %}
+        <div class="case-triage-visual" role="img" aria-label="{{ section.image_alt | default: section.title }}">
+          <div class="case-triage-study-list">
+            <div class="case-triage-list-head">
+              <span>Study queue</span>
+              <strong>AI priority</strong>
+            </div>
+            <div class="case-triage-row case-triage-row-high">
+              <span>CT Abdomen · Prior available</span>
+              <strong>Suspicious</strong>
+            </div>
+            <div class="case-triage-row case-triage-row-mid">
+              <span>Chest CT · Motion artifact</span>
+              <strong>Uncertain</strong>
+            </div>
+            <div class="case-triage-row case-triage-row-low">
+              <span>MR Brain · Complete series</span>
+              <strong>Normal</strong>
+            </div>
+          </div>
+          <div class="case-triage-viewer">
+            <div class="case-triage-scan" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="case-triage-panel">
+              <span class="case-triage-panel-label">AI Triage</span>
+              <h3>Structured observations</h3>
+              <p>Relevant series selected, multi-view evidence reviewed and uncertainty flagged for human evaluation.</p>
+              <div class="case-triage-chip-row">
+                <span>Series 4</span>
+                <span>Prior exam</span>
+                <span>Review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% when "direction-timeline" %}
+        <div class="case-direction-timeline">
+          {% for item in section.visual.items %}
+          <div class="case-direction-item">
+            <span class="case-direction-index">{{ forloop.index }}</span>
+            <span>{{ item }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endcase %}
+        {% if section.image_caption %}<p class="case-visual-caption">{{ section.image_caption }}</p>{% endif %}
         {% endif %}
         {% if section.image %}
         <figure class="case-figure {% if section.image_wide %}case-figure-wide{% endif %}">
           <a href="{{ section.image | relative_url }}" class="case-figure-zoom" data-case-lightbox-src="{{ section.image | relative_url }}" data-case-lightbox-alt="{{ section.image_alt | default: section.title }}" aria-label="Expand image: {{ section.title }}">
             <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}" loading="lazy" />
+            <span class="case-figure-zoom-icon" aria-hidden="true"><i class="icofont-ui-zoom-in"></i></span>
           </a>
           {% if section.image_caption %}<figcaption>{{ section.image_caption }}</figcaption>{% endif %}
         </figure>
@@ -164,7 +215,7 @@ layout: default
 </script>
 
 <div class="case-lightbox" hidden>
-  <button type="button" class="case-lightbox-close" aria-label="Close expanded image">&times;</button>
+  <button type="button" class="case-lightbox-close" aria-label="Close expanded image"><i class="icofont-ui-close" aria-hidden="true"></i></button>
   <img src="" alt="" />
 </div>
 

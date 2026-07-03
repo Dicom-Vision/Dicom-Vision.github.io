@@ -29,18 +29,18 @@ case:
   partners:
     title: "Developed with clinical and research partners"
     body: >
-      TAVI-TEC is the result of a collaboration between clinical teams, academic researchers
-      and medical imaging technology developers.
+      TAVI-TEC is the result of a collaboration between **clinical teams, academic researchers
+      and medical imaging technology developers**.
 
 
-      IRCCS ISMETT contributes clinical expertise and retrospective CTA data from TAVI procedures.
+      **IRCCS ISMETT** contributes clinical expertise and retrospective CTA data from TAVI procedures.
 
 
       The University of Palermo contributes engineering and bioengineering research expertise.
 
 
-      D/Vision Lab develops the DICOM Vision® web-based imaging platform and supports integration
-      of the TAVI-TEC workflow into the clinical review environment.
+      **D/Vision Lab** develops the DICOM Vision® web-based imaging platform and supports integration
+      of the TAVI-TEC workflow into the **clinical review environment**.
 
 
       The project is supported within the ANTHEM initiative, funded by the European Commission —
@@ -55,16 +55,16 @@ case:
   sections:
     - title: "The problem"
       body: >
-        TAVI planning depends on accurate CTA assessment of the aortic annulus, aortic root,
-        calcifications and vascular access.
+        TAVI planning depends on accurate **CTA assessment** of the **aortic annulus, aortic root,
+        calcifications and vascular access**.
 
 
-        Manual measurements can be time-consuming and may vary between operators, especially
-        in borderline cases.
+        **Manual measurements** can be time-consuming and may vary between operators, especially
+        in **borderline cases**.
 
 
-        TAVI-TEC explores how AI can help standardize this workflow and bring automatic
-        measurements directly into the clinical imaging environment.
+        TAVI-TEC explores how AI can help **standardize this workflow** and bring **automatic
+        measurements** directly into the clinical imaging environment.
 
 
         **Designed for hospitals, Heart Teams, research groups and medtech projects working
@@ -74,17 +74,17 @@ case:
         TAVI-TEC automatically processes preoperative CTA studies to support:
       cards:
         - title: "AI segmentation"
-          text: "Aortic root and vascular structure segmentation."
+          text: "**Aortic root** and **vascular structure** segmentation."
         - title: "Automatic measurements"
-          text: "Annular area, perimeter and diameter measurements."
+          text: "**Annular area, perimeter and diameter** measurements."
         - title: "3D anatomical review"
-          text: "Aortic root, calcifications and vascular structures in 3D."
+          text: "**Aortic root, calcifications and vascular structures** in 3D."
         - title: "Vascular access assessment"
-          text: "Iliac-femoral evaluation with CPR views and calcification mapping."
+          text: "**Iliac-femoral evaluation** with CPR views and calcification mapping."
         - title: "Sizing support"
-          text: "Retrospective prosthesis size evaluation for SAPIEN 3 Ultra."
+          text: "Retrospective prosthesis size evaluation for **SAPIEN 3 Ultra**."
         - title: "DICOM Vision® integration"
-          text: "Review images, outputs and discussion in one web-based platform."
+          text: "Review **images, outputs and discussion** in one web-based platform."
       image: /assets/images/showcase/tavi-tec-viewer.png
       image_alt: "TAVI-TEC inside the DICOM Vision viewer: axial CTA with 3D aortic root segmentation and full-body vascular access view"
       image_caption: "TAVI-TEC inside DICOM Vision®: CTA visualization, 3D segmentation, anatomical measurements and vascular access review in a single web-based environment."
@@ -92,19 +92,19 @@ case:
     - title: "TAVI-TEC at a glance"
       id: "workflow"
       body: >
-        From CTA upload to AI output review, the workflow is designed to keep imaging,
-        measurements and discussion inside the same web-based environment.
+        From **CTA upload** to **AI output review**, the workflow is designed to keep **imaging,
+        measurements and discussion** inside the same web-based environment.
       image: /assets/images/showcase/tavi-tec-glance.webp
       image_alt: "TAVI-TEC at a glance diagram showing the clinical challenge of TAVI planning in an aging population, CTA imaging analysis with AI segmentation, 3D visualization, annular sizing and vascular access assessment, integration inside the DICOM Vision web workflow, and expected benefits for standardization, speed and Heart Team collaboration"
       image_caption: "An overview of the TAVI-TEC concept, from the clinical challenge to imaging analysis, workflow integration and expected benefits."
     - title: "Why DICOM Vision®"
       body: >
-        DICOM Vision® provides the web-based environment where clinicians can review the
-        original CTA images, inspect AI-generated outputs, visualize 3D reconstructions,
-        check measurements and discuss the case within a single platform.
+        DICOM Vision® provides the **web-based environment** where clinicians can review the
+        original CTA images, inspect **AI-generated outputs**, visualize **3D reconstructions**,
+        check measurements and discuss the case within a **single platform**.
 
 
-        The goal is not to replace clinical judgment, but to make advanced imaging analysis
+        The goal is **not to replace clinical judgment**, but to make **advanced imaging analysis**
         easier to access, review and share.
     - title: "Evaluated on real clinical data"
       show_partners_after: true
@@ -113,7 +113,7 @@ case:
         processed CTA studies in **2.2 to 6.4 minutes** on a GPU.
 
 
-        The system showed strong agreement with clinician-derived annular measurements
+        The system showed **strong agreement with clinician-derived annular measurements**
         (CCC 0.934 for annular area) and achieved **82% agreement with implanted
         SAPIEN 3 Ultra valve sizes**, with most mismatches occurring between adjacent sizes.
   final_cta:

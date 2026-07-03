@@ -77,14 +77,20 @@ items:
 
   - id: agentic-ai-triage
     category: ai-features
+    categories:
+      - ai-features
+      - clinical-workflow
+      - feature-showcase
     icon: icofont-robot
-    coming_soon: true
+    image: /assets/images/showcase/agentic-triage-study-workflow.webp
+    url: /showcase/agentic-triage
+    url_it: /vetrina/agentic-triage
     en:
-      title: "Agentic AI Triage for Imaging Workflows"
-      description: "A showcase of how AI can prioritize suspicious studies, suggest further analysis and support faster review."
+      title: "Agentic Triage"
+      description: "AI-native triage workflows that inspect DICOM studies, analyze multiple views, generate structured observations and support prioritization for human review."
     it:
-      title: "Triage con IA Agentica per i Workflow di Imaging"
-      description: "Come l'IA può dare priorità agli studi sospetti, suggerire analisi aggiuntive e supportare una revisione più rapida."
+      title: "Agentic Triage"
+      description: "Workflow di triage AI-native che ispezionano studi DICOM, analizzano viste multiple, generano osservazioni strutturate e supportano la prioritizzazione per revisione umana."
 
   - id: collaborative-review
     category: collaboration
