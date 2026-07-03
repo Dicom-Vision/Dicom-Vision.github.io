@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% seo %}
-    {% assign alt_lang = "it" %}{% if site.lang == "it" %}{% assign alt_lang = "en" %}{% endif %}
-    <link rel="alternate" hreflang="{{ site.lang | default: 'en' }}" href="{{ site.url }}{{ page.url }}" />
-    <link rel="alternate" hreflang="{{ alt_lang }}" href="{{ site.alternate_url }}{{ page.url }}" />
-    <link rel="alternate" hreflang="x-default" href="https://dicom.vision{{ page.url }}" />
+    {% if site.lang == "it" %}{% assign en_domain = site.alternate_url %}{% assign it_domain = site.url %}{% else %}{% assign en_domain = site.url %}{% assign it_domain = site.alternate_url %}{% endif %}
+    {% assign en_url = page.slug_en | default: page.url %}
+    {% assign it_url = page.slug_it | default: page.url %}
+    <link rel="alternate" hreflang="en" href="{{ en_domain }}{{ en_url }}" />
+    <link rel="alternate" hreflang="it" href="{{ it_domain }}{{ it_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ en_domain }}{{ en_url }}" />
     {% assign seo_name = page.seo_title | default: page.title | default: site.title %}
     {% assign seo_desc = page.description | default: site.description %}
     {% assign seo_image = page.image | default: site.logo %}

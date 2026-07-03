@@ -5,6 +5,7 @@ description: "Access DICOM medical images from any browser. No installation requ
 headline: "Zero-Footprint DICOM Viewer"
 subheadline: "View, analyze, and share medical images from any browser — no installation required"
 permalink: /dicom-viewer
+slug_it: /visualizzatore-dicom
 header_class: "navbar-bg-dark inverse-text nav-uppercase"
 faq:
   - q: "What is a DICOM viewer?"

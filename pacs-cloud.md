@@ -5,6 +5,7 @@ description: "Replace legacy PACS with a cloud-native solution. DICOM Vision off
 headline: "Cloud PACS Solution"
 subheadline: "Enterprise-grade PACS in the cloud — no hardware, no maintenance, infinite scalability"
 permalink: /pacs-cloud
+slug_it: /pacs-cloud-soluzione
 header_class: "navbar-bg-dark inverse-text nav-uppercase"
 faq:
   - q: "What is Cloud PACS?"

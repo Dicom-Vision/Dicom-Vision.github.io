@@ -5,6 +5,7 @@ description: "Visualizzatore DICOM cloud zero-footprint per immagini medicali. N
 headline: "Visualizzatore DICOM Zero-Footprint"
 subheadline: "Visualizza, analizza e condividi immagini medicali da qualsiasi browser — senza installazione"
 permalink: /visualizzatore-dicom
+slug_en: /dicom-viewer
 header_class: "navbar-bg-dark inverse-text nav-uppercase"
 faq:
   - q: "Cos'è un visualizzatore DICOM?"

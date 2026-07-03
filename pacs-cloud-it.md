@@ -5,6 +5,7 @@ description: "Soluzione PACS cloud per la gestione delle immagini medicali. Arch
 headline: "Soluzione PACS Cloud"
 subheadline: "PACS enterprise nel cloud — nessun hardware, nessuna manutenzione, scalabilità infinita"
 permalink: /pacs-cloud-soluzione
+slug_en: /pacs-cloud
 header_class: "navbar-bg-dark inverse-text nav-uppercase"
 faq:
   - q: "Cos'è un PACS Cloud?"

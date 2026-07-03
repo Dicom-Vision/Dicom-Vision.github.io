@@ -5,6 +5,7 @@ description: "AI-powered radiology platform. Automatic anomaly detection, anatom
 headline: "AI for Radiology & Medical Imaging"
 subheadline: "Artificial intelligence integrated directly into your diagnostic workflow"
 permalink: /ai-radiology
+slug_it: /ia-radiologia
 header_class: "navbar-bg-dark inverse-text nav-uppercase"
 faq:
   - q: "How does AI improve radiology workflows?"

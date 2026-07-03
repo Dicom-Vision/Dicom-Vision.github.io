@@ -5,6 +5,7 @@ description: "Piattaforma radiologica con intelligenza artificiale. Rilevamento 
 headline: "IA per Radiologia e Imaging Medicale"
 subheadline: "Intelligenza artificiale integrata direttamente nel flusso di lavoro diagnostico"
 permalink: /ia-radiologia
+slug_en: /ai-radiology
 header_class: "navbar-bg-dark inverse-text nav-uppercase"
 faq:
   - q: "Come migliora l'IA i flussi di lavoro radiologici?"

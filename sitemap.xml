@@ -4,14 +4,24 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {% if site.lang == 'it' %}
+    {% assign en_domain = site.alternate_url %}{% assign it_domain = site.url %}
+  {% else %}
+    {% assign en_domain = site.url %}{% assign it_domain = site.alternate_url %}
+  {% endif %}
   {% assign pages = site.pages | where_exp: "p", "p.url != '/404.html'" %}
   {% for page in pages %}
   {% unless page.url contains 'assets/' or page.url contains 'feed' or page.url contains 'sitemap' or page.url contains 'robots' or page.url contains 'atlassian' or page.url contains 'DOCKER' or page.url contains 'MODERN' %}
+  {% comment %} A page carrying slug_en is an Italian-slug stub; slug_it marks an English-slug one. Skip stubs that belong to the other language's build. {% endcomment %}
+  {% if site.lang == 'it' and page.slug_it %}{% continue %}{% endif %}
+  {% if site.lang != 'it' and page.slug_en %}{% continue %}{% endif %}
+  {% assign en_url = page.slug_en | default: page.url %}
+  {% assign it_url = page.slug_it | default: page.url %}
   <url>
     <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    <xhtml:link rel="alternate" hreflang="{{ site.lang | default: 'en' }}" href="{{ site.url }}{{ page.url | remove: 'index.html' }}" />
-    <xhtml:link rel="alternate" hreflang="{% if site.lang == 'it' %}en{% else %}it{% endif %}" href="{{ site.alternate_url }}{{ page.url | remove: 'index.html' }}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dicom.vision{{ page.url | remove: 'index.html' }}" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ en_domain }}{{ en_url | remove: 'index.html' }}" />
+    <xhtml:link rel="alternate" hreflang="it" href="{{ it_domain }}{{ it_url | remove: 'index.html' }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ en_domain }}{{ en_url | remove: 'index.html' }}" />
     {% if page.last_modified_at %}
     <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
     {% endif %}
