@@ -1,28 +1,7 @@
 ---
-layout: page
-header_class: "navbar-bg-dark inverse-text nav-uppercase"
+layout: default
 custom_css: leaf
 custom_font: font4
-white_menu: true
-
-contact_info:
-  enable: true
-  contact_data:
-    - icon: "/assets/images/icons/ui-gps.png"
-      info: "Via Pasubio, 5<br> c/o POINT<br>v24044 Dalmine, BG Italia"
-
-    - icon: "/assets/images/icons/co-email-5.png"
-      info:
-        - "info@dicom.vision"
-contact_form:
-  enable: true
-
-  lists:
-    - info_01: Via Pasubio, 5 c/o POINT<br>24044 Dalmine, BG Italia
-      icon: "icofont-location-pin"
-
-    - info_01: "info@dicom.vision"
-      icon: "icofont-mail-box"
 
 google_maps:
   enable: true
@@ -30,14 +9,199 @@ google_maps:
 
 {% assign t = site.data.i18n[site.lang] %}
 
-<div
-  class="wrapper light-wrapper page-title-wrapper"
-  data-image-src="{{page_d.background_image}}"
->
+{% include header.html container_class="container" extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
+
+<div class="wrapper docs-hero" style="background-image: url('{{ '/assets/images/features-hero.webp' | relative_url }}');">
   <div class="container inner text-center">
-    <h1 class="page-title">{{ t.contact.title }}</h1>
+    <div class="docs-hero-badge">
+      <span class="docs-hero-badge-label">{{ t.contact.hero_badge }}</span>
+    </div>
+    <h1 class="docs-hero-title">{{ t.contact.title }}</h1>
+    <p class="docs-hero-subtitle">{{ t.contact.hero_subtitle }}</p>
   </div>
-  <!-- /.container -->
 </div>
-<!-- /.wrapper -->
-{% include contact_4.html %}
+
+<div class="wrapper light-wrapper">
+  <div class="container pt-60 pb-60">
+    <div class="row">
+      <div class="col-lg-5 contact-info-col">
+        <div class="contact-info-card">
+          <h2 class="contact-block-title">{{ t.contact.info_title }}</h2>
+          <ul class="contact-info-list">
+            <li>
+              <i class="icofont-location-pin"></i>
+              <div>
+                <span class="contact-info-label">{{ t.contact.address_label }}</span>
+                <span>Via Pasubio, 5 c/o POINT<br />24044 Dalmine (BG), Italia</span>
+              </div>
+            </li>
+            <li>
+              <i class="icofont-envelope"></i>
+              <div>
+                <span class="contact-info-label">{{ t.contact.email_label }}</span>
+                <a href="mailto:info@dicom.vision">info@dicom.vision</a>
+              </div>
+            </li>
+            <li>
+              <i class="icofont-certificate"></i>
+              <div>
+                <span class="contact-info-label">{{ t.contact.info_pec_label }}</span>
+                <a href="mailto:dicomvision@pec.it">dicomvision@pec.it</a>
+              </div>
+            </li>
+            <li>
+              <i class="icofont-headphone-alt"></i>
+              <div>
+                <span class="contact-info-label">{{ t.contact.info_support_label }}</span>
+                <span>{{ t.contact.info_support_text }}</span>
+                <a href="{{ site.support_url }}" target="_blank" rel="noopener" class="contact-support-link">{{ t.contact.info_support_cta }} <i class="icofont-arrow-right"></i></a>
+              </div>
+            </li>
+          </ul>
+          <div class="contact-info-map">
+            {% include gmap.html extra_class="map-full" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <h2 class="contact-block-title">{{ t.contact.form_title }}</h2>
+          <p class="contact-form-subtitle">{{ t.contact.form_subtitle }}</p>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xbdvpnje"
+            method="POST"
+            novalidate
+          >
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-field">
+                  <label for="cf-name">{{ t.contact.form_name }} <span class="contact-required">*</span></label>
+                  <input id="cf-name" type="text" name="name" required autocomplete="name" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-field">
+                  <label for="cf-email">{{ t.contact.form_email }} <span class="contact-required">*</span></label>
+                  <input id="cf-email" type="email" name="email" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-field">
+                  <label for="cf-organization">{{ t.contact.form_organization }}</label>
+                  <input id="cf-organization" type="text" name="organization" autocomplete="organization" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-field">
+                  <label for="cf-subject">{{ t.contact.form_subject }} <span class="contact-required">*</span></label>
+                  <select id="cf-subject" name="subject" required>
+                    {% for opt in t.contact.form_subject_options %}
+                    <option value="{{ opt.value }}">{{ opt.label }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="contact-field">
+                  <label for="cf-message">{{ t.contact.form_message }} <span class="contact-required">*</span></label>
+                  <textarea id="cf-message" name="message" rows="6" required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="contact-consent">
+                  <input id="cf-consent" type="checkbox" name="privacy_consent" value="yes" required />
+                  <label for="cf-consent">
+                    {{ t.contact.form_consent_pre }}
+                    <a href="{{ '/web-privacy-policy-cookie' | relative_url }}" target="_blank" rel="noopener">{{ t.contact.form_consent_link }}</a>
+                    {{ t.contact.form_consent_post }}
+                    <span class="contact-required">*</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;" />
+            <input type="hidden" name="_subject" id="cf-mail-subject" value="[dicom.vision] New contact request" />
+            <input type="hidden" name="language" value="{{ site.lang }}" />
+            <input type="hidden" name="source_site" value="{{ site.url }}" />
+
+            <div class="contact-form-footer">
+              <span class="contact-required-note"><span class="contact-required">*</span> {{ t.contact.form_required_note }}</span>
+              <button type="submit" class="btn btn-l btn-green contact-submit">{{ t.contact.form_submit }}</button>
+            </div>
+
+            <div class="contact-feedback contact-feedback-success" hidden>
+              <i class="icofont-check-circled"></i>
+              <div>
+                <strong>{{ t.contact.form_success_title }}</strong>
+                <p>{{ t.contact.form_success_text }}</p>
+              </div>
+            </div>
+            <div class="contact-feedback contact-feedback-error" hidden>
+              <i class="icofont-warning-alt"></i>
+              <p>{{ t.contact.form_error }}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
+
+<script>
+  (function () {
+    var form = document.getElementById("contact-form");
+    if (!form) return;
+
+    var submitBtn = form.querySelector(".contact-submit");
+    var successBox = form.querySelector(".contact-feedback-success");
+    var errorBox = form.querySelector(".contact-feedback-error");
+    var subjectSelect = document.getElementById("cf-subject");
+    var mailSubject = document.getElementById("cf-mail-subject");
+    var submitLabel = submitBtn.textContent;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      successBox.hidden = true;
+      errorBox.hidden = true;
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      mailSubject.value =
+        "[dicom.vision] " + subjectSelect.value + " - " + form.elements.name.value;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "{{ t.contact.form_sending }}";
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (response) {
+          if (response.ok) {
+            form.reset();
+            successBox.hidden = false;
+            successBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          } else {
+            errorBox.hidden = false;
+          }
+        })
+        .catch(function () {
+          errorBox.hidden = false;
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        });
+    });
+  })();
+</script>
