@@ -77,7 +77,9 @@ layout: default
         {% endif %}
         {% if section.image %}
         <figure class="case-figure {% if section.image_wide %}case-figure-wide{% endif %}">
-          <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}" loading="lazy" />
+          <a href="{{ section.image | relative_url }}" class="case-figure-zoom" data-case-lightbox-src="{{ section.image | relative_url }}" data-case-lightbox-alt="{{ section.image_alt | default: section.title }}" aria-label="Expand image: {{ section.title }}">
+            <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}" loading="lazy" />
+          </a>
           {% if section.image_caption %}<figcaption>{{ section.image_caption }}</figcaption>{% endif %}
         </figure>
         {% endif %}
@@ -159,6 +161,47 @@ layout: default
     "operatingSystem": "Any (web-based)"
   }
 }
+</script>
+
+<div class="case-lightbox" hidden>
+  <button type="button" class="case-lightbox-close" aria-label="Close expanded image">&times;</button>
+  <img src="" alt="" />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var lightbox = document.querySelector(".case-lightbox");
+    if (!lightbox) return;
+
+    var image = lightbox.querySelector("img");
+    var close = lightbox.querySelector(".case-lightbox-close");
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.classList.remove("case-lightbox-open");
+      image.removeAttribute("src");
+      image.setAttribute("alt", "");
+    }
+
+    document.addEventListener("click", function (event) {
+      var trigger = event.target.closest("[data-case-lightbox-src]");
+      if (!trigger) return;
+      event.preventDefault();
+      image.setAttribute("src", trigger.getAttribute("data-case-lightbox-src"));
+      image.setAttribute("alt", trigger.getAttribute("data-case-lightbox-alt") || "");
+      lightbox.hidden = false;
+      document.body.classList.add("case-lightbox-open");
+      close.focus();
+    });
+
+    close.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  });
 </script>
 
 {% include footer.html %}

@@ -24,6 +24,12 @@ categories:
 items:
   - id: tavi-tec
     category: clinical-workflow
+    categories:
+      - ai-features
+      - clinical-workflow
+      - collaboration
+      - research
+      - feature-showcase
     icon: icofont-heart-beat
     image: /assets/images/showcase/tavi-tec-card.png
     url: /showcase/tavi-tec

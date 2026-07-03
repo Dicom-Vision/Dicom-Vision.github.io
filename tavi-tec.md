@@ -89,14 +89,14 @@ case:
       image_alt: "TAVI-TEC inside the DICOM Vision viewer: axial CTA with 3D aortic root segmentation and full-body vascular access view"
       image_caption: "TAVI-TEC inside DICOM Vision®: CTA visualization, 3D segmentation, anatomical measurements and vascular access review in a single web-based environment."
       image_wide: true
-    - title: "The workflow"
+    - title: "TAVI-TEC at a glance"
       id: "workflow"
       body: >
         From CTA upload to AI output review, the workflow is designed to keep imaging,
         measurements and discussion inside the same web-based environment.
-      image: /assets/images/showcase/tavi-tec-pipeline.png
-      image_alt: "Pipeline of the TAVI-TEC computational framework"
-      image_caption: "Pipeline of the computational framework for automated annotations and valve-size prediction."
+      image: /assets/images/showcase/tavi-tec-glance.webp
+      image_alt: "TAVI-TEC at a glance diagram showing the clinical challenge of TAVI planning in an aging population, CTA imaging analysis with AI segmentation, 3D visualization, annular sizing and vascular access assessment, integration inside the DICOM Vision web workflow, and expected benefits for standardization, speed and Heart Team collaboration"
+      image_caption: "An overview of the TAVI-TEC concept, from the clinical challenge to imaging analysis, workflow integration and expected benefits."
     - title: "Why DICOM Vision®"
       body: >
         DICOM Vision® provides the web-based environment where clinicians can review the

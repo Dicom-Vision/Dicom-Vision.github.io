@@ -43,9 +43,14 @@ layout: default
     <div class="row showcase-grid">
       {% for item in sc.items %}
       {% assign i = item[lang] %}
+      {% if item.categories %}
+      {% assign item_category_list = item.categories | join: ' ' %}
+      {% else %}
+      {% assign item_category_list = item.category %}
+      {% endif %}
       {% assign cat = sc.categories | where: "id", item.category | first %}
       {% if lang == "it" %}{% assign item_url = item.url_it %}{% else %}{% assign item_url = item.url %}{% endif %}
-      <div class="col-md-6 col-lg-4 showcase-col" data-category="{{ item.category }}">
+      <div class="col-md-6 col-lg-4 showcase-col" data-category="{{ item_category_list }}">
         <div class="showcase-card {% if item.coming_soon %}showcase-card-soon{% endif %}">
           {% if item.image %}
           <div class="showcase-card-visual" style="background-image: url('{{ item.image | relative_url }}');"></div>
@@ -124,7 +129,8 @@ layout: default
         btn.classList.add("active");
         var f = btn.getAttribute("data-filter");
         cols.forEach(function (col) {
-          col.style.display = (f === "all" || col.getAttribute("data-category") === f) ? "" : "none";
+          var categories = (col.getAttribute("data-category") || "").split(/\s+/);
+          col.style.display = (f === "all" || categories.indexOf(f) !== -1) ? "" : "none";
         });
       });
     });
