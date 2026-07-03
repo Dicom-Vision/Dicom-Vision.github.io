@@ -1,6 +1,6 @@
 {% assign t = site.data.i18n[site.lang] %}
 
-{% unless page.url contains 'contact' %}
+{% unless page.url contains 'contact' or page.hide_footer_cta %}
 <div class="wrapper bg-default footer-cta">
   <div class="container footer-cta-inner text-center">
     <div class="footer-cta-text">{{ t.footer.cta_title }}</div>

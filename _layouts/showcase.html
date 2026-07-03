@@ -1,0 +1,134 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+{% assign lang = site.lang | default: "en" %}
+{% assign sc = site.data.showcases %}
+
+{% include header.html container_class="container" extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
+
+<div class="wrapper docs-hero" style="background-image: url('{{ '/assets/images/features-hero.webp' | relative_url }}');">
+  <div class="container inner text-center">
+    <div class="docs-hero-badge">
+      <span class="docs-hero-badge-label">{{ t.showcase.hero_badge }}</span>
+    </div>
+    <h1 class="docs-hero-title">{{ t.showcase.hero_title }}</h1>
+    <p class="docs-hero-subtitle">{{ t.showcase.hero_subtitle }}</p>
+    <div class="showcase-hero-actions">
+      <a href="#showcase-grid" class="btn btn-l btn-green">{{ t.showcase.hero_cta_explore }}</a>
+      <a href="{{ '/contact' | relative_url }}" class="btn btn-l btn-white">{{ t.showcase.hero_cta_demo }}</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper light-wrapper">
+  <div class="container pt-40 pb-40">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <p class="lead">{{ t.showcase.intro_1 }}</p>
+        <p>{{ t.showcase.intro_2 }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper gray-wrapper" id="showcase-grid">
+  <div class="container pt-40 pb-60">
+    <div class="showcase-filters text-center mb-40">
+      <button class="showcase-filter active" data-filter="all">{{ t.showcase.filter_all }}</button>
+      {% for cat in sc.categories %}
+      <button class="showcase-filter" data-filter="{{ cat.id }}">{{ cat[lang] }}</button>
+      {% endfor %}
+    </div>
+    <div class="row showcase-grid">
+      {% for item in sc.items %}
+      {% assign i = item[lang] %}
+      {% assign cat = sc.categories | where: "id", item.category | first %}
+      {% if lang == "it" %}{% assign item_url = item.url_it %}{% else %}{% assign item_url = item.url %}{% endif %}
+      <div class="col-md-6 col-lg-4 showcase-col" data-category="{{ item.category }}">
+        <div class="showcase-card {% if item.coming_soon %}showcase-card-soon{% endif %}">
+          {% if item.image %}
+          <div class="showcase-card-visual" style="background-image: url('{{ item.image | relative_url }}');"></div>
+          {% else %}
+          <div class="showcase-card-visual showcase-card-visual-icon">
+            <i class="{{ item.icon | default: 'icofont-monitor' }}"></i>
+          </div>
+          {% endif %}
+          <div class="showcase-card-body">
+            <span class="showcase-card-badge">{{ cat[lang] }}</span>
+            <h3 class="showcase-card-title">{{ i.title }}</h3>
+            <p class="showcase-card-desc">{{ i.description }}</p>
+            {% if item.coming_soon %}
+            <span class="showcase-card-link showcase-card-link-soon">{{ t.showcase.coming_soon }}</span>
+            {% else %}
+            <a href="{{ item_url | relative_url }}" class="showcase-card-link">{{ t.showcase.read_more }} &rarr;</a>
+            {% endif %}
+          </div>
+          {% unless item.coming_soon %}
+          <a href="{{ item_url | relative_url }}" class="showcase-card-overlay" aria-label="{{ i.title }}"></a>
+          {% endunless %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="wrapper light-wrapper">
+  <div class="container pt-60 pb-60 text-center">
+    <h2 class="section-title mb-20">{{ t.showcase.cta_title }}</h2>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <p class="lead mb-30">{{ t.showcase.cta_text }}</p>
+      </div>
+    </div>
+    <a href="{{ '/contact' | relative_url }}" class="btn btn-l btn-green">{{ t.showcase.cta_button }}</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ t.showcase.hero_title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "inLanguage": {{ lang | jsonify }},
+  "publisher": { "@id": "{{ site.url }}/#organization" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {% assign idx = 0 %}
+      {% for item in sc.items %}{% unless item.coming_soon %}{% assign i = item[lang] %}
+      {% if lang == "it" %}{% assign item_url = item.url_it %}{% else %}{% assign item_url = item.url %}{% endif %}
+      {% if idx > 0 %},{% endif %}{% assign idx = idx | plus: 1 %}
+      {
+        "@type": "ListItem",
+        "position": {{ idx }},
+        "name": {{ i.title | jsonify }},
+        "url": "{{ site.url }}{{ item_url }}"
+      }
+      {% endunless %}{% endfor %}
+    ]
+  }
+}
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var filters = document.querySelectorAll(".showcase-filter");
+    var cols = document.querySelectorAll(".showcase-col");
+    filters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        filters.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        var f = btn.getAttribute("data-filter");
+        cols.forEach(function (col) {
+          col.style.display = (f === "all" || col.getAttribute("data-category") === f) ? "" : "none";
+        });
+      });
+    });
+  });
+</script>
+
+{% include footer.html %}

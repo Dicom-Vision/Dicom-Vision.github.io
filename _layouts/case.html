@@ -1,0 +1,132 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[site.lang] %}
+{% assign lang = site.lang | default: "en" %}
+{% assign c = page.case %}
+{% capture showcase_url %}{% if lang == "it" %}/vetrina{% else %}/showcase{% endif %}{% endcapture %}
+
+{% include header.html container_class="container" extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
+
+<div class="wrapper docs-hero" style="background-image: url('{{ '/assets/images/features-hero.webp' | relative_url }}');">
+  <div class="container inner text-center">
+    <div class="docs-hero-badge">
+      <span class="docs-hero-badge-label">{{ c.badge }}</span>
+    </div>
+    <h1 class="docs-hero-title">{{ c.name }}</h1>
+    <p class="case-hero-tagline">{{ c.tagline }}</p>
+    <p class="docs-hero-subtitle">{{ c.subtitle }}</p>
+    <div class="showcase-hero-actions">
+      <a href="{{ c.cta_primary.url | relative_url }}" class="btn btn-l btn-green">{{ c.cta_primary.label }}</a>
+      {% if c.cta_secondary %}
+      <a href="{{ c.cta_secondary.url }}" class="btn btn-l btn-white">{{ c.cta_secondary.label }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if c.stats %}
+<div class="wrapper light-wrapper case-stats-wrapper">
+  <div class="container">
+    <div class="row case-stats">
+      {% for stat in c.stats %}
+      <div class="col-6 col-lg-3">
+        <div class="case-stat">
+          <div class="case-stat-value">{{ stat.value }}</div>
+          <div class="case-stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% assign shade = false %}
+{% for section in c.sections %}
+<div class="wrapper {% if shade %}gray-wrapper{% else %}light-wrapper{% endif %}" {% if section.id %}id="{{ section.id }}"{% endif %}>
+  <div class="container pt-60 pb-60">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 landing-content">
+        <h2 class="text-center mb-30">{{ section.title }}</h2>
+        {% if section.steps %}
+        <div class="case-workflow">
+          {% for step in section.steps %}
+          <span class="case-workflow-step">{{ step }}</span>
+          {% unless forloop.last %}<span class="case-workflow-arrow" aria-hidden="true">&rarr;</span>{% endunless %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if section.body %}{{ section.body | markdownify }}{% endif %}
+        {% if section.bullets %}
+        <ul>
+          {% for item in section.bullets %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if section.image %}
+        <figure class="case-figure">
+          <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}" loading="lazy" />
+          {% if section.image_caption %}<figcaption>{{ section.image_caption }}</figcaption>{% endif %}
+        </figure>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% if shade %}{% assign shade = false %}{% else %}{% assign shade = true %}{% endif %}
+{% endfor %}
+
+<div class="wrapper dark-wrapper inverse-text case-final-cta">
+  <div class="container pt-60 pb-60 text-center">
+    <h2 class="mb-20">{{ c.final_cta.title }}</h2>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <p class="lead mb-30">{{ c.final_cta.text }}</p>
+      </div>
+    </div>
+    <a href="{{ '/contact' | relative_url }}" class="btn btn-l btn-green">{{ c.final_cta.button_primary }}</a>
+    <a href="{{ '/contact' | relative_url }}" class="btn btn-l btn-white">{{ c.final_cta.button_secondary }}</a>
+  </div>
+</div>
+
+{% if c.disclaimer %}
+<div class="wrapper light-wrapper">
+  <div class="container pt-30 pb-30">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <p class="case-disclaimer">{{ c.disclaimer }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="wrapper light-wrapper">
+  <div class="container pb-30 text-center">
+    <a href="{{ showcase_url | relative_url }}">&larr; {{ t.nav.showcase }}</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "inLanguage": {{ lang | jsonify }},
+  "image": {{ site.logo | absolute_url | jsonify }},
+  "author": { "@id": "{{ site.url }}/#organization" },
+  "publisher": { "@id": "{{ site.url }}/#organization" },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "DICOM Vision",
+    "applicationCategory": "Medical imaging software",
+    "operatingSystem": "Any (web-based)"
+  }
+}
+</script>
+
+{% include footer.html %}

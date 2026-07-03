@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Showcase section styles (/showcase, /vetrina)
+   ========================================================================== */
+
+/* --- Hero actions --- */
+.showcase-hero-actions {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Filter chips --- */
+.showcase-filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.showcase-filter {
+  background: #fff;
+  border: 1px solid #dbe3ec;
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5a6a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #0d4a6b;
+    color: #0d4a6b;
+  }
+
+  &.active {
+    background: #0d4a6b;
+    border-color: #0d4a6b;
+    color: #fff;
+  }
+}
+
+/* --- Cards --- */
+.showcase-col {
+  margin-bottom: 1.5rem;
+}
+
+.showcase-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #eaeef3;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.showcase-card-soon {
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .showcase-card-visual,
+  .showcase-card-title,
+  .showcase-card-desc {
+    opacity: 0.65;
+  }
+}
+
+.showcase-card-visual {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.showcase-card-visual-icon {
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 55%, #0d4a6b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 2.6rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.showcase-card-body {
+  padding: 1.4rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.showcase-card-badge {
+  align-self: flex-start;
+  background: #eef5fa;
+  color: #0d4a6b;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.showcase-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #404040;
+}
+
+.showcase-card-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.showcase-card-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0d4a6b;
+  margin-top: 0.75rem;
+}
+
+.showcase-card-link-soon {
+  color: #9aa7b4;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Whole-card click target above content, below nothing interactive */
+.showcase-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Case-study pages (layout: case)
+   ========================================================================== */
+
+.case-hero-tagline {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* --- Stats row --- */
+.case-stats-wrapper {
+  border-bottom: 1px solid #eaeef3;
+}
+
+.case-stats {
+  padding: 2.25rem 0;
+}
+
+.case-stat {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+}
+
+.case-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0d4a6b;
+  line-height: 1.1;
+}
+
+.case-stat-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.35rem;
+}
+
+/* --- Workflow bar --- */
+.case-workflow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-workflow-step {
+  background: #eef5fa;
+  border: 1px solid #d5e5f0;
+  color: #0d4a6b;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.case-workflow-arrow {
+  color: #9ab4c6;
+  font-weight: 700;
+}
+
+/* --- Figure --- */
+.case-figure {
+  margin: 1.5rem 0 0;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+}
+
+/* --- Final CTA + disclaimer --- */
+.case-final-cta {
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 55%, #0d4a6b 100%);
+
+  .btn { margin: 0 0.35rem 0.5rem; }
+}
+
+.case-disclaimer {
+  font-size: 0.78rem;
+  color: #999;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}

@@ -8,11 +8,13 @@ layout: default
 {% assign cat = site.data.features | where: "category_id", page.feature_category | first %}
 {% assign c = cat[lang] %}
 {% capture guide_url %}{% if lang == "it" %}/guida-utente{% else %}/user-guide{% endif %}{% endcapture %}
+{% capture showcase_url %}{% if lang == "it" %}/vetrina{% else %}/showcase{% endif %}{% endcapture %}
 
-{% include header.html extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
+{% include header.html container_class="container" extra_class="navbar-bg-dark inverse-text nav-uppercase" %}
 
 <div class="wrapper light-wrapper page-title-wrapper">
   <div class="container inner text-center">
+    <p class="mb-10"><a href="{{ showcase_url | relative_url }}">&larr; {{ t.nav.showcase }}</a></p>
     <h1 class="page-title">{{ p.headline }}</h1>
     <p class="lead">{{ p.subheadline }}</p>
   </div>
@@ -37,6 +39,12 @@ layout: default
         {% endfor %}
 
         {{ content }}
+
+        {% if page.linkedin_url %}
+        <p class="mt-30"><em>{{ t.showcase.related_post }}</em>
+          <a href="{{ page.linkedin_url }}" target="_blank" rel="noopener">{{ t.showcase.related_post_link }}</a>
+        </p>
+        {% endif %}
       </div>
     </div>
     <div class="text-center mt-40">

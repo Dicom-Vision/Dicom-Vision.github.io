@@ -10,6 +10,7 @@ site:
 nav:
   home: "HOME"
   demo: "DEMO"
+  showcase: "SHOWCASE"
   guide: "USER GUIDE"
   contact: "CONTACT US"
   privacy: "WEB PRIVACY POLICY & COOKIES"
@@ -277,3 +278,23 @@ docs:
 schema:
   billed_monthly: "Billed monthly"
   billed_yearly: "Billed yearly"
+
+# --- Showcase ---
+showcase:
+  title: "DICOM Vision® Showcase | Workflows, AI Features & Use Cases"
+  description: "Explore real workflows, AI-assisted features, clinical collaboration scenarios and product updates from the DICOM Vision platform."
+  hero_badge: "Feature stories · AI workflows · Clinical collaboration"
+  hero_title: "DICOM Vision® Showcase"
+  hero_subtitle: "Explore real workflows, AI-assisted features, clinical collaboration scenarios and product updates from the DICOM Vision platform."
+  hero_cta_explore: "Explore showcases"
+  hero_cta_demo: "Request a demo"
+  intro_1: "Discover selected workflows, product updates and feature stories from the DICOM Vision® platform."
+  intro_2: "From AI-assisted case discussion to referral workflows, collaborative DICOM review and research-oriented imaging tools, this section highlights how DICOM Vision can support healthcare professionals in managing, reviewing and sharing medical imaging data."
+  filter_all: "All"
+  read_more: "Read more"
+  coming_soon: "Coming soon"
+  cta_title: "Want to see these workflows in action?"
+  cta_text: "Book a demo and discover how DICOM Vision® can support your imaging workflow, from DICOM visualization to AI-assisted collaboration and second opinion."
+  cta_button: "Request a demo"
+  related_post: "Related post:"
+  related_post_link: "Read the original LinkedIn update →"

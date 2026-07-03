@@ -1,0 +1,103 @@
+# Showcase section registry: filter categories and content cards.
+# Rendered by _layouts/showcase.html on /showcase (EN) and /vetrina (IT).
+# Items with `coming_soon: true` render as non-clickable cards; drop the flag
+# and add url/url_it once the detail page exists. `image` is optional — cards
+# fall back to an icon visual.
+
+categories:
+  - id: ai-features
+    en: "AI Features"
+    it: "Funzionalità IA"
+  - id: clinical-workflow
+    en: "Clinical Workflow"
+    it: "Workflow Clinico"
+  - id: collaboration
+    en: "Collaboration"
+    it: "Collaborazione"
+  - id: research
+    en: "Research"
+    it: "Ricerca"
+  - id: feature-showcase
+    en: "Feature Showcase"
+    it: "Feature in Evidenza"
+
+items:
+  - id: tavi-tec
+    category: clinical-workflow
+    icon: icofont-heart-beat
+    image: /assets/images/showcase/tavi-tec-card.png
+    url: /showcase/tavi-tec
+    url_it: /vetrina/tavi-tec
+    en:
+      title: "TAVI-TEC: AI-Assisted TAVI Planning"
+      description: "From CTA to Heart Team discussion: automatic segmentation, annular measurements, vascular access assessment and valve sizing support — evaluated on 109 patients."
+    it:
+      title: "TAVI-TEC: Pianificazione TAVI Assistita dall'IA"
+      description: "Dalla CTA alla discussione dell'Heart Team: segmentazione automatica, misure dell'annulus, valutazione degli accessi vascolari e supporto al sizing — valutato su 109 pazienti."
+
+  - id: segmentation-3d
+    category: feature-showcase
+    icon: icofont-magic
+    url: /showcase/ai-segmentation
+    url_it: /vetrina/segmentazione-ia
+    en:
+      title: "Segmentation and 3D Surface Generation"
+      description: "From medical images to segmentation masks and 3D models for visualization, planning and research."
+    it:
+      title: "Segmentazione e Generazione di Superfici 3D"
+      description: "Dalle immagini medicali alle maschere di segmentazione e ai modelli 3D per visualizzazione, pianificazione e ricerca."
+
+  - id: referral-second-opinion
+    category: clinical-workflow
+    icon: icofont-doctor-alt
+    coming_soon: true
+    en:
+      title: "Referral & Second Opinion Workflow"
+      description: "How DICOM Vision enables secure sharing of DICOM studies, collaborative review and structured case discussion between professionals."
+    it:
+      title: "Workflow di Referral e Second Opinion"
+      description: "Come DICOM Vision abilita la condivisione sicura di studi DICOM, la revisione collaborativa e la discussione strutturata dei casi tra professionisti."
+
+  - id: ai-case-discussion
+    category: ai-features
+    icon: icofont-brain-alt
+    coming_soon: true
+    en:
+      title: "AI-Assisted Case Discussion"
+      description: "Use advanced models to summarize clinical discussions, analyze the current viewer image and support multidisciplinary review."
+    it:
+      title: "Discussione del Caso Assistita dall'IA"
+      description: "Modelli avanzati per riassumere le discussioni cliniche, analizzare l'immagine corrente del viewer e supportare la revisione multidisciplinare."
+
+  - id: agentic-ai-triage
+    category: ai-features
+    icon: icofont-robot
+    coming_soon: true
+    en:
+      title: "Agentic AI Triage for Imaging Workflows"
+      description: "A showcase of how AI can prioritize suspicious studies, suggest further analysis and support faster review."
+    it:
+      title: "Triage con IA Agentica per i Workflow di Imaging"
+      description: "Come l'IA può dare priorità agli studi sospetti, suggerire analisi aggiuntive e supportare una revisione più rapida."
+
+  - id: collaborative-review
+    category: collaboration
+    icon: icofont-users-alt-4
+    coming_soon: true
+    en:
+      title: "Real-Time Collaborative DICOM Review"
+      description: "Multiple users can review the same study, discuss findings, share annotations and coordinate decisions remotely."
+    it:
+      title: "Revisione DICOM Collaborativa in Tempo Reale"
+      description: "Più utenti possono rivedere lo stesso studio, discutere i reperti, condividere annotazioni e coordinare le decisioni da remoto."
+
+  - id: clinical-research
+    category: research
+    icon: icofont-microscope
+    coming_soon: true
+    en:
+      title: "DICOM Vision for Clinical Research"
+      description: "Study upload, anonymization workflows, workgroup sharing and structured research collaboration."
+    it:
+      title: "DICOM Vision per la Ricerca Clinica"
+      description: "Caricamento degli studi, workflow di anonimizzazione, condivisione nei gruppi di lavoro e collaborazione strutturata per la ricerca."

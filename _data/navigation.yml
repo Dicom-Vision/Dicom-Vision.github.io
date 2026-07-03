@@ -6,6 +6,10 @@ main_menu:
     url: "https://rapid-credit-55b6.daniele-ciriello.workers.dev"
     external: true
 
+  - key: "showcase"
+    url: "/showcase"
+    url_it: "/vetrina"
+
   - key: "guide"
     url: "/user-guide"
     url_it: "/guida-utente"
@@ -13,5 +17,4 @@ main_menu:
   - key: "contact"
     url: "/contact"
 
-  - key: "privacy"
-    url: "/web-privacy-policy-cookie"
+# privacy: linked from the footer legal column (footer.html), removed from navbar
