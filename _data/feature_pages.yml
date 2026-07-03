@@ -1,0 +1,125 @@
+# Commercial showcase pages for feature categories (one page per category).
+# Marketing copy lives here; reference documentation stays in features.yml
+# (rendered on the user guide). Rendered by _layouts/feature.html via stub
+# pages that set `feature_category`.
+
+- category_id: ai-tools
+  en:
+    headline: "AI Segmentation & Analysis for Medical Imaging"
+    subheadline: "Segment organs and lesions in seconds, refine with full control, export anywhere — all in your browser"
+    intro: "Manual contouring is one of the most time-consuming tasks in medical imaging: delineating an organ slice by slice can take longer than reading the entire study. DICOM Vision embeds state-of-the-art AI segmentation directly in its zero-footprint viewer, so you go from image to editable, exportable mask in seconds — with no software to install and no GPU workstation to maintain."
+    sections:
+      - title: "From manual contouring to one click"
+        body: >
+          Segment interactively with **SAM2 (Segment Anything Model 2)**: click on the
+          structure you want, add positive or negative prompts to refine, and get a contour
+          instantly. When you need the whole series done, domain-specific predictors for
+          **Lungs, Abdomen, Pancreas and Total Body** segment every slice automatically.
+          Results appear as color overlays with adjustable opacity, ready to inspect
+          slice by slice.
+        bullets:
+          - "Interactive point-prompt segmentation on any visible structure"
+          - "One-click automatic predictors: Lungs, Abdomen, Pancreas, Total Body"
+          - "Color overlays with adjustable opacity and editable contours"
+      - title: "AI you can correct, not just accept"
+        body: >
+          An AI result you cannot edit is a dead end in clinical work. DICOM Vision pairs
+          every segmentation with an **interactive brush tool** (1–100 px) to paint and erase
+          masks, with full undo/redo. The dedicated editing workspace combines the 2D stack
+          view with **real-time 3D surface rendering**, so every correction you make is
+          immediately visible in three dimensions. The clinician always has the last word.
+      - title: "Results that travel with your workflow"
+        body: >
+          Masks are stored on the server with metadata — who created them, when, and with
+          which properties — so you can reload and refine them in future sessions. When it is
+          time to move on, export as **DICOM RTSTRUCT** for radiotherapy planning systems,
+          **NIfTI** for research pipelines, or standard image formats for presentations
+          and publications.
+        bullets:
+          - "DICOM RTSTRUCT export for radiotherapy planning"
+          - "NIfTI export for research and deep learning pipelines"
+          - "Server-side persistence: reload, refine and version your masks over time"
+      - title: "Beyond segmentation: landmarks and automated metrics"
+        body: >
+          AI in DICOM Vision does not stop at masks. Automatic detection of **anatomical
+          landmarks** — joint centers, vertebra centroids — feeds structured tables of
+          clinical metrics and indices, with temporal tracking across longitudinal studies.
+          Quantitative follow-up without a spreadsheet in sight.
+      - title: "No GPU workstation required"
+        body: >
+          All models run on DICOM Vision's cloud infrastructure. Your side of the equation
+          is a modern web browser: nothing to install, nothing to update, results in seconds
+          on the same laptop or tablet you already use.
+    checklist_title: "Everything in the AI toolbox"
+    guide_cta: "Read the full documentation"
+    faq:
+      - q: "Do I need special hardware to run AI segmentation?"
+        a: "No. All AI models run on DICOM Vision's cloud infrastructure. You only need a modern web browser — segmentation results are computed server-side and streamed back to the viewer in seconds, on any laptop or tablet."
+      - q: "Which anatomical structures can be segmented automatically?"
+        a: "Dedicated predictors cover Lungs, Abdomen, Pancreas and Total Body segmentation across full series. For any other structure, SAM2 interactive segmentation lets you segment arbitrary organs and lesions with a few clicks."
+      - q: "Can I edit the AI-generated masks?"
+        a: "Yes. An interactive brush tool (1–100 px) with undo/redo lets you paint and erase masks in a combined 2D+3D editing workspace, where corrections are instantly reflected in the 3D surface rendering."
+      - q: "Which export formats are supported?"
+        a: "Segmentation masks can be exported as DICOM RTSTRUCT for radiotherapy planning, NIfTI for research pipelines, or standard image formats. Masks are also stored on the server with metadata for later retrieval and refinement."
+      - q: "Can I share segmentation results with colleagues?"
+        a: "Yes. Masks are saved with the study, and DICOM Vision's share links let colleagues review the same series and overlays from their own browser, with no installation required."
+  it:
+    headline: "Segmentazione e Analisi IA per l'Imaging Medicale"
+    subheadline: "Segmenta organi e lesioni in secondi, perfeziona con pieno controllo, esporta ovunque — tutto nel browser"
+    intro: "Il contouring manuale è una delle attività più dispendiose dell'imaging medicale: delineare un organo fetta per fetta può richiedere più tempo della lettura dell'intero studio. DICOM Vision integra la segmentazione IA di ultima generazione direttamente nel suo visualizzatore zero-footprint: dall'immagine a una maschera modificabile ed esportabile in pochi secondi, senza software da installare né workstation GPU da mantenere."
+    sections:
+      - title: "Dal contouring manuale a un click"
+        body: >
+          Segmenta in modo interattivo con **SAM2 (Segment Anything Model 2)**: clicca sulla
+          struttura che ti interessa, aggiungi prompt positivi o negativi per rifinire e
+          ottieni subito il contorno. Quando serve l'intera serie, i predictor specifici per
+          **Polmoni, Addome, Pancreas e Total Body** segmentano automaticamente ogni fetta.
+          I risultati appaiono come overlay colorati con opacità regolabile, pronti da
+          ispezionare fetta per fetta.
+        bullets:
+          - "Segmentazione interattiva a prompt su qualsiasi struttura visibile"
+          - "Predictor automatici con un click: Polmoni, Addome, Pancreas, Total Body"
+          - "Overlay colorati con opacità regolabile e contorni modificabili"
+      - title: "Un'IA che puoi correggere, non solo accettare"
+        body: >
+          Un risultato IA non modificabile è un vicolo cieco nel lavoro clinico. DICOM Vision
+          affianca a ogni segmentazione uno **strumento pennello interattivo** (1–100 px) per
+          dipingere e cancellare le maschere, con annulla/ripeti completo. Il workspace di
+          editing dedicato combina la vista stack 2D con il **rendering di superficie 3D in
+          tempo reale**: ogni correzione è immediatamente visibile in tre dimensioni.
+          L'ultima parola resta sempre al clinico.
+      - title: "Risultati che seguono il tuo flusso di lavoro"
+        body: >
+          Le maschere sono archiviate sul server con i metadati — chi le ha create, quando e
+          con quali proprietà — così puoi ricaricarle e perfezionarle in sessioni future.
+          Quando è ora di proseguire, esporta come **DICOM RTSTRUCT** per i sistemi di
+          pianificazione radioterapica, **NIfTI** per le pipeline di ricerca o formati
+          immagine standard per presentazioni e pubblicazioni.
+        bullets:
+          - "Esportazione DICOM RTSTRUCT per la pianificazione radioterapica"
+          - "Esportazione NIfTI per ricerca e pipeline di deep learning"
+          - "Persistenza lato server: ricarica, perfeziona e versiona le maschere nel tempo"
+      - title: "Oltre la segmentazione: landmark e metriche automatizzate"
+        body: >
+          L'IA di DICOM Vision non si ferma alle maschere. Il rilevamento automatico di
+          **landmark anatomici** — centri articolari, centroidi vertebrali — alimenta tabelle
+          strutturate di metriche e indici clinici, con tracciamento temporale negli studi
+          longitudinali. Follow-up quantitativo senza fogli di calcolo.
+      - title: "Nessuna workstation GPU richiesta"
+        body: >
+          Tutti i modelli girano sull'infrastruttura cloud di DICOM Vision. Dalla tua parte
+          serve solo un browser moderno: niente da installare, niente da aggiornare,
+          risultati in secondi sullo stesso laptop o tablet che già usi.
+    checklist_title: "Tutto ciò che trovi nella cassetta degli attrezzi IA"
+    guide_cta: "Leggi la documentazione completa"
+    faq:
+      - q: "Serve hardware dedicato per la segmentazione IA?"
+        a: "No. Tutti i modelli IA girano sull'infrastruttura cloud di DICOM Vision. Basta un browser moderno: i risultati sono calcolati lato server e mostrati nel visualizzatore in pochi secondi, su qualsiasi laptop o tablet."
+      - q: "Quali strutture anatomiche possono essere segmentate automaticamente?"
+        a: "I predictor dedicati coprono Polmoni, Addome, Pancreas e Total Body su serie complete. Per qualsiasi altra struttura, la segmentazione interattiva SAM2 permette di segmentare organi e lesioni arbitrari con pochi click."
+      - q: "Posso modificare le maschere generate dall'IA?"
+        a: "Sì. Uno strumento pennello interattivo (1–100 px) con annulla/ripeti permette di dipingere e cancellare le maschere in un workspace di editing 2D+3D combinato, dove le correzioni si riflettono subito nel rendering di superficie 3D."
+      - q: "Quali formati di esportazione sono supportati?"
+        a: "Le maschere di segmentazione si esportano come DICOM RTSTRUCT per la pianificazione radioterapica, NIfTI per le pipeline di ricerca o formati immagine standard. Le maschere restano inoltre archiviate sul server con i metadati, per recupero e perfezionamento successivi."
+      - q: "Posso condividere i risultati di segmentazione con i colleghi?"
+        a: "Sì. Le maschere sono salvate con lo studio e i link di condivisione di DICOM Vision permettono ai colleghi di rivedere la stessa serie e gli stessi overlay dal proprio browser, senza installare nulla."
