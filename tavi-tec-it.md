@@ -89,7 +89,7 @@ case:
           text: "Revisione di **immagini, output e discussione** in un'unica piattaforma web."
       image: /assets/images/showcase/tavi-tec-viewer.png
       image_alt: "TAVI-TEC nel viewer DICOM Vision: CTA assiale con segmentazione 3D della radice aortica e vista total-body degli accessi vascolari"
-      image_caption: "TAVI-TEC dentro DICOM Vision®: visualizzazione CTA, segmentazione 3D, misurazioni anatomiche e revisione degli accessi vascolari in un unico ambiente web."
+      image_caption: "TAVI-TEC dentro DICOM Vision®: (A) analisi della radice aortica basata su CTA con segmentazione 3D e misurazioni automatiche; (B) revisione CTA full-body con aorta segmentata e asse iliaco-femorale per la valutazione degli accessi vascolari."
       image_wide: true
     - title: "TAVI-TEC in sintesi"
       id: "workflow"
@@ -99,6 +99,14 @@ case:
       image: /assets/images/showcase/tavi-tec-glance.webp
       image_alt: "Diagramma TAVI-TEC in sintesi che mostra la sfida clinica della pianificazione TAVI nella popolazione anziana, l'analisi CTA con segmentazione IA, visualizzazione 3D, sizing dell'annulus e valutazione degli accessi vascolari, l'integrazione nel workflow web DICOM Vision e i benefici attesi per standardizzazione, rapidità e collaborazione dell'Heart Team"
       image_caption: "Una panoramica del concept TAVI-TEC, dalla sfida clinica all'analisi imaging, all'integrazione nel workflow e ai benefici attesi."
+    - title: "Video walkthrough"
+      body: >
+        Guarda il workflow TAVI-TEC in due brevi video walkthrough su YouTube.
+      cards:
+        - title: "Analisi della radice aortica basata su CTA"
+          text: "**Analisi della radice aortica basata su CTA** con segmentazione 3D e misurazioni automatiche. [Guarda su YouTube](https://www.youtube.com/watch?v=-CiGuHrUcQ4)."
+        - title: "Revisione CTA full-body"
+          text: "**Revisione CTA full-body** con aorta segmentata e asse iliaco-femorale per la valutazione degli accessi vascolari. [Guarda su YouTube](https://www.youtube.com/watch?v=eIuImWeAzo4)."
     - title: "Perché DICOM Vision®"
       body: >
         DICOM Vision® fornisce l'**ambiente web** in cui i clinici possono rivedere le immagini

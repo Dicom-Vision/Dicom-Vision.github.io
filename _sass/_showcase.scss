@@ -253,6 +253,10 @@
   margin: 1.75rem 0 0;
 }
 
+.case-feature-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .case-feature-card {
   background: #fff;
   border: 1px solid #e5ebf1;

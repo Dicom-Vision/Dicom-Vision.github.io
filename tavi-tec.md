@@ -87,7 +87,7 @@ case:
           text: "Review **images, outputs and discussion** in one web-based platform."
       image: /assets/images/showcase/tavi-tec-viewer.png
       image_alt: "TAVI-TEC inside the DICOM Vision viewer: axial CTA with 3D aortic root segmentation and full-body vascular access view"
-      image_caption: "TAVI-TEC inside DICOM Vision®: CTA visualization, 3D segmentation, anatomical measurements and vascular access review in a single web-based environment."
+      image_caption: "TAVI-TEC inside DICOM Vision®: (A) CTA-based aortic root analysis with 3D segmentation and automated measurements; (B) full-body CTA review with segmented aorta and iliac-femoral axis for vascular access assessment."
       image_wide: true
     - title: "TAVI-TEC at a glance"
       id: "workflow"
@@ -97,6 +97,14 @@ case:
       image: /assets/images/showcase/tavi-tec-glance.webp
       image_alt: "TAVI-TEC at a glance diagram showing the clinical challenge of TAVI planning in an aging population, CTA imaging analysis with AI segmentation, 3D visualization, annular sizing and vascular access assessment, integration inside the DICOM Vision web workflow, and expected benefits for standardization, speed and Heart Team collaboration"
       image_caption: "An overview of the TAVI-TEC concept, from the clinical challenge to imaging analysis, workflow integration and expected benefits."
+    - title: "Video walkthrough"
+      body: >
+        Watch the TAVI-TEC workflow in two short video walkthroughs on YouTube.
+      cards:
+        - title: "CTA-based aortic root analysis"
+          text: "With 3D segmentation and automated measurements. [Watch on YouTube](https://www.youtube.com/watch?v=-CiGuHrUcQ4)."
+        - title: "Full-body CTA review"
+          text: "With segmented aorta and iliac-femoral axis for vascular access assessment. [Watch on YouTube](https://www.youtube.com/watch?v=eIuImWeAzo4)."
     - title: "Why DICOM Vision®"
       body: >
         DICOM Vision® provides the **web-based environment** where clinicians can review the

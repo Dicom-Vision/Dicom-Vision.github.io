@@ -41,6 +41,23 @@ items:
       title: "TAVI-TEC: Pianificazione TAVI Assistita dall'IA"
       description: "Dalla CTA alla discussione dell'Heart Team: segmentazione automatica, misure dell'annulus, valutazione degli accessi vascolari e supporto al sizing — valutato su 109 pazienti."
 
+  - id: agentic-ai-triage
+    category: ai-features
+    categories:
+      - ai-features
+      - clinical-workflow
+      - feature-showcase
+    icon: icofont-robot
+    image: /assets/images/showcase/agentic-triage-study-workflow.webp
+    url: /showcase/agentic-triage
+    url_it: /vetrina/agentic-triage
+    en:
+      title: "Agentic Triage"
+      description: "AI-native triage workflows that inspect DICOM studies, analyze multiple views, generate structured observations and support prioritization for human review."
+    it:
+      title: "Agentic Triage"
+      description: "Workflow di triage AI-native che ispezionano studi DICOM, analizzano viste multiple, generano osservazioni strutturate e supportano la prioritizzazione per revisione umana."
+
   - id: segmentation-3d
     category: feature-showcase
     icon: icofont-magic
@@ -74,23 +91,6 @@ items:
     it:
       title: "Discussione del Caso Assistita dall'IA"
       description: "Modelli avanzati per riassumere le discussioni cliniche, analizzare l'immagine corrente del viewer e supportare la revisione multidisciplinare."
-
-  - id: agentic-ai-triage
-    category: ai-features
-    categories:
-      - ai-features
-      - clinical-workflow
-      - feature-showcase
-    icon: icofont-robot
-    image: /assets/images/showcase/agentic-triage-study-workflow.webp
-    url: /showcase/agentic-triage
-    url_it: /vetrina/agentic-triage
-    en:
-      title: "Agentic Triage"
-      description: "AI-native triage workflows that inspect DICOM studies, analyze multiple views, generate structured observations and support prioritization for human review."
-    it:
-      title: "Agentic Triage"
-      description: "Workflow di triage AI-native che ispezionano studi DICOM, analizzano viste multiple, generano osservazioni strutturate e supportano la prioritizzazione per revisione umana."
 
   - id: collaborative-review
     category: collaboration

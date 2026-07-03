@@ -31,3 +31,6 @@ social_accounts:
 
     - url: "https://x.com/DicomVision"
       icon: "jam jam-x"
+
+    - url: "https://www.youtube.com/@DicomVision"
+      icon: "jam jam-youtube"
