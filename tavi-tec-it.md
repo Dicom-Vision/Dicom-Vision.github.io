@@ -19,13 +19,41 @@ case:
     url: "#workflow"
   stats:
     - value: "109"
-      label: "pazienti — coorte CTA retrospettiva valutata"
+      label: "pazienti in valutazione CTA retrospettiva"
     - value: "2–6 min"
-      label: "tempo di elaborazione automatica su GPU"
+      label: "tempo di elaborazione automatica GPU"
     - value: "82%"
       label: "concordanza retrospettiva con la taglia della valvola SAPIEN 3 Ultra impiantata"
     - value: "0.934 CCC"
       label: "concordanza sull'area dell'annulus vs misure del clinico"
+  partners:
+    title: "Sviluppato con partner clinici e di ricerca"
+    body: >
+      TAVI-TEC nasce da una collaborazione tra team clinici, ricercatori accademici e
+      sviluppatori di tecnologie per l'imaging medicale.
+
+
+      IRCCS ISMETT contribuisce con competenze cliniche e dati CTA retrospettivi da
+      procedure TAVI.
+
+
+      L'Università degli Studi di Palermo contribuisce con competenze di ricerca in
+      ingegneria e bioingegneria.
+
+
+      D/Vision Lab sviluppa la piattaforma di imaging web DICOM Vision® e supporta
+      l'integrazione del workflow TAVI-TEC nell'ambiente di revisione clinica.
+
+
+      Il progetto è supportato nell'ambito dell'iniziativa ANTHEM, finanziata dalla
+      Commissione Europea — NextGenerationEU / PNRR.
+    logos:
+      - image: /assets/images/clients/ismett_logo_svg_20231102.svg
+        alt: "IRCCS ISMETT"
+      - image: /assets/images/clients/UniPa-Universita-degli-studi-di-Palermo.jpg
+        alt: "Università degli Studi di Palermo"
+      - image: /assets/images/clients/dv.png
+        alt: "D/Vision Lab"
   sections:
     - title: "Il problema"
       body: >
@@ -46,23 +74,28 @@ case:
     - title: "Cosa fa TAVI-TEC"
       body: >
         TAVI-TEC elabora automaticamente gli studi CTA preoperatori per supportare:
-      bullets:
-        - "Segmentazione della radice aortica"
-        - "Identificazione del piano dell'annulus"
-        - "Misure di area, perimetro e diametri dell'annulus"
-        - "Visualizzazione delle calcificazioni"
-        - "Valutazione degli accessi vascolari"
-        - "Viste CPR delle arterie iliache e femorali"
-        - "Valutazione della taglia della protesi"
-        - "Revisione anatomica 3D dentro DICOM Vision®"
+      cards:
+        - title: "Segmentazione IA"
+          text: "Segmentazione della radice aortica e delle strutture vascolari."
+        - title: "Misurazioni automatiche"
+          text: "Misure di area, perimetro e diametri dell'annulus."
+        - title: "Revisione anatomica 3D"
+          text: "Radice aortica, calcificazioni e strutture vascolari in 3D."
+        - title: "Valutazione degli accessi vascolari"
+          text: "Valutazione iliaco-femorale con viste CPR e mappatura delle calcificazioni."
+        - title: "Supporto al sizing"
+          text: "Valutazione retrospettiva della taglia della protesi per SAPIEN 3 Ultra."
+        - title: "Integrazione DICOM Vision®"
+          text: "Revisione di immagini, output e discussione in un'unica piattaforma web."
       image: /assets/images/showcase/tavi-tec-viewer.png
       image_alt: "TAVI-TEC nel viewer DICOM Vision: CTA assiale con segmentazione 3D della radice aortica e vista total-body degli accessi vascolari"
-      image_caption: "TAVI-TEC dentro DICOM Vision®. (A) Vista assiale dell'aorta e vista tridimensionale della radice aortica segmentata con annotazioni nel pannello di destra. (B) Scansione total-body con vista tridimensionale dell'aorta segmentata per la valutazione degli accessi vascolari."
+      image_caption: "TAVI-TEC dentro DICOM Vision®: visualizzazione CTA, segmentazione 3D, misurazioni anatomiche e revisione degli accessi vascolari in un unico ambiente web."
+      image_wide: true
     - title: "Il workflow"
       id: "workflow"
       body: >
-        Dal caricamento della CTA alla discussione dell'Heart Team, ogni passaggio avviene
-        nello stesso ambiente web — senza export, senza software da workstation separati.
+        Dal caricamento della CTA alla revisione degli output IA, il workflow è progettato
+        per mantenere imaging, misurazioni e discussione nello stesso ambiente web.
       image: /assets/images/showcase/tavi-tec-pipeline.png
       image_alt: "Pipeline del framework computazionale TAVI-TEC"
       image_caption: "Pipeline del framework computazionale per le annotazioni automatiche e la predizione della taglia della valvola."
@@ -76,6 +109,7 @@ case:
         L'obiettivo non è sostituire il giudizio clinico, ma rendere l'analisi avanzata delle
         immagini più facile da usare, rivedere e condividere.
     - title: "Valutato su dati clinici reali"
+      show_partners_after: true
       body: >
         In una valutazione retrospettiva su **109 pazienti TAVI**, il workflow TAVI-TEC ha
         elaborato gli studi CTA in **2,2–6,4 minuti** su GPU.
@@ -87,7 +121,7 @@ case:
         con la maggior parte delle discrepanze tra taglie adiacenti.
   final_cta:
     title: "Costruisci workflow di imaging avanzati con DICOM Vision®"
-    text: "DICOM Vision® aiuta i team clinici e di ricerca a combinare visualizzazione DICOM, collaborazione, annotazione, segmentazione e analisi assistita dall'IA in un unico ambiente web. Scopri come workflow come TAVI-TEC possono supportare ricerca, pianificazione procedurale e revisione multidisciplinare."
+    text: "DICOM Vision® aiuta i team clinici e di ricerca a combinare visualizzazione DICOM, collaborazione, annotazione, segmentazione e analisi assistita dall'IA in un'unica piattaforma web."
     button_primary: "Richiedi una Demo"
     button_secondary: "Contattaci"
   disclaimer: "TAVI-TEC è presentato come showcase di ricerca e innovazione. Il workflow è pensato per supportare professionisti sanitari qualificati e non sostituisce il giudizio clinico. Ulteriori validazioni possono essere necessarie in base all'uso clinico, al contesto di implementazione e allo stato regolatorio."

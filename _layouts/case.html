@@ -42,12 +42,12 @@ layout: default
 </div>
 {% endif %}
 
-{% assign shade = false %}
+{% if c.stats %}{% assign shade = true %}{% else %}{% assign shade = false %}{% endif %}
 {% for section in c.sections %}
 <div class="wrapper {% if shade %}gray-wrapper{% else %}light-wrapper{% endif %}" {% if section.id %}id="{{ section.id }}"{% endif %}>
   <div class="container pt-60 pb-60">
     <div class="row">
-      <div class="col-lg-8 offset-lg-2 landing-content">
+      <div class="{% if section.image_wide %}col-lg-10 offset-lg-1{% else %}col-lg-8 offset-lg-2{% endif %} landing-content">
         <h2 class="text-center mb-30">{{ section.title }}</h2>
         {% if section.steps %}
         <div class="case-workflow">
@@ -65,8 +65,18 @@ layout: default
           {% endfor %}
         </ul>
         {% endif %}
+        {% if section.cards %}
+        <div class="case-feature-grid">
+          {% for card in section.cards %}
+          <div class="case-feature-card">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.text }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
         {% if section.image %}
-        <figure class="case-figure">
+        <figure class="case-figure {% if section.image_wide %}case-figure-wide{% endif %}">
           <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}" loading="lazy" />
           {% if section.image_caption %}<figcaption>{{ section.image_caption }}</figcaption>{% endif %}
         </figure>
@@ -76,6 +86,28 @@ layout: default
   </div>
 </div>
 {% if shade %}{% assign shade = false %}{% else %}{% assign shade = true %}{% endif %}
+{% if section.show_partners_after and c.partners %}
+<div class="wrapper {% if shade %}gray-wrapper{% else %}light-wrapper{% endif %} case-partners-wrapper">
+  <div class="container pt-55 pb-55">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 landing-content">
+        <h2 class="text-center mb-25">{{ c.partners.title }}</h2>
+        {% if c.partners.logos %}
+        <div class="case-partner-logos" aria-label="{{ c.partners.title }}">
+          {% for logo in c.partners.logos %}
+          <div class="case-partner-logo">
+            <img src="{{ logo.image | relative_url }}" alt="{{ logo.alt }}" loading="lazy" />
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if c.partners.body %}{{ c.partners.body | markdownify }}{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% if shade %}{% assign shade = false %}{% else %}{% assign shade = true %}{% endif %}
+{% endif %}
 {% endfor %}
 
 <div class="wrapper dark-wrapper inverse-text case-final-cta">
