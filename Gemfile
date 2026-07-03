@@ -22,3 +22,8 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 gem "webrick"
 gem "kramdown-parser-gfm", "~> 1.1"
+
+# Ruby 3.4+ no longer bundles these as default gems
+gem "csv"
+gem "base64"
+gem "bigdecimal"
